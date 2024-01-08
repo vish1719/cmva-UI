@@ -77,7 +77,7 @@ import Privacy from "./components/Policy/Privacy";
 import Price1 from "./components/Pricing/price1";
 import Ad_hoc from "./components/Pricing/ad_hoc";
 import Refer from "./components/Refer/Refer";
-import Sign_up from "./components/UserAuth/Sign_up";
+import Sign_up from "./components/Pricing/Sign_up";
 import { Component } from "react";
 import { connect } from "react-redux";
 
@@ -140,19 +140,19 @@ class App extends Component {
                     <IndustrySec />
                     <HowWeWorkSec />
                     <PricingHomeSec />
-                    <ContactForm />
-                    {/* <ServicesSec />
+                   {/* <ContactForm />
+                     <ServicesSec />
                 <PortfolioSec />
                 <TeamSec />
                 <FaqSec />
                 <ContactSec /> */}
                     <div className="quote-grp">
                       <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                      <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                      {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                     </div>
                     <div className="quote-grp">
 
-                      <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                     {/* <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                     </div>
                   </main>
                 </>)
@@ -174,11 +174,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                 {/* <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
 
@@ -193,11 +193,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -206,11 +206,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -232,11 +232,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -248,11 +248,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -265,11 +265,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
 
@@ -283,11 +283,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
 
@@ -297,11 +297,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -311,11 +311,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -324,11 +324,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -337,7 +337,7 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -346,11 +346,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -360,11 +360,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -373,11 +373,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -386,11 +386,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                {/* <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -399,11 +399,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                {/*  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -412,11 +412,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                {/*  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -425,11 +425,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                {/*  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -438,11 +438,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                 {/* <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                 {/* <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -451,11 +451,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                 {/* <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -464,11 +464,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -477,11 +477,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>
@@ -490,11 +490,11 @@ class App extends Component {
               <>
                 <div className="quote-grp">
                   <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>
+                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
                 </div>
                 <div className="quote-grp">
 
-                  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>
+                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
                 </div>
               </>
             </Route>

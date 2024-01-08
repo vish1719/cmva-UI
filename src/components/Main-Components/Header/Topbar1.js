@@ -32,9 +32,9 @@ class Topbar1 extends Component {
                                                         <> */}
                                                         <Link to={"/faq"}><button type="button" className="btn btn-outline-dark btn-sm my-0">FAQ</button></Link>
                                                 <Link to={"/refer"}><button type="button" className="btn btn-outline-dark btn-sm mx-2 my-0">Refer</button></Link>
-                                                    <Link to={"/login"}><button type="button" className="btn btn-dark btn-sm ms-2 my-0">Login</button></Link>
+                                                   {/* <Link to={"/login"}><button type="button" className="btn btn-dark btn-sm ms-2 my-0">Login</button></Link>
                                                     <Link to={"/signup"}><button type="button" className="btn btn-dark btn-sm mx-1 my-0">Sign up</button></Link>
-                                                    {/* </>
+                                                     </>
                                                     )
                                                 }
                                                 */}

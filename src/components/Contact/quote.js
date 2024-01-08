@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Redirect, useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import config from '../../config';
 const Quote = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -19,7 +19,8 @@ const Quote = () => {
 
     const history = useHistory()
 
-    const addQuoteInfo = async () => {
+    const addQuoteInfo = async (event) => {
+        event.preventDefault()
         let formField = new FormData()
         formField.append('name', name)
         formField.append('email', email)
@@ -30,7 +31,6 @@ const Quote = () => {
         formField.append('deadline', deadline)
         formField.append('requirements', requirements)
         formField.append('goal', goal)
-        
 
         // if (category !== null) {
         //     formField.append('category', category)
@@ -38,16 +38,17 @@ const Quote = () => {
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/quote/',
-            data: formField
+            url: `${config.apiUrl}/api/quote/`,
+            data: formField,
+            
         }).then(response => {
             console.log(response.data);
             
             toast.success('Quote has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
             // <Redirect to="/" />
-            // history.push('/');
+            history.push('/');
             // refresh();
-            window.location.replace("/");
+            //window.location.replace("/");
         })
         .catch(error=>{
             toast.error('There are items that require your attention!', {position: toast.POSITION.TOP_CENTER});
@@ -89,11 +90,11 @@ const Quote = () => {
                         </div>
 
                         <div className="col-lg-10" data-aos="fade-up" data-aos-delay="200">
-                            <form action="" method="post" role="form" className="php-email-form">
+                            <form  method="post" role="form" className="php-email-form">
                                 <div className="row">
                                     <div className="col-lg-6">
                                     <div className="form-group">
-                                    <h6 className="head req"> Full Name :</h6>
+                                    <h6 className="head req"> Full Name:</h6>
                                     <input type="text" className="form-control" name="name" value={name} onChange= {(e) => setName(e.target.value)} id="name" placeholder="Enter Full Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
                                     <div className="validate"></div>
                                 </div>

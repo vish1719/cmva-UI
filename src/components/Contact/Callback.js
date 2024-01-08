@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
+import config from '../../config';
 // import SuccessAlert from '../Alerts/SuccessAlert';
 // import ErrorAlert from '../Alerts/ErrorAlert';
 
@@ -25,7 +25,8 @@ const Callback= () => {
     //     }
 
 
-    const addCallbackInfo = async () => {
+    const addCallbackInfo = async (event) => {
+        event.preventDefault()
         let formField = new FormData()
         formField.append('name', name)
         formField.append('email', email)
@@ -38,7 +39,7 @@ const Callback= () => {
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/callback/',
+            url: `${config.apiUrl}/api/callback/`,
 
             data: formField
         }).then(response => {
@@ -47,7 +48,7 @@ const Callback= () => {
             //   window.location.reload(false);
             // this.setState({alert_message:"success"});
             //   history.push('/')
-            window.location.replace("/");
+            //window.location.replace("/");
 
         })
             .catch(error => {
@@ -90,7 +91,7 @@ const Callback= () => {
                         </div>
 
                         <div className="col-lg-10" data-aos="fade-up" data-aos-delay="200">
-                            <form action="/" method="post" role="form" className="php-email-form">
+                            <form  role="form" className="php-email-form">
                                 <div className="form-group">
                                     <h6 className="head req"> Full Name :</h6>
                                     <input type="text" className="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} id="name" placeholder="Enter Full Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />

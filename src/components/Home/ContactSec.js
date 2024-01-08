@@ -34,7 +34,7 @@ function ContactSec() {
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/HomeContact/',
+            url: `${config.apiUrl}/HomeContact/`,
             data: formField
         }).then(response => {
             console.log(response.data);

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
+import config from '../../config';
 const Ad_hoc = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -15,7 +15,8 @@ const Ad_hoc = () => {
 
     const history = useHistory()
 
-    const addHocInfo = async () => {
+    const addHocInfo = async (event) => {
+        event.preventDefault()
         let formField = new FormData()
         formField.append('name', name)
         formField.append('email', email)
@@ -30,7 +31,7 @@ const Ad_hoc = () => {
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/hoc/',
+            url: `${config.apiUrl}/api/hoc/`,
             data: formField
         }).then(response => {
             console.log(response.data);
@@ -78,7 +79,7 @@ const Ad_hoc = () => {
                         </div>
 
                         <div className="col-lg-10" data-aos="fade-up" data-aos-delay="200">
-                            <form action="#" method="post" role="form" className="php-email-form">
+                            <form  method="post" role="form" className="php-email-form">
                                 <p>Send your request and we will get back to you with an estimate.</p>
                                 <div className="row">
                                     <div className="col-lg-6">

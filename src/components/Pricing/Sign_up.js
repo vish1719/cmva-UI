@@ -6,47 +6,83 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 import { authSignup } from '../UserAuth/store/actions/auth';
-
+import { withRouter } from 'react-router-dom';
+import config from '../../config';
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
 
-class Sign_up_resuse extends Component {
+class Sign_up extends Component {
+    formData = "";
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          formData: {
+            // Initialize your form fields here
+            clientname: "",
+            email: "",
+            phone: "",
+            
+            address: "",
+            addrstate:"",
+            city: "",
+            country: "",
+            paypalemail:"",
+            planname:"",
+          },
+        };
+      }
+    
+    handleChange = (event) => {
+        console.log(this.formData);
+        const { name, value } = event.target;
+        this.setState(prevState => ({
+          formData: {
+            ...prevState.formData,
+            [name]: value,
+          },
+        }));
+      };
 
-    // useEffect(()=>{
-    //     if(localStorage.getItem('token'))
-    //     {
-    //         history.push('/register')
-    //     }
-    // }, [])
-    state = {
-        // username: "",
-        first_name: "",
-        middle_name: "",
-        last_name: "",
-        email: "",
-        phone: "",
-        
-        address: "",
-        city: "",
-        country: "",
-        password1: "",
-        password2: "",
+      updatePlanName = (planName) => {
+        this.setState(prevState => ({
+          formData: {
+            ...prevState.formData, // spread the existing properties
+            planname: planName, // update the specific property
+          },
+        }));
+      };
 
-
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
-        console.log(this.state);
-    }
-
-    handleSubmit = (e) => {
+      handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        await axios({
+            method: 'post',
+            url:`${config.apiUrl}/api/plansignup/`,            
+            data: this.state.formData
+          }).then(response=>{
+            console.log(response.data);
+            toast.success('Message has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
+          //   window.location.reload(false);
+          // this.setState({alert_message:"success"});
+          //   history.push('/')
+          window.location.replace("/");
+            
+          })
+          .catch(error=>{
+              toast.error('There are items that require your attention!', {position: toast.POSITION.TOP_CENTER});
+              // this.setState({alert_message:"error"});
+              // setErrors(error.response.data.errors);
+              console.log(error.data)
+          })
+      };
+   /* handleSubmit = (e) => {
         e.preventDefault();
 
-        const {first_name, middle_name, last_name, email, phone, address, city, country, password1, password2 } = this.state;
-        this.props.signup(first_name, middle_name, last_name, email, phone, address, city, country, password1, password2);
-    }
+        const {clientname, email, phone, address, addrstate, city, country,paypalemailid } = this.state;
+        this.props.signup(clientname, email, phone, address, addrstate, city, country,paypalemailid);
+    }*/
 
     //   componentDidMount() {
     //     console.log("Hello");
@@ -55,11 +91,16 @@ class Sign_up_resuse extends Component {
 
 
     render() {
-
-        const {first_name, middle_name, last_name, email, phone, address, city, country, password1, password2} = this.state;
+        const { location } = this.props;
+        const myState = location.state;
+        if (this.state.formData.planname !== JSON.stringify(myState.planname) && (this.state.formData.planname === '')) {
+            this.updatePlanName(myState.planname);
+          }
+        
+        const {clientname, email, phone, address,addrstate, city, country, paypalemail, planname} = this.state.formData;
         const { loading } = this.props;
 
-
+        console.log('###############' + this.planname);
 
         return (
             <>
@@ -96,36 +137,27 @@ class Sign_up_resuse extends Component {
                                             <div className="validate"></div>
                                         </div> */}
                                             <div className="row">
-
-                                            <div className="col-lg-4">
+                                            <div className="col-lg-12">
+                                                   
+                                                        <h2 >Plan : <span style={{ color: "#58b958" }}>{planname}</span></h2>
+                                                        <br></br>
+                                                </div>
+                                            <div className="col-lg-12">
                                                     <div className="form-group">
-                                                        <h6 className="head">First Name:</h6>
-                                                        <input type="text" className="form-control" name="first_name" value={first_name} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                                        <h6 className="head">Name:</h6>
+                                                        <input type="text" className="form-control" name="clientname" value={clientname} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                                         <div className="validate"></div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-4">
-                                                    <div className="form-group">
-                                                        <h6 className="head">Middle Name:</h6>
-                                                        <input type="text" className="form-control" name="middle_name" value={middle_name} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-4">
-                                                    <div className="form-group">
-                                                        <h6 className="head">Last Name:</h6>
-                                                        <input type="text" className="form-control" name="last_name" value={last_name} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-6">
+                                              
+                                                <div className="col-lg-8">
                                                     <div className="form-group">
                                                         <h6 className="head">Email:</h6>
                                                         <input type="email" className="form-control" name="email" value={email} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                                         <div className="validate"></div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-4">
                                                     <div className="form-group">
                                                         <h6 className="head">Phone:</h6>
                                                         <input type="text" className="form-control" name="phone" value={phone} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
@@ -149,26 +181,25 @@ class Sign_up_resuse extends Component {
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
+                                                        <h6 className="head">State:</h6>
+                                                        <input type="text" className="form-control" name="addrstate" value={addrstate} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                                        <div className="validate"></div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="form-group">
                                                         <h6 className="head">Country:</h6>
                                                         <input type="text" className="form-control" name="country" value={country} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                                         <div className="validate"></div>
                                                     </div>
                                                 </div>
-
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
-                                                        <h6 className="head">Password:</h6>
-                                                        <input type="password" className="form-control" name="password1" value={password1} onChange={this.handleChange} placeholder="Enter Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                                        <h6 className="head">PayPal Email:</h6>
+                                                        <input type="email" className="form-control" name="paypalemail" value={paypalemail} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                                         <div className="validate"></div>
                                                     </div>
-                                                </div>
-                                                <div className="col-lg-6">
-                                                    <div className="form-group">
-                                                        <h6 className="head">Confirm Password:</h6>
-                                                        <input type="password" className="form-control" name="password2" value={password2} onChange={this.handleChange} placeholder="Confirm Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
-                                                    </div>
-                                                </div>
+                                                </div>                                              
                                             </div>
 
                                             {/* <div className="form-group">
@@ -193,10 +224,6 @@ class Sign_up_resuse extends Component {
                                     </div>
                                 </div> */}
                                             <div className="text-center"><button loading={loading} disabled={loading} type="submit">Signup</button></div>
-                                            <div className="text-center my-3">
-                                                {/* <input id="magicBtn5" type="checkbox" className="custom-control-input" /> */}
-                                                Already have an account? <Link to="/login" className="" for="magicBtn5">Log in</Link>
-                                            </div>
                                             {/* <div className="text-center log-link">
                                     <Link className="sig" to="/signup"> <div className="heya text-center">Sign Up</div></Link>
                                     </div> */}
@@ -220,21 +247,7 @@ class Sign_up_resuse extends Component {
 
 // const WrappedNormalLoginForm = form.create()(Login);
 
-const mapStateToProps = (state) => {
-    return {
-        authenticated: state.token !== null,
-        loading: state.loading,
-        error: state.error
-    }
-}
 
-const mapDispatchToProps = dispatch => {
-    return {
-        signup: (first_name, middle_name, last_name, email, phone, address, city, country, password1, password2) => dispatch(authSignup(first_name, middle_name, last_name, email, phone, address, city, country, password1, password2))
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Sign_up);
+export default withRouter(Sign_up);
 
 

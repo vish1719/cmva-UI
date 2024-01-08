@@ -32,18 +32,11 @@ function Website() {
 									<li>Coding to ensure superior indexing for the best end result</li>
 								</ul>
 
-								<div className="card">
-									<div className="card-header" id="headingOne">
-										<button className="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											WordPress Services we provide
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-
-									<div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+								<div>
+								<h6><strong>WordPress Services we provide</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Custom Theme Design &amp; Development</li>
 												<li>WordPress eCommerce Website</li>
 												<li>Plugin &amp; Widget Solutions</li>
@@ -94,20 +87,14 @@ function Website() {
 												<li>Multiple template supporting</li>
 												<li>Integrating search module system</li>
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card ">
-									<div className="card-header" id="headingTwo">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										Joomla Development Services include:
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+
+								<div>
+								<h6><strong>Joomla Development Services include:</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Joomla Website Designing</li>
 												<li>Custom Template Designing &amp; Development</li>
 												<li>Joomla CMS web site Development</li>
@@ -135,15 +122,8 @@ function Website() {
 												<li>No more mysterious additional fees</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-
-
-								
-								
-								
-
 							</div>
 						</div>
 

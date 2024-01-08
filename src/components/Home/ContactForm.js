@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import config from '../../config';
 
 function ContactForm() {
     const [for_what, setFor_what] = useState(null)
@@ -38,12 +39,12 @@ function ContactForm() {
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/homecontact/',
+            url: `${config.apiUrl}/api/homecontact/`,
             data: formField
         }).then(response => {
             console.log(response.data);
             
-            toast.success('information has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
+            toast.success('Information has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
             history.push('/')
         })
         .catch(error=>{

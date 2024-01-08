@@ -23,31 +23,17 @@ function Executive() {
 								ConnectMyVA executive assistants can make a profitable difference to a business or company by engaging in other 
 								duties such as market research, guiding employees and making travel arrangements for meetings, etc.,</p>
 
-								<div className="card">
-									<div className="card-header" id="headingOne">
-										<button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											Research
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-
-									<div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-										<div className="card-body">
-										Executive assistants conduct intense online and offline research working remotely for the diverse needs of top executives or chiefs of an organization.
-										</div>
-									</div>
+								<div>
+								<h6><strong>Research</strong></h6>
+									
+										<p>Executive assistants conduct intense online and offline research working remotely for the diverse needs of top executives or chiefs of an organization.
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingTwo">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											Daily Management
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-										<div className="card-body">
+
+								<div>
+								<h6><strong>Daily Management</strong></h6>
+									
+										<p>
 										<ul>
 											<li>Organize Executive’s schedule</li>
 											<li>Act as a representative for the executive in calls and meeting in their absence</li>
@@ -59,49 +45,28 @@ function Executive() {
 											<li>Overseeing administrative assistants and workforce</li>
 
 										</ul>
-										</div>
-									</div>
+										</p>
+								</div>
+
+								<div>
+								<h6><strong>Word Processing</strong></h6>
+									
+										<p>Word Processors help you with creating and formatting reports, mailshots, newsletters, brochures, and maintaining audio &amp; video content in standard formats, etc., by using different tools.
+										</p>
+								</div>
+								
+								<div>
+								<h6><strong>Call Screening</strong></h6>
+									
+										<p>The call screener will be monitoring all incoming and outgoing calls on the client’s behalf and has to organize all data into key points for their day-to-day scheduling and business archives.
+										</p>
 								</div>
 								
 								
-								<div className="card">
-									<div className="card-header" id="headingThree">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-											Word Processing
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-										<div className="card-body">
-										Word Processors help you with creating and formatting reports, mailshots, newsletters, brochures, and maintaining audio &amp; video content in standard formats, etc., by using different tools.
-										</div>
-									</div>
-								</div>
-								<div className="card">
-									<div className="card-header" id="headingfour">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-											Call Screening
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapsefour" className="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
-										<div className="card-body">
-										The call screener will be monitoring all incoming and outgoing calls on the client’s behalf and has to organize all data into key points for their day-to-day scheduling and business archives.
-										</div>
-									</div>
-								</div>
-								<div className="card">
-									<div className="card-header" id="headingFive">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-										To do list organization
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseFive" className="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-										<div className="card-body">
+								<div>
+								<h6><strong>To do list organization</strong></h6>
+									
+										<p>
 										Executive assistants(EA) are well organized to give personal assistance by forming a to-do-list of 
 										tasks that needs your focus. Their sharp instinct in managing things for you will save precious time 
 										and also keep your head fresh.
@@ -123,10 +88,8 @@ function Executive() {
 											<li>Handle Purchases, Bookings &amp; Payments.</li>
 
 										</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-
 							</div>
 						</div>
 

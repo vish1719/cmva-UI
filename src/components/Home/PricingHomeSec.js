@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 function PricingHomeSec() {
     return (
@@ -32,7 +33,7 @@ function PricingHomeSec() {
                                 </div>
                                 <div className="pack_footer">
                                     <h4>$15/Mo</h4>
-                                    <a className="main_btn" href="#">Sign Up</a>
+                                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Tiptoe-1'} }}>Sign Up</Link>
                                 </div>
                             </div>
 
@@ -58,7 +59,7 @@ function PricingHomeSec() {
                                 </div>
                                 <div className="pack_footer">
                                     <h4>$90/Mo</h4>
-                                    <a className="main_btn" href="#">Sign Up</a>
+                                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Begin-10'} }}>Sign Up</Link>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +81,7 @@ function PricingHomeSec() {
                                 </div>
                                 <div className="pack_footer">
                                     <h4>$170/Mo</h4>
-                                    <a className="main_btn" href="#">Sign Up</a>
+                                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Experiment-20'} }}>Sign Up</Link>
                                 </div>
                             </div>
                         </div>

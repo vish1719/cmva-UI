@@ -3,38 +3,45 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import ReferBanner from './ReferBanner';
+import config from '../../config';
+import {toast} from 'react-toastify';
 
 const Refer = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState("")
-    const [subject, setSubject] = useState("")
-    const [hear_about_us, setHear_about_us] = useState("")
-    const [category, setCategory] = useState(null)
-    const [message, setMessage] = useState("")
+    const [fname, setFName] = useState("")
+    const [femail, setFEmail] = useState("")
 
     const history = useHistory()
 
-    const addContactInfo = async () => {
+    const addContactInfo = async (event) => {
+        event.preventDefault()
         let formField = new FormData()
         formField.append('name', name)
         formField.append('email', email)
-        formField.append('phone', phone)
-        formField.append('subject', subject)
-        formField.append('hear_about_us', hear_about_us)
-        formField.append('message', message)
+        formField.append('friendname', fname)
+        formField.append('freindemail', femail)
 
-        if (category !== null) {
-            formField.append('category', category)
-        }
+    
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/api/',
+            url: `${config.apiUrl}/api/refer/`,
             data: formField
         }).then(response => {
             console.log(response.data);
-            history.push('/')
+            
+            toast.success('Quote has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
+            // <Redirect to="/" />
+            history.push('/');
+            // refresh();
+            //window.location.replace("/");
+        })
+        .catch(error=>{
+            toast.error('There are items that require your attention!', {position: toast.POSITION.TOP_CENTER});
+            // this.setState({alert_message:"error"});
+            // setErrors(error.response.data.errors);
+            console.log(error.data)
         })
     }
 
@@ -70,27 +77,27 @@ const Refer = () => {
                         </div>
 
                         <div className="col-lg-10" data-aos="fade-up" data-aos-delay="200">
-                            <form action="#" method="post" role="form" className="php-email-form">
+                            <form method="post" role="form" className="php-email-form">
                                 <p className="send-est">For every referral you will be getting 10% off on their monthly billing</p>
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head">Your Full Name:</h6>
-                                            <input type="text" className="form-control" name="name" value={name} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                            <input type="text" className="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head">Your Registered Email ID:</h6>
-                                            <input type="email" className="form-control" name="email" value={email} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                            <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-6">
+                                    {/*<div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head"> Your ConnectMyVA Membership ID:</h6>
-                                            <input type="text" className="form-control" name="phone" value={phone} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                            <input type="text" className="form-control" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
@@ -100,22 +107,23 @@ const Refer = () => {
                                             <input type="email" className="form-control" name="email" value={email} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div className="validate"></div>
                                         </div>
-                                    </div>
+                                        </div> */}
 
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head"> Your Friend's Full Name:</h6>
-                                            <input type="email" className="form-control" name="email" value={email} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                            <input className="form-control" name="fname" value={fname} onChange={(e) => setFName(e.target.value)}data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head"> Your Friend's Email ID:</h6>
-                                            <input type="text" className="form-control" name="phone" value={phone} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                            <input type="text" className="form-control" name="femail" value={femail} onChange={(e) => setFEmail(e.target.value)}data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
+                                    {/* 
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head"> Contact Number:</h6>
@@ -123,7 +131,7 @@ const Refer = () => {
                                             <div className="validate"></div>
                                         </div>
                                     </div>
-                                    
+                                    */}
                                     {/* <div className="col-lg-4">
                                         <div className="form-group">
                                             <h6 className="head"> Contact Number:</h6>

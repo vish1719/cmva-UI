@@ -20,19 +20,12 @@ function Digital() {
 									Every business requires some marketing tactics to get more limelight to their brands.
 									ConnectMyVA assistants will take care of social media marketing strategies for your business
 									and here are the services they offer.</p>
-
-								<div className="card">
-									<div className="card-header" id="headingOne">
-										<button className="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											Search Engine Optimization (SEO)
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-
-									<div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+								
+								<div>
+								<h6><strong>Search Engine Optimization (SEO)</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Surveying Business Objectives (Evaluate business goals, Check Audit Status)</li>
 												<li>Website Scrutiny (SEO auditing, Analyze design architecture &amp; navigation, Keywords &amp; Market research)</li>
 												<li>Tactical Plans &amp; Implementation: Exclusive plan of action as per business needs for local/universal SEO.</li>
@@ -50,20 +43,14 @@ function Digital() {
 												
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingTwo">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										Search Engine Marketing (SEM)
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+
+								<div>
+								<h6><strong>Search Engine Marketing (SEM)</strong></h6>
+									
+										<p>
+										<ul>
 												<li>PPC Consulting &amp; Management</li>
 												<li>Research Trending Keywords</li>
 												<li>PPC Planning: Analyze traffic, CPC, and budget allocation for a month at various locations.</li>
@@ -74,21 +61,13 @@ function Digital() {
 												<li>Showcase ads including texts, banners &amp; flash on managed placements.</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
 
-
-								<div className="card">
-									<div className="card-header" id="headingThree">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										Social Media Optimization (SMO)
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-										<div className="card-body">
+								<div>
+								<h6><strong>Social Media Optimization (SMO)</strong></h6>
+									
+										<p>
 										<ul>
 												<li>Optimizing Facebook, Twitter, Blogs, YouTube</li>
 												<li>Monitor Social Accounts (Manage Profiles, Posting on Schedule, Strengthening Issues Related to brand status/reputation)</li>
@@ -97,19 +76,12 @@ function Digital() {
 												
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingfour">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-										Social Media Marketing (SMM)
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapsefour" className="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
-										<div className="card-body">
+								<div>
+								<h6><strong>Social Media Marketing (SMM)</strong></h6>
+									
+										<p>
 										<ul>
 												<li>Set up, organize and optimize social media campaigns (Facebook, Twitter, YouTube, LinkedIn)</li>
 												<li>Bid Management for businesses, Ad copy A/B Testing</li>
@@ -118,27 +90,18 @@ function Digital() {
 												
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingFive">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-										Search Optimized Content
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseFive" className="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-										<div className="card-body">
-											
-											<ul>
+								<div>
+								<h6><strong>Search Optimized Content</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Compose Blogs and articles for sociable search responses.</li>
 												
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
 
 							</div>

@@ -11,18 +11,18 @@ function Hyperlinks2() {
 
                     <div className="row">
 
-                        <div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+                        {/*<div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
 
                             <div className="info-box1 signup">
 
-                                {/* <h3 >Sign Up</h3> */}
+                                
                                 <p>Sign up with ConnectMyVA is simple and easy, so we handle your task and you can enjoy the
 moments.</p>
                                 
                                 <Link to={"/signup"}>Sign Up</Link>
                             </div>
 
-                        </div>
+                        </div>*/}
                         <div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
                             <div className="row">
                                 <div className="col-lg-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">

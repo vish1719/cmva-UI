@@ -124,7 +124,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$15/Mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Tiptoe-1'} }}>Buy Now</Link>
                   </div>
                 </div>
 
@@ -147,7 +147,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$90/Mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Begin-10'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$170/Mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Experiment-20'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$320/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Grow-40'} }}>Buy Now</Link>
                   </div>
                 </div>
 
@@ -211,7 +211,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$450/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Leapfrog-60'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$560/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Dominate-80'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$780/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Proficient-120'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>$960/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Genius-160+'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -303,7 +303,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€75/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Begin-10'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€140/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Experiment-20'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -345,7 +345,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€260/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Grow-40'} }}>Buy Now</Link>
                   </div>
                 </div>
 
@@ -367,7 +367,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€360/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Leapfrog-60'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -388,7 +388,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€440/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Dominate-80'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -409,7 +409,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€600/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Proficient-120'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -430,7 +430,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>€720/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Genius-160+'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -462,7 +462,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 130/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Begin-10'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -483,7 +483,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 220/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Experiment-20'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -504,7 +504,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 380/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Grow-40'} }}>Buy Now</Link>
                   </div>
                 </div>
 
@@ -526,7 +526,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 540/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Leapfrog-60'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -547,7 +547,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 680/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Dominate-80'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -568,7 +568,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 960/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Proficient-120'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>
@@ -589,7 +589,7 @@ export default function Plans() {
                   </div>
                   <div className="pack_footer">
                     <h4>AUD 1200/mo</h4>
-                    <Link className="main_btn" to="/signup">Buy Now</Link>
+                    <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Genius-160+'} }}>Buy Now</Link>
                   </div>
                 </div>
               </div>

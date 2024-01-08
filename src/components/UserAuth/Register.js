@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
+import config from '../../config';
 
 toast.configure()
 
@@ -47,7 +47,7 @@ const Register = () => {
 
         await axios({
             method: 'post',
-            url: 'http://localhost:8000/register/',
+            url: `${config.apiUrl}/register/`,
             data: formField,
             
         }).then(response => {

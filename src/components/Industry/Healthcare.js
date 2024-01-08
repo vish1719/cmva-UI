@@ -26,57 +26,33 @@ function Healthcare() {
 									assistant highly experienced with task like managing clients, Organizing programs and
 									workshop, client billing.<br /></p>
 
-								<div className="card">
-									<div className="card-header" id="headingOne">
-										<button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											Patient / Client Management
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-
-									<div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-										<div className="card-body">
-
-											<ul>
+								<div>
+										<h6><strong>Patient / Client Management</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Updating records or database</li>
 												<li>Reminders</li>
 												<li>Scheduling appointments</li>
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingTwo">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											Insurance Claims
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+								<div>
+										<h6><strong>Insurance Claims</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Program subscriptions</li>
 												<li>Claims assistance / follow ups</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-
-
-								<div className="card">
-									<div className="card-header" id="headingThree">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-											Billing
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+								<div>
+										<h6><strong>Billing</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Book keeping</li>
 												<li>Payment processing</li>
 												<li>Invoicing</li>
@@ -89,20 +65,13 @@ function Healthcare() {
 												<li>Manage Autopay Expirations and Rejections</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingfour">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-											Programs / Workshops
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapsefour" className="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+								<div>
+										<h6><strong>Programs / Workshops</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Organizing Fitness programs</li>
 												<li>Promotion</li>
 												<li>Bookings</li>
@@ -111,51 +80,33 @@ function Healthcare() {
 												<li>Presentations and documents prepareations</li>
 												<li>Creating Brochures, flyers in Canva</li>
 
-											</ul>
-										</div>
-									</div>
+										</ul>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingFive">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-											Performance Evaluation
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseFive" className="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-										<div className="card-body">
-
-											<ul>
+								<div>
+										<h6><strong>Performance Evaluation</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Fitness tracking</li>
 												<li>Performance parameter analysis</li>
 												<li>Evaluation reports</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingSix">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-											Specialized tasks
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseSix" className="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-										<div className="card-body">
-
-											<ul>
+								<div>
+										<h6><strong>Specialized tasks</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Medical transcription</li>
 												<li>EHR</li>
 												<li>Updating Social medias (LinkedIn, Instagram, Facebook)</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-
 
 							</div>
 						</div>

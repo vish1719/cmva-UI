@@ -26,36 +26,22 @@ function Education() {
 									training sector while you focus on the core competency. Our assistant are with extensive
 									experience to handle tasks such as Updating courses, Admin support, Assessment Evaluation.<br /></p>
 
-								<div className="card">
-									<div className="card-header" id="headingOne">
-										<button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											Courses
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-
-									<div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-										<div className="card-body">
-
+								<div>
+								
+									<h6><strong>Courses</strong></h6>
+											
+									
+									<p>
 											<ul>
 												<li>Listing</li>
 												<li>Updating</li>
 												<li>Online directories</li>
 											</ul>
-										</div>
-									</div>
+									</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingTwo">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											Admin Support
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-										<div className="card-body">
+								<div>
+								<h6><strong>Admin Support</strong></h6>
+										<p>
 											<ul>
 												<li>Student enrollment</li>
 												<li>Material dispatch to participants</li>
@@ -63,108 +49,70 @@ function Education() {
 												<li>Lecture scheduling</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
 
 
-								<div className="card">
-									<div className="card-header" id="headingThree">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-											Back Office
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-										<div className="card-body">
+								<div>
+										<h6><strong>Back Office</strong></h6>
+									
+										<p>
 											<ul>
-												<li>Files convesions</li>
-												<li>Creating Presentation material</li>
-												<li>Documents processing &amp; Formatting</li>
+												<li>Student enrollment</li>
+												<li>Material dispatch to participants</li>
+												<li>Attendance</li>
+												<li>Lecture scheduling</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingfour">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-											Marketing
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapsefour" className="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
-										<div className="card-body">
-											<ul>
+
+								<div>
+								<h6><strong>Marketing</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Lead generation</li>
 												<li>CRM</li>
 												<li>Mailer campaigns</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingFive">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-											Accounts
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseFive" className="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-										<div className="card-body">
-
-											<ul>
+								<div>
+								<h6><strong>Accounts</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Client / student billing</li>
 												<li>Third party invoicing / payments, Payroll</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingSix">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-											Assessment
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseSix" className="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-										<div className="card-body">
-
-											<ul>
+								<div>
+								<h6><strong>Assessment</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Evaluation</li>
 												<li>Scores</li>
 												<li>Reports</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-								<div className="card">
-									<div className="card-header" id="headingEight">
-										<button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-											Feedback
-											<i className="icofont-simple-down"></i>
-											<i className="icofont-simple-up"></i>
-										</button>
-									</div>
-									<div id="collapseEight" className="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-										<div className="card-body">
-
-											<ul>
+								<div>
+								<h6><strong>Feedback</strong></h6>
+									
+										<p>
+										<ul>
 												<li>Student / tutor feedback</li>
 												<li>Monitoring Yelp / BestLocalReviews</li>
 
 											</ul>
-										</div>
-									</div>
+										</p>
 								</div>
-
 							</div>
 						</div>
 
