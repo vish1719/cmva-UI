@@ -10,103 +10,75 @@ import { withRouter } from 'react-router-dom';
 import config from '../../config';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import {useForm} from 'react-hook-form';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
 
-class Sign_up extends Component {
-    formData = "";
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          formData: {
-            // Initialize your form fields here
-            clientname: "",
-            email: "",
-            phone: "",
-            
-            address: "",
-            addrstate:"",
-            city: "",
-            country: "",
-            paypalemail:"",
-            planname:"",
-          },
-        };
-      }
-    
-    handleChange = (event) => {
-        console.log(this.formData);
-        const { name, value } = event.target;
-        this.setState(prevState => ({
-          formData: {
-            ...prevState.formData,
-            [name]: value,
-          },
-        }));
-      };
+const Sign_up = () => {
+    const location = useLocation(); // useLocation hook
+    let formData = {'planname':''}
 
-      updatePlanName = (planName) => {
-        this.setState(prevState => ({
-          formData: {
-            ...prevState.formData, // spread the existing properties
-            planname: planName, // update the specific property
-          },
-        }));
-      };
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+        const myState = location.state;
+        
+        if (formData.planname !== myState.planname && formData.planname === '') {
+            setValue('planname', location.state?.planname || '');
+        }
+      }, [location, formData.planname]);
 
-      handleSubmit = async (event) => {
-        event.preventDefault();
+    const { handleSubmit, control, register, formState: { errors, isDirty, isValid, isSubmitting } , setValue, getValues } = useForm({
+    defaultValues: {
+        clientname: '',
+        email: '',
+        phone:'',
+        address: '',
+        addrstate:'',
+        city: '',
+        country: '',
+        paypalemail:'',
+        planname:location.state?.planname || '',
+        },
+    });
     
+    
+    
+    const submitData = async (data) => {
+        formData.clientname = data.clientname;
+        formData.email = data.email;
+        formData.phone = data.phone;
+        formData.address = data.address;
+        formData.addrstate = data.addrstate;
+        formData.city = data.city;
+        formData.country = data.country;
+        formData.paypalemail = data.paypalemail;
+        formData.planname = data.planname;
         await axios({
             method: 'post',
             url:`${config.apiUrl}/api/plansignup/`,            
-            data: this.state.formData
-          }).then(response=>{
+            data: formData
+            }).then(response=>{
             console.log(response.data);
             toast.success('Message has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
-          //   window.location.reload(false);
-          // this.setState({alert_message:"success"});
-          //   history.push('/')
-          window.location.replace("/");
+            //   window.location.reload(false);
+            // this.setState({alert_message:"success"});
+            //   history.push('/')
+            window.location.replace("/");
             
-          })
-          .catch(error=>{
-              toast.error('There are items that require your attention!', {position: toast.POSITION.TOP_CENTER});
-              // this.setState({alert_message:"error"});
-              // setErrors(error.response.data.errors);
-              console.log(error.data)
-          })
-      };
-   /* handleSubmit = (e) => {
-        e.preventDefault();
+            })
+            .catch(error=>{
+                toast.error('There are items that require your attention!', {position: toast.POSITION.TOP_CENTER});
+                // this.setState({alert_message:"error"});
+                // setErrors(error.response.data.errors);
+                console.log(error.data)
+            })
+        }
 
-        const {clientname, email, phone, address, addrstate, city, country,paypalemailid } = this.state;
-        this.props.signup(clientname, email, phone, address, addrstate, city, country,paypalemailid);
-    }*/
-
-    //   componentDidMount() {
-    //     console.log("Hello");
-    //   }
-
-
-
-    render() {
-        const { location } = this.props;
-        const myState = location.state;
-        if (this.state.formData.planname !== JSON.stringify(myState.planname) && (this.state.formData.planname === '')) {
-            this.updatePlanName(myState.planname);
-          }
-        
-        const {clientname, email, phone, address,addrstate, city, country, paypalemail, planname} = this.state.formData;
-        const { loading } = this.props;
-
-        console.log('###############' + this.planname);
+      
 
         return (
             <>
-
-
-
                 <section id="contact" className="contact new-contact">
 
                     <div className="container">
@@ -124,12 +96,8 @@ class Sign_up extends Component {
                             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                                 {/* {errorMessage} */}
                                 {
-                                    this.props.loading ?
-
-                                        <Spin indicator={antIcon} />
-
-                                        :
-                                        <form action="#" method="post" onSubmit={this.handleSubmit} role="form" className="php-email-form" >
+                                    
+                                        <form action="#" method="post" role="form" className="php-email-form" >
 
                                             {/* <div className="form-group">
                                             <h6 className="head"> Username:</h6>
@@ -139,65 +107,65 @@ class Sign_up extends Component {
                                             <div className="row">
                                             <div className="col-lg-12">
                                                    
-                                                        <h2 >Plan : <span style={{ color: "#58b958" }}>{planname}</span></h2>
+                                                        <h2 >Plan : <span style={{ color: "#58b958" }}>{getValues('planname')}</span></h2>
                                                         <br></br>
                                                 </div>
                                             <div className="col-lg-12">
                                                     <div className="form-group">
                                                         <h6 className="head">Name:</h6>
-                                                        <input type="text" className="form-control" name="clientname" value={clientname} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="text" className="form-control" placeholder="Enter Full Name" {...register('clientname', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                                        <div className="error-message-form">{errors.clientname && errors.clientname.message}</div>
                                                     </div>
                                                 </div>
                                               
                                                 <div className="col-lg-8">
                                                     <div className="form-group">
                                                         <h6 className="head">Email:</h6>
-                                                        <input type="email" className="form-control" name="email" value={email} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="email" className="form-control" placeholder="Enter Email" {...register('email', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                                        <div className="error-message-form">{errors.email && errors.email.message}</div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
                                                         <h6 className="head">Phone:</h6>
-                                                        <input type="text" className="form-control" name="phone" value={phone} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="text" className="form-control" placeholder="Enter Phone" {...register('phone', { required: 'Phone number is required', pattern: { value: /^(\+\d{1,4}\s?)?(\d{1,4}[-\s]?){1,15}$/, message: 'Please provide the valid phone number with country code' } })} />
+                                                        <div className="error-message-form">{errors.phone && errors.phone.message}</div>
                                                     </div>
                                                 </div>
                                                 
                                                 <div className="col-lg-12">
                                                     <div className="form-group">
                                                         <h6 className="head">Address:</h6>
-                                                        <input type="text" className="form-control" name="address" value={address} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="text" className="form-control" placeholder="Enter Address" {...register('address', { required: 'Address is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid address'} })} />
+                                                        <div className="error-message-form">{errors.address && errors.address.message}</div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
                                                         <h6 className="head">City:</h6>
-                                                        <input type="text" className="form-control" name="city" value={city} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="text" className="form-control" placeholder="Enter City Name" {...register('city', { required: 'City is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid city name'} })} />
+                                                        <div className="error-message-form">{errors.city && errors.city.message}</div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
                                                         <h6 className="head">State:</h6>
-                                                        <input type="text" className="form-control" name="addrstate" value={addrstate} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="text" className="form-control" placeholder="Enter State Name" {...register('addrstate', { required: 'State is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid state name'} })} />
+                                                        <div className="error-message-form">{errors.addrstate && errors.addrstate.message}</div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
                                                         <h6 className="head">Country:</h6>
-                                                        <input type="text" className="form-control" name="country" value={country} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="text" className="form-control" placeholder="Enter Country Name" {...register('country', { required: 'Country is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid country name'} })} />
+                                                        <div className="error-message-form">{errors.country && errors.country.message}</div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="form-group">
                                                         <h6 className="head">PayPal Email:</h6>
-                                                        <input type="email" className="form-control" name="paypalemail" value={paypalemail} onChange={this.handleChange} placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                        <div className="validate"></div>
+                                                        <input type="email" className="form-control" placeholder="Enter Paypal Email" {...register('paypalemail', { required: 'Paypal Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                                        <div className="error-message-form">{errors.paypalemail && errors.paypalemail.message}</div>
                                                     </div>
                                                 </div>                                              
                                             </div>
@@ -223,7 +191,7 @@ class Sign_up extends Component {
                                         <label className="custom-control-label" for="magicBtn5">I agree that my submitted data is being collected and stored.</label>
                                     </div>
                                 </div> */}
-                                            <div className="text-center"><button loading={loading} disabled={loading} type="submit">Signup</button></div>
+                                            <div className="text-center"><button onClick={handleSubmit(submitData)} type="submit">Signup</button></div>
                                             {/* <div className="text-center log-link">
                                     <Link className="sig" to="/signup"> <div className="heya text-center">Sign Up</div></Link>
                                     </div> */}
@@ -241,9 +209,7 @@ class Sign_up extends Component {
                 </section>
             </>
         )
-    }
 }
-
 
 // const WrappedNormalLoginForm = form.create()(Login);
 

@@ -30,12 +30,15 @@ function Hyperlinks4() {
                                             Check out this list of the best virtual assistant services for your budget and business needs</p>
                                         <p>
                                             <ul className="toRemLi">
-                                                <li>E-Commerce</li>
-                                                <li>Executive assistant</li>
-                                                <li>Customer Services</li>
+                                                <li><Link to={"/retail-and-ecommerce"}>E-Commerce</Link></li>
+                                                <br></br>
+                                                <li><Link to={"/executive"}>Executive assistant</Link></li>
+                                                <br></br>
+                                                <li><Link to={"/customerServices"}>Customer Services</Link></li>
+                                                <br></br>
+                                                <li><Link to={"/business"}>Services</Link></li>
                                             </ul>
                                         </p>
-                                        <Link to={"/executive"}>Services</Link>
                                     </div>
                                 </div>
                         </div>

@@ -2,12 +2,16 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import WebsiteBanner from './WebsiteBanner'
 // import FAQBanner from './FAQBanner'
-
+import { useEffect } from 'react'
 
 function Website() {
+	useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
 	return (
 		<>
-			<WebsiteBanner/>
+			{/*<WebsiteBanner/>*/}
 			<section id="faq" className="faq section-bg">
 				<div className="container">
 

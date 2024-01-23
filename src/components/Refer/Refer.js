@@ -5,24 +5,35 @@ import { useHistory } from 'react-router-dom';
 import ReferBanner from './ReferBanner';
 import config from '../../config';
 import {toast} from 'react-toastify';
-
+import {useForm} from 'react-hook-form';
+import { useEffect } from 'react';
 const Refer = () => {
-    const [name, setName] = useState("")
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
+
+
+    const { handleSubmit, control, register, formState: { errors, isDirty, isValid, isSubmitting } } = useForm({
+        defaultValues: {
+          name: '',
+          email: '',
+          fname:'',
+          femail:'',
+        },
+      });
+    /*const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [fname, setFName] = useState("")
-    const [femail, setFEmail] = useState("")
+    const [femail, setFEmail] = useState("")*/
 
     const history = useHistory()
 
-    const addContactInfo = async (event) => {
-        event.preventDefault()
+    const addContactInfo =async(data) => {
         let formField = new FormData()
-        formField.append('name', name)
-        formField.append('email', email)
-        formField.append('friendname', fname)
-        formField.append('freindemail', femail)
-
-    
+        formField.append('name', data.name)
+        formField.append('email', data.email)
+        formField.append('friendname', data.fname)
+        formField.append('freindemail', data.femail)   
 
         await axios({
             method: 'post',
@@ -31,7 +42,7 @@ const Refer = () => {
         }).then(response => {
             console.log(response.data);
             
-            toast.success('Quote has beeen sent successfully!', {position: toast.POSITION.TOP_CENTER});
+            toast.success('You have referred successfully!', {position: toast.POSITION.TOP_CENTER});
             // <Redirect to="/" />
             history.push('/');
             // refresh();
@@ -43,6 +54,8 @@ const Refer = () => {
             // setErrors(error.response.data.errors);
             console.log(error.data)
         })
+
+       
     }
 
 
@@ -83,44 +96,29 @@ const Refer = () => {
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head">Your Full Name:</h6>
-                                            <input type="text" className="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" placeholder="Enter Full Name" {...register('name', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                            <div className="error-message-form">{errors.name && errors.name.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head">Your Registered Email ID:</h6>
-                                            <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div className="validate"></div>
+                                            <input type="email" className="form-control" placeholder="Enter Email" {...register('email', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                            <div className="error-message-form">{errors.email && errors.email.message}</div>
                                         </div>
                                     </div>
-                                    {/*<div className="col-lg-6">
+                                     <div className="col-lg-6">
                                         <div className="form-group">
-                                            <h6 className="head"> Your ConnectMyVA Membership ID:</h6>
-                                            <input type="text" className="form-control" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div className="validate"></div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6">
-                                        <div className="form-group">
-                                            <h6 className="head"> Promo code:</h6>
-                                            <input type="email" className="form-control" name="email" value={email} data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div className="validate"></div>
-                                        </div>
-                                        </div> */}
-
-                                    <div className="col-lg-6">
-                                        <div className="form-group">
-                                            <h6 className="head"> Your Friend's Full Name:</h6>
-                                            <input className="form-control" name="fname" value={fname} onChange={(e) => setFName(e.target.value)}data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div className="validate"></div>
+                                            <h6 className="head">Your Friend's Full Name:</h6>
+                                            <input type="text" className="form-control" placeholder="Enter Friend's Full Name" {...register('fname', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                            <div className="error-message-form">{errors.fname && errors.fname.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
-                                            <h6 className="head"> Your Friend's Email ID:</h6>
-                                            <input type="text" className="form-control" name="femail" value={femail} onChange={(e) => setFEmail(e.target.value)}data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div className="validate"></div>
+                                            <h6 className="head">Your Friend's Email ID:</h6>
+                                            <input type="email" className="form-control" placeholder="Enter Friend's Email" {...register('femail', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                            <div className="error-message-form">{errors.femail && errors.femail.message}</div>
                                         </div>
                                     </div>
                                     {/* 
@@ -163,10 +161,11 @@ const Refer = () => {
                                 </div> */}
                                 <div className="mb-3">
                                     <div className="loading">Loading</div>
-                                    <div className="error-message"></div>
+                                   
                                     <div className="sent-message">Your message has been sent. Thank you!</div>
                                 </div>
-                                <div className="text-center"><button onClick={addContactInfo} type="submit">Submit</button></div>
+                            
+                                <div className="text-center"><button onClick={handleSubmit(addContactInfo)} type="submit" >Submit</button></div>
                             </form>
                         </div>
                         <div className="col-lg-1 contact-sec" data-aos="fade-up" data-aos-delay="200">

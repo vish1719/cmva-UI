@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: 'https://vaconnect-be7668860e63.herokuapp.com',
+    apiUrl: process.env.REACT_APP_API_URL,
   };
   
   export default config;

@@ -1060,7 +1060,7 @@ h6,
 
 /* line 1, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_bradcam.scss */
 .breadcam_bg {
-  background-image: url(/assets/images/FAQ1.jpg);
+  background-image: url(../images/FAQ1.jpg);
 }
 
 /* line 5, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_bradcam.scss */
@@ -1273,7 +1273,7 @@ section {
   color: #fff;
   
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(/assets/images/ServicesH.jpg);
+      url(../images/ServicesH.jpg);
 
   
   background-position: center;
@@ -1291,7 +1291,7 @@ section {
   color: #fff;
   
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(/assets/images/ReferH.jpg);
+      url(../images/ReferH.jpg);
 
   
   background-position: center;
@@ -1309,7 +1309,7 @@ section {
   color: #fff;
   
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/assets/images/HowItWorks-hyperlink.jpg);
+      url(../images/HowItWorks-hyperlink.jpg);
 
   
   background-position: center;
@@ -1327,7 +1327,7 @@ section {
   color: #fff;
   
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/assets/images/Signup-hyperlink.jpg);
+      url(../images/Signup-hyperlink.jpg);
 
   
   background-position: end;
@@ -1344,7 +1344,7 @@ section {
 .hyper .fourth {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/assets/images/PricingH.jpg);
+      url(../images/PricingH.jpg);
 
   
   background-position: start;
@@ -1363,7 +1363,7 @@ section {
 .hyper .fifth {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/assets/images/ContactH.jpg);
+      url(../images/ContactH.jpg);
 
   
   background-position: center;
@@ -1380,7 +1380,7 @@ section {
 .hyper .sixth {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/assets/images/process-hyperlink.jpg);
+      url(../images/process-hyperlink.jpg);
 
   
   background-position: center;
@@ -1397,7 +1397,7 @@ section {
 .hyper .month {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(/assets/images/month.jpg);
+      url(../images/month.jpg);
 
   
   background-position: start;
@@ -1414,7 +1414,7 @@ section {
 .hyper .ind {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(/assets/images/IndustryWeServe-hyperlink.jpg);
+      url(../images/IndustryWeServe-hyperlink.jpg);
 
   
   background-position: center;
@@ -1431,7 +1431,7 @@ section {
 .hyper .seventh {
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(/assets/images/AboutH.jpg);
+      url(../images/AboutH.jpg);
 
   
   background-position: center;
@@ -1501,7 +1501,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 300px;
-  background:url(/assets/images/About.jpg);
+  background:url(../images/About.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1516,7 +1516,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/Pricing&Plan.jpg);
+  background:url(../images/Pricing&Plan.jpg);
   z-index: 1;
   background-position: end;
   background-repeat: no-repeat;
@@ -1531,7 +1531,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/Subscription.jpg);
+  background:url(../images/Subscription.jpg);
   z-index: 1;
   background-position: end;
   background-repeat: no-repeat;
@@ -1545,7 +1545,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/How.jpg);
+  background:url(../images/How.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1560,7 +1560,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/Process.jpg);
+  background:url(../images/Process.jpg);
   z-index: 1;
   background-position: end;
   background-repeat: no-repeat;
@@ -1575,7 +1575,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/Contact.jpg);
+  background:url(../images/Contact.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1590,7 +1590,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/FAQ.jpg);
+  background:url(../images/FAQ.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1605,7 +1605,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/Refer.jpg);
+  background:url(../images/Refer.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1620,7 +1620,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/Education.jpg);
+  background:url(../images/Education.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1637,7 +1637,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/event.jpg);
+  background:url(../images/event.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1654,7 +1654,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Health.jpg);
+  background:url(../images/Health.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1672,7 +1672,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/ecommerce.jpg);
+  background:url(../images/ecommerce.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1688,7 +1688,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Sales.jpg);
+  background:url(../images/Sales.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1705,7 +1705,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/realestate.jpg);
+  background:url(../images/realestate.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1722,7 +1722,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Staffing.jpg);
+  background:url(../images/Staffing.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1738,7 +1738,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Travel.jpg);
+  background:url(../images/Travel.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1754,7 +1754,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/customer.jpg);
+  background:url(../images/customer.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1769,7 +1769,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Personal.jpg);
+  background:url(../images/Personal.jpg);
   z-index: 1 ;
   background-position: end;
   background-repeat: no-repeat;
@@ -1785,7 +1785,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/executive.jpg);
+  background:url(../images/executive.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1801,7 +1801,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/bookkeep.jpg);
+  background:url(../images/bookkeep.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1816,7 +1816,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/amazon.jpg);
+  background:url(../images/amazon.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1831,7 +1831,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Linkedin.jpg);
+  background:url(../images/Linkedin.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1846,7 +1846,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 350px;
-  background:url(/assets/images/Social.jpg);
+  background:url(../images/Social.jpg);
   z-index: 1 ;
   background-position: center;
   background-repeat: no-repeat;
@@ -1862,7 +1862,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/signup1.jpg);
+  background:url(../images/signup1.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1878,7 +1878,7 @@ section {
   overflow: hidden;
   /* width: 0%; */
   min-height: 330px;
-  background:url(/assets/images/signup1.jpg);
+  background:url(../images/signup1.jpg);
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -1891,7 +1891,7 @@ section {
 }
 
 /* .banner_area .banner_inner .overlayAbt {
-  background: url(/assets/images/About.jpg) no-repeat scroll center center;
+  background: url(../images/About.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -1915,7 +1915,7 @@ section {
   
 } */
 /* .banner_area .banner_inner .overlaySubs {
-  background: url(/assets/images/Subscription.jpg) no-repeat scroll center
+  background: url(../images/Subscription.jpg) no-repeat scroll center
     center;
   position: absolute;
   left: 0;
@@ -1927,7 +1927,7 @@ section {
   opacity: 0.8;
 } */
 /* .banner_area .banner_inner .overlayProcess {
-  background: url(/assets/images/Process.jpg) no-repeat scroll center center;
+  background: url(../images/Process.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -1938,7 +1938,7 @@ section {
   opacity: 0.8;
 } */
 /* .banner_area .banner_inner .overlayHow {
-  background: url(/assets/images/How.jpg) no-repeat scroll center center;
+  background: url(../images/How.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -1949,7 +1949,7 @@ section {
   opacity: 0.8;
 } */
 /* .banner_area .banner_inner .overlayContact {
-  background: url(/assets/images/Contact.jpg) no-repeat scroll center center;
+  background: url(../images/Contact.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -1960,7 +1960,7 @@ section {
   opacity: 0.8;
 } */
 /* .banner_area .banner_inner .overlayFAQ {
-  background: url(/assets/images/FAQ.jpg) no-repeat scroll center center;
+  background: url(../images/FAQ.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -1972,7 +1972,7 @@ section {
 } */
 
 /* .banner_area .banner_inner .overlayRegister {
-  background: url(/assets/images/signup1.jpg) no-repeat scroll center center;
+  background: url(../images/signup1.jpg) no-repeat scroll center center;
   position: absolute;
   left: 0;
   right: 0;
@@ -3302,7 +3302,7 @@ select, option {
 }
 
 .contact .php-email-form .validate {
-  display: none;
+ display: none;
   color: red;
   margin: 0 0 15px 0;
   font-weight: 400;
@@ -3310,7 +3310,7 @@ select, option {
 }
 
 .contact .php-email-form .error-message {
-  display: none;
+display: none;
   color: #fff;
   background: #ed3c0d;
   text-align: center;
@@ -3945,4 +3945,11 @@ position: relative;
 
 .sec-height{
   min-height: 70vh;
+}
+
+.error-message-form {
+  color: #cc0033;
+  font-size: 15px;
+  margin: 2px 0 0;
+  font-weight: 600
 }

@@ -1,8 +1,12 @@
 import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import StaffBanner from './StaffBanner'
-
+import { useEffect } from 'react'
 function Staff() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     return (
         <>
         <StaffBanner/>

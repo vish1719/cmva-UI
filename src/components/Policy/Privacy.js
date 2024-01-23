@@ -1,9 +1,13 @@
 import React from 'react'
 // import FAQBanner from './FAQBanner'
 import { Link } from 'react-router-dom';
-
+import { useEffect } from 'react';
 
 function Privacy() {
+	useEffect(() => {
+        console.log('dfdsfdsf')
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
 	return (
 		<>
 			{/* <FAQBanner/> */}

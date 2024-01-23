@@ -5,36 +5,46 @@ import {Redirect, useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
+import { useEffect } from 'react';
+import {useForm} from 'react-hook-form'
 const Quote = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState("")
-    const [company, setCompany] = useState("")
-    const [location, setLocation] = useState("")
-    const [response, setResponse] = useState("")
-    // const [category, setCategory] = useState(null)
-    const [deadline, setDeadline] = useState("")
-    const [requirements, setRequirements] = useState("")
-    const [goal, setGoal] = useState("")
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
+
+    const { handleSubmit, control, register, formState: { errors, isDirty, isValid, isSubmitting } } = useForm({
+    defaultValues: {
+        name: '',
+        email: '',
+        phone:'',
+        company:'',
+        location:'',
+        response:null,
+        deadline:'',
+        requirements:'',
+        goal:'',
+        },
+    });
 
     const history = useHistory()
 
-    const addQuoteInfo = async (event) => {
-        event.preventDefault()
+    const addQuoteInfo = async (data) => {
         let formField = new FormData()
-        formField.append('name', name)
-        formField.append('email', email)
-        formField.append('phone', phone)
-        formField.append('company', company)
-        formField.append('location', location)
-        formField.append('response', response)
-        formField.append('deadline', deadline)
-        formField.append('requirements', requirements)
-        formField.append('goal', goal)
+        formField.append('name', data.name)
+        formField.append('email', data.email)
+        formField.append('phone', data.phone)
+        formField.append('company', data.company)
+        formField.append('location', data.location)
+        formField.append('response', data.response)
+        formField.append('deadline', data.deadline)
+        formField.append('requirements', data.requirements)
+        formField.append('goal', data.goal)
 
-        // if (category !== null) {
-        //     formField.append('category', category)
-        // }
+        const formDataString = Array.from(formField.entries())
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&');
+  
+        console.log('FormData as String:', formDataString);
 
         await axios({
             method: 'post',
@@ -95,43 +105,43 @@ const Quote = () => {
                                     <div className="col-lg-6">
                                     <div className="form-group">
                                     <h6 className="head req"> Full Name:</h6>
-                                    <input type="text" className="form-control" name="name" value={name} onChange= {(e) => setName(e.target.value)} id="name" placeholder="Enter Full Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" placeholder="Enter Full Name" {...register('name', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                    <div className="error-message-form">{errors.name && errors.name.message}</div>
                                 </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Email :</h6>
-                                            <input type="email" className="form-control" name="email" value={email} onChange= {(e) => setEmail(e.target.value)} id="email" placeholder="Enter Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="email" className="form-control" placeholder="Enter Email" {...register('email', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                    <div className="error-message-form">{errors.email && errors.email.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Phone :</h6>
-                                            <input type="text" className="form-control" name="phone" value={phone} onChange= {(e) => setPhone(e.target.value)} id="phone" placeholder="Enter Phone Number" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" placeholder="Enter Phone" {...register('phone', { required: 'Phone number is required', pattern: { value: /^(\+\d{1,4}\s?)?(\d{1,4}[-\s]?){1,15}$/, message: 'Please provide the valid phone number with country code' } })} />
+                                    <div className="error-message-form">{errors.phone && errors.phone.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Your Company Name/Your Company Website :</h6>
-                                            <input type="text" className="form-control" name="company" value={company} onChange= {(e) => setCompany(e.target.value)} id="company" placeholder=""  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" {...register('company', { required: 'Company Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text without special charaters'} })} />
+                                            <div className="error-message-form">{errors.company && errors.company.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Your Location :</h6>
-                                            <input type="text" className="form-control" name="location" value={location} onChange= {(e) => setLocation(e.target.value)} id="location" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" {...register('location', { required: 'Location is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text without special charaters'} })} />
+                                            <div className="error-message-form">{errors.location && errors.location.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> When is the Response for the RFQ Due ? </h6>
-                                            <input type="text" className="form-control" name="response" value={response} onChange= {(e) => setResponse(e.target.value)} id="response" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" {...register('response', { required: 'Response is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text without special charaters'} })} />
+                                            <div className="error-message-form">{errors.response && errors.response.message}</div>
                                         </div>
                                     </div>
                                     {/* <div className="col-lg-4">
@@ -145,18 +155,18 @@ const Quote = () => {
 
                                 <div className="form-group">
                                     <h6 className="head req"> Specific Dead-line or time-line for this project </h6>
-                                    <input type="text" className="form-control" name="deadline" value={deadline} onChange= {(e) => setDeadline(e.target.value)} id="deadline" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" {...register('deadline', { required: 'Response is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text without special charaters'} })} />
+                                    <div className="error-message-form">{errors.deadline && errors.deadline.message}</div>
                                 </div>
                                 <div className="form-group">
                                     <h6 className="head req"> Brief overview of your requirements alongwith overview of deliverables. </h6>
-                                    <input type="text" className="form-control" name="requirements" value={requirements} onChange= {(e) => setRequirements(e.target.value)} id="requirements" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" {...register('requirements', { required: 'Requirements is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text without special charaters'} })} />
+                                    <div className="error-message-form">{errors.requirements && errors.requirements.message}</div>
                                 </div>
                                 <div className="form-group">
                                     <h6 className="head req"> Details about the goal of this project its target audience extended project scope budget etc.</h6>
-                                    <input type="text" className="form-control" name="goal" value={goal} onChange= {(e) => setGoal(e.target.value)} id="goal" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" {...register('goal', { required: 'Goal is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text without special charaters'} })} />
+                                    <div className="error-message-form">{errors.goal && errors.goal.message}</div>
                                 </div>
                                 {/* <div className="form-group">
                                     <h6 className="head"> Message:</h6>
@@ -168,7 +178,7 @@ const Quote = () => {
                                     <div className="error-message"></div>
                                     <div className="sent-message">Your message has been sent. Thank you!</div>
                                 </div> */}
-                                <div className="text-center"><button onClick={addQuoteInfo} type="submit">Submit</button></div>
+                                <div className="text-center"><button onClick={handleSubmit(addQuoteInfo)} type="submit">Submit</button></div>
                             </form>
                         </div>
                         <div className="col-lg-1 contact-sec" data-aos="fade-up" data-aos-delay="200">

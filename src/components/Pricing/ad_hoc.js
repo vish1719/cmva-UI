@@ -5,28 +5,37 @@ import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import config from '../../config';
+import { useEffect } from 'react';
+import {useForm} from 'react-hook-form';
 const Ad_hoc = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState("")
-    const [hear_about_us, setHear_about_us] = useState("")
-    const [category, setCategory] = useState(null)
-    const [request, setRequest] = useState("")
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
+
+    const { handleSubmit, control, register, formState: { errors, isDirty, isValid, isSubmitting } } = useForm({
+    defaultValues: {
+        name: '',
+        email: '',
+        phone:'',
+        hear_about_us:'',
+        category:null,
+        request:''
+        },
+    });
 
     const history = useHistory()
 
-    const addHocInfo = async (event) => {
-        event.preventDefault()
+    const addHocInfo = async (data) => {
         let formField = new FormData()
-        formField.append('name', name)
-        formField.append('email', email)
-        formField.append('phone', phone)
+        formField.append('name', data.name)
+        formField.append('email', data.email)
+        formField.append('phone', data.phone)
         
-        formField.append('hear_about_us', hear_about_us)
-        formField.append('request', request)
+        formField.append('hear_about_us', data.hear_about_us)
+        formField.append('request', data.request)
 
-        if (category !== null) {
-            formField.append('category', category)
+        if (data.category !== null) {
+            formField.append('category', data.category)
         }
 
         await axios({
@@ -85,29 +94,29 @@ const Ad_hoc = () => {
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Full Name : </h6>
-                                            <input type="text" className="form-control" name="name" value={name}  onChange= {(e) => setName(e.target.value)}   data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" placeholder="Enter Full Name" {...register('name', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                            <div className="error-message-form">{errors.name && errors.name.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Email :</h6>
-                                            <input type="email" className="form-control" name="email" value={email} onChange= {(e) => setEmail(e.target.value)}   data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="email" className="form-control" placeholder="Enter Email" {...register('email', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                            <div className="error-message-form">{errors.email && errors.email.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> Phone :</h6>
-                                            <input type="text" className="form-control" name="phone" value={phone} onChange= {(e) => setPhone(e.target.value)}   data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" placeholder="Enter Phone" {...register('phone', { required: 'Phone number is required', pattern: { value: /^(\+\d{1,4}\s?)?(\d{1,4}[-\s]?){1,15}$/, message: 'Please provide the valid phone number with country code' } })} />
+                                            <div className="error-message-form">{errors.phone && errors.phone.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <h6 className="head req"> How did you hear about us : </h6>
-                                            <input type="text" className="form-control" name="hear_about_us" value={hear_about_us} onChange= {(e) => setHear_about_us(e.target.value)}   data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
-                                            <div className="validate"></div>
+                                            <input type="text" className="form-control" {...register('hear_about_us', { required: 'This is a required field', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid text'} })} />
+                                            <div className="error-message-form">{errors.hear_about_us && errors.hear_about_us.message}</div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
@@ -116,7 +125,7 @@ const Ad_hoc = () => {
                                     {/* <input type="text" className="form-control" name="subject" id="subject" placeholder="Select Category" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" /> */}
 
                                     
-                                    <select id="disabledSelect" className="form-select form-control" name="category" value={category} onChange= {(e) => setCategory(e.target.value)} placeholder="Select Category" required>
+                                    <select id="disabledSelect" className="form-select form-control" placeholder="Select Category" {...register('category', { required: 'Please select the category' })}>
                                         <option selected></option>
                                         <option>Personal VA service</option>
                                         <option>Executive Secreterial Task</option>
@@ -126,14 +135,14 @@ const Ad_hoc = () => {
                                         <option>Digital Services</option>
                                         <option>Digital Services</option>
                                     </select>
-
+                                    <div className="error-message-form">{errors.category && errors.category.message}</div>
                                 </div>
                                     </div>
                                     <div className="col-lg-6">
                                     <div className="form-group">
                                     <h6 className="head req"> Request :</h6>
-                                    <textarea className="form-control"  name="request" value={request} onChange= {(e) => setRequest(e.target.value)} rows="5"  data-msg="Please write something for us" placeholder="" required></textarea>
-                                    <div className="validate"></div>
+                                    <textarea  rows="5"  className="form-control"{...register('request',{ required: 'Request is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Message without special characters'} })} />
+                                    <div className="error-message-form">{errors.request && errors.request.message}</div>
                                 </div>
                                     </div>
                                     {/* <div className="col-lg-4">
@@ -170,7 +179,7 @@ const Ad_hoc = () => {
                                     <div className="error-message"></div>
                                     <div className="sent-message">Your message has been sent. Thank you!</div>
                                 </div>
-                                <div className="text-center"><button onClick={addHocInfo} type="submit">Submit</button></div>
+                                <div className="text-center"><button onClick={handleSubmit(addHocInfo)} type="submit">Submit</button></div>
                             </form>
                         </div>
                         <div className="col-lg-1 contact-sec" data-aos="fade-up" data-aos-delay="200">

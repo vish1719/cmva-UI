@@ -4,8 +4,12 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { useEffect } from 'react';
 function ContactSec() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     const [for_what, setFor_what] = useState("")
     const [company, setCompany] = useState("")
     const [first_name, setFirst_name] = useState("")

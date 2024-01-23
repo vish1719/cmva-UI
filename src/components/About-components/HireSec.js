@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { useEffect } from 'react'
 function HireSec() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     return (
         <>
             <div id="contact" className="contact new-contact hiresec">
@@ -24,7 +28,7 @@ function HireSec() {
                                 <div className="about">
                                 <h2 className="title"><strong><span>Hire a Virtual Assistant  </span></strong>for Your business</h2>
                                 </div>
-                                <Link to={"/signup"}>Get Started</Link>
+                                <Link to={"/pricing2"}>Get Started</Link>
                             </div>
                         </div>
 

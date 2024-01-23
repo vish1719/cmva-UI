@@ -25,7 +25,7 @@ import HomeSec2 from "./components/Home/HomeSec2";
 import HowWeWorkSec from "./components/Home/HowWeWorkSec";
 
 import ShowContacts from "./components/Contact/contact2";
-import Hyperlinks2 from "./components/Main-Components/Hyperlinks/Hyperlinks2"; 
+//import Hyperlinks2 from "./components/Main-Components/Hyperlinks/Hyperlinks2"; 
 import AboutSec1 from "./components/About-components/AboutSec1";
 import DiffSec from "./components/About-components/DiffSec";
 import HireSec from "./components/About-components/HireSec";
@@ -34,7 +34,7 @@ import TradeSec from "./components/About-components/TradeSec";
 import Faq from "./components/FAQ/Faq";
 
 import Pricing from "./components/Pricing/Pricing";
-import PriceSec1 from "./components/Pricing/PriceSec1";
+//import PriceSec1 from "./components/Pricing/PriceSec1";
 
 import How from "./components/How/how";
 import BookKeeping from "./components/Services/BookKeeping";
@@ -57,8 +57,8 @@ import Healthcare from "./components/Industry/Healthcare";
 import Sales from "./components/Industry/Sales";
 import Refund from "./components/Policy/Refund";
 
-import PricingComp from "./components/Pricing/PricingComp";
-import ContactBanner from "./components/Contact/ContactBanner";
+//import PricingComp from "./components/Pricing/PricingComp";
+//import ContactBanner from "./components/Contact/ContactBanner";
 
 import NavbarComp from "./components/Pricing/NavbarComp";
 import SubsBanner from "./components/Pricing/SubsBanner";
@@ -66,7 +66,7 @@ import How1 from "./components/How/how1";
 import NavbarHow from "./components/How/NavbarHow";
 import ProcessBanner from "./components/How/ProcessBanner";
 import HowBanner from "./components/How/HowBanner";
-import ContactForm from "./components/Home/ContactForm";
+//import ContactForm from "./components/Home/ContactForm";
 import Hyperlinks3 from "./components/Main-Components/Hyperlinks/Hyperlinks3";
 import Register from "./components/UserAuth/Register";
 import Login from "./components/UserAuth/Login";

@@ -9,7 +9,7 @@ import Box from '@material-ui/core/Box';
 import Work from './work';
 import Hyperlinks5 from '../Main-Components/Hyperlinks/Hyperlinks5';
 import Video from './video';
-
+import { useEffect } from 'react';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function How() {
+  useEffect(() => {
+    
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 

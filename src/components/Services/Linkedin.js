@@ -3,8 +3,12 @@ import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import LinkedinBanner from './LinkedinBanner'
 import LinkedinProcess from './LinkedinProcess'
 import { Link } from 'react-router-dom'
-
+import { useEffect } from 'react'
 function LinkedIn() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     return (
         <>
         <LinkedinBanner/>

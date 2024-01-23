@@ -1,8 +1,12 @@
 import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import PersonalBanner from './PersonalBanner'
-
+import { useEffect } from 'react'
 function Personal() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     return (
         <>
         <PersonalBanner/>

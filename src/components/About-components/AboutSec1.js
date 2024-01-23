@@ -1,6 +1,11 @@
 import React from 'react'
+import { useEffect } from 'react';
 
 function AboutSec1() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     return (
         <>
             <section id="faq" className="faq section-bg">

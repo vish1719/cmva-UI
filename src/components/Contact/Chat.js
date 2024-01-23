@@ -7,38 +7,42 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Link } from 'react-router-dom';
 // import SuccessAlert from '../Alerts/SuccessAlert';
 // import ErrorAlert from '../Alerts/ErrorAlert';
+import { useEffect } from 'react';
 import config from '../../config';
+import {useForm} from 'react-hook-form';
 const Chat= () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    
-    const [mode, setMode] = useState(null)
-    const [message, setMessage] = useState("")
-    // const [errors, setErrors] = usestate("")
+    useEffect(() => {        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
 
-    // const [message,setMessage] = useState("")
-
+    const { handleSubmit, control, register, formState: { errors, isDirty, isValid, isSubmitting } } = useForm({
+        defaultValues: {
+            name: '',
+            email: '',
+            mode:null,
+            message:'',
+            },
+        });
     const history = useHistory()
 
-    // state={
-    //         alert_message : ''
-    //     }
-
-
-    const addChatInfo = async (event) => {
-        event.preventDefault()
+    const addChatInfo = async (data) => {
         let formField = new FormData()
-        formField.append('name', name)
-        formField.append('email', email)
+        formField.append('name', data.name)
+        formField.append('email', data.email)
         
-        formField.append('message', message)
+        formField.append('message', data.message)
 
-        if (mode !== null) {
-            formField.append('mode', mode)
+        if (data.mode !== null) {
+            formField.append('mode', data.mode)
         }
 
 
-
+        
+        const formDataString = Array.from(formField.entries())
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&');
+  
+        console.log('FormData as String:', formDataString);
         await axios({
             method: 'post',
             url: `${config.apiUrl}/api/chat/`,
@@ -95,13 +99,13 @@ const Chat= () => {
                             <form role="form" className="php-email-form">
                                 <div className="form-group">
                                     <h6 className="head req"> Full Name :</h6>
-                                    <input type="text" className="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} id="subject" placeholder="Enter Full Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" placeholder="Enter Full Name" {...register('name', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                    <div className="error-message-form">{errors.name && errors.name.message}</div>
                                 </div>
                                 <div className="form-group">
                                     <h6 className="head req"> Email :</h6>
-                                    <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} id="subject" placeholder="Enter Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
-                                    <div className="validate"></div>
+                                    <input type="email" className="form-control" placeholder="Enter Email" {...register('email', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                    <div className="error-message-form">{errors.email && errors.email.message}</div>
                                 </div>
                                 
                                 <div className="form-group">
@@ -109,7 +113,7 @@ const Chat= () => {
                                     {/* <input type="text" className="form-control" name="subject" id="subject" placeholder="Select Category" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" /> */}
 
 
-                                    <select id="disabledSelect" className="form-select form-control" name="mode" value={mode} onChange={(e) => setMode(e.target.value)} placeholder="Select mode" required>
+                                    <select id="disabledSelect" className="form-select form-control" placeholder="Select mode" {...register('mode', { required: 'This field is required' })}>
                                         <option selected></option>
                                         <option>Skype</option>
                                         <option>Hangout</option>
@@ -120,15 +124,15 @@ const Chat= () => {
                                 </div>
                                 <div className="form-group">
                                     <h6 className="head3 req"> Message :</h6>
-                                    <textarea className="form-control" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" data-rule="minlen:4" data-msg="Please write something for us" placeholder="Message" required></textarea>
-                                    <div className="validate"></div>
+                                    <textarea  rows="5"  className="form-control"{...register('message',{ required: 'Message is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Message without special characters'} })} />
+                                    <div className="error-message-form">{errors.message && errors.message.message}</div>
                                 </div>
                                 <div className="mb-3">
                                     {/* <div className="loading">Loading</div> */}
                                     {/* <div className="error-message"></div> */}
                                     {/* <div className="sent-message">Your message has been sent. Thank you!</div> */}
                                 </div>
-                                <div className="text-center"><button onClick={addChatInfo} type="submit">Send Message</button></div>
+                                <div className="text-center"><button onClick={handleSubmit(addChatInfo)} type="submit">Send Message</button></div>
 
                                 <hr />
 

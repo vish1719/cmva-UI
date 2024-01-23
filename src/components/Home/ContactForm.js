@@ -5,8 +5,12 @@ import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
-
+import { useEffect } from 'react';
 function ContactForm() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     const [for_what, setFor_what] = useState(null)
     const [company, setCompany] = useState("")
     const [first_name, setFirst_name] = useState("")

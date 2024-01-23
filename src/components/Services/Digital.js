@@ -2,8 +2,12 @@ import React from 'react'
 // import FAQBanner from './FAQBanner'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import DigitalBanner from './DigitalBanner'
-
+import { useEffect } from 'react'
 function Digital() {
+	useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
 	return (
 		<>
 			<DigitalBanner/>

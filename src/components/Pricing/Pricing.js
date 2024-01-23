@@ -13,7 +13,7 @@ import { Avatar } from '@material-ui/core';
 import { Us } from 'react-flags-select';
 import 'flag-icon-css/css/flag-icon.min.css'
 import { Link } from 'react-router-dom';
-
+import { useEffect } from 'react';
 
 const theme= createMuiTheme({
   palette:{
@@ -79,6 +79,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SimpleTabs() {
+  useEffect(() => {
+    
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -296,13 +300,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    10hrs</li>
-                      <li>Hourly Rate	-   €7.5</li>
+                      <li>Hourly Rate	-   €8.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€75/mo</h4>
+                    <h4>€85/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Begin-10'} }}>Sign Up</Link>
                   </div>
                 </div>
@@ -317,13 +321,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    20hr</li>
-                      <li>Hourly Rate	-   €7</li>
+                      <li>Hourly Rate	-   €8</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€140/mo</h4>
+                    <h4>€160/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Experiment-20'} }}>Sign Up</Link>
                   </div>
                 </div>
@@ -338,13 +342,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    40hrs</li>
-                      <li>Hourly Rate	-   €6.5</li>
+                      <li>Hourly Rate	-   €7.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€260/mo</h4>
+                    <h4>€300/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Grow-40'} }}>Sign Up</Link>
                   </div>
                 </div>
@@ -360,13 +364,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    60hrs</li>
-                      <li>Hourly Rate	-   €6</li>
+                      <li>Hourly Rate	-   €7</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€360/mo</h4>
+                    <h4>€420/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Leapfrog-60'} }}>Sign Up</Link>
                   </div>
                 </div>
@@ -381,13 +385,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    80hrs</li>
-                      <li>Hourly Rate	-   €5.5</li>
+                      <li>Hourly Rate	-   €6.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€440/mo</h4>
+                    <h4>€520/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Dominate-80'} }}>Sign Up</Link>
                   </div>
                 </div>
@@ -402,13 +406,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    120hrs</li>
-                      <li>Hourly Rate	-   €5</li>
+                      <li>Hourly Rate	-   €6</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€600/mo</h4>
+                    <h4>€720/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Proficient-120'} }}>Sign Up</Link>
                   </div>
                 </div>
@@ -423,13 +427,13 @@ export default function SimpleTabs() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    160hrs</li>
-                      <li>Hourly Rate	-   €4.5</li>
+                      <li>Hourly Rate	-   €5.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€720/mo</h4>
+                    <h4>€880/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Genius-160+'} }}>Sign Up</Link>
                   </div>
                 </div>

@@ -296,13 +296,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    10hrs</li>
-                      <li>Hourly Rate	-   €7.5</li>
+                      <li>Hourly Rate	-   €8.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€75/mo</h4>
+                    <h4>€85/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Begin-10'} }}>Buy Now</Link>
                   </div>
                 </div>
@@ -317,13 +317,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    20hr</li>
-                      <li>Hourly Rate	-   €7</li>
+                      <li>Hourly Rate	-   €8</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€140/mo</h4>
+                    <h4>€160/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Experiment-20'} }}>Buy Now</Link>
                   </div>
                 </div>
@@ -338,13 +338,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    40hrs</li>
-                      <li>Hourly Rate	-   €6.5</li>
+                      <li>Hourly Rate	-   €7.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€260/mo</h4>
+                    <h4>€300/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Grow-40'} }}>Buy Now</Link>
                   </div>
                 </div>
@@ -360,13 +360,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    60hrs</li>
-                      <li>Hourly Rate	-   €6</li>
+                      <li>Hourly Rate	-   €7</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€360/mo</h4>
+                    <h4>€420/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Leapfrog-60'} }}>Buy Now</Link>
                   </div>
                 </div>
@@ -381,13 +381,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    80hrs</li>
-                      <li>Hourly Rate	-   €5.5</li>
+                      <li>Hourly Rate	-   €6.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€440/mo</h4>
+                    <h4>€520/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Dominate-80'} }}>Buy Now</Link>
                   </div>
                 </div>
@@ -402,13 +402,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    120hrs</li>
-                      <li>Hourly Rate	-   €5</li>
+                      <li>Hourly Rate	-   €6</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€600/mo</h4>
+                    <h4>€720/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Proficient-120'} }}>Buy Now</Link>
                   </div>
                 </div>
@@ -423,13 +423,13 @@ export default function Plans() {
                   <div className="pack_body">
                     <ul className="list">
                       <li>Hours Included -    160hrs</li>
-                      <li>Hourly Rate	-   €4.5</li>
+                      <li>Hourly Rate	-   €5.5</li>
                       <li>Additional Hour Rate -  Flat charges</li>
                       <li>Rollover -  All Unused hrs*</li>
                     </ul>
                   </div>
                   <div className="pack_footer">
-                    <h4>€720/mo</h4>
+                    <h4>€880/mo</h4>
                     <Link className="main_btn" to={{pathname: "/signup", state: {planname: 'Genius-160+'} }}>Buy Now</Link>
                   </div>
                 </div>

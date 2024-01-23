@@ -1,7 +1,12 @@
 import React from 'react'
 import FAQBanner from './FAQBanner'
+import { useEffect } from 'react'
 
 function Faq() {
+	useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
 	return (
 		<>
 		<FAQBanner/>

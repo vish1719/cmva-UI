@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { useEffect } from 'react'
 function HomeSec1() {
+    useEffect(() => {
+        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
     return (
         <>
             <section id="services" className="services">

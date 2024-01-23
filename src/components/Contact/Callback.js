@@ -5,35 +5,38 @@ import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import config from '../../config';
+import {useForm} from 'react-hook-form'
 // import SuccessAlert from '../Alerts/SuccessAlert';
 // import ErrorAlert from '../Alerts/ErrorAlert';
-
+import { useEffect } from 'react';
 const Callback= () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    
-    const [phone,setPhone] = useState("")
-    const [message, setMessage] = useState("")
-    // const [errors, setErrors] = usestate("")
+    useEffect(() => {        
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+      }, [])
 
-    
+    const { handleSubmit, control, register, formState: { errors, isDirty, isValid, isSubmitting } } = useForm({
+    defaultValues: {
+        name: '',
+        email: '',
+        phone:'',
+        message:'',
+        },
+    });    
 
     const history = useHistory()
 
-    // state={
-    //         alert_message : ''
-    //     }
-
-
-    const addCallbackInfo = async (event) => {
-        event.preventDefault()
+    const addCallbackInfo = async (data) => {
         let formField = new FormData()
-        formField.append('name', name)
-        formField.append('email', email)
-        formField.append('phone', phone)
-        formField.append('message', message)
+        formField.append('name', data.name)
+        formField.append('email', data.email)
+        formField.append('phone', data.phone)
+        formField.append('message', data.message)
 
-        
+        const formDataString = Array.from(formField.entries())
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&');
+  
+        console.log('FormData as String:', formDataString);
 
 
 
@@ -79,7 +82,7 @@ const Callback= () => {
                 <div className="container">
 
                     <div className="section-title">
-                        <h2>Request a Call back</h2>
+                        <h2>Send your requirements</h2>
                     </div>
 
                     <div className="row">
@@ -94,31 +97,31 @@ const Callback= () => {
                             <form  role="form" className="php-email-form">
                                 <div className="form-group">
                                     <h6 className="head req"> Full Name :</h6>
-                                    <input type="text" className="form-control" name="name" value={name} onChange={(e) => setName(e.target.value)} id="name" placeholder="Enter Full Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" placeholder="Enter Full Name" {...register('name', { required: 'Name is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Name'} })} />
+                                    <div className="error-message-form">{errors.name && errors.name.message}</div>
                                 </div>
                                 <div className="form-group">
                                     <h6 className="head req"> Email :</h6>
-                                    <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email" placeholder="Enter Email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
-                                    <div className="validate"></div>
+                                    <input type="email" className="form-control" placeholder="Enter Email" {...register('email', { required: 'Email is required', pattern: { value: /\S+@\S+\.\S+/, message: 'Please provide the valid email address' } })} />
+                                    <div className="error-message-form">{errors.email && errors.email.message}</div>
                                 </div>
                                 <div className="form-group">
                                     <h6 className="head req"> Phone :</h6>
-                                    <input type="text" className="form-control" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} id="phone" placeholder="Enter Phone" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
-                                    <div className="validate"></div>
+                                    <input type="text" className="form-control" placeholder="Enter Phone" {...register('phone', { required: 'Phone number is required', pattern: { value: /^(\+\d{1,4}\s?)?(\d{1,4}[-\s]?){1,15}$/, message: 'Please provide the valid phone number with country code' } })} />
+                                    <div className="error-message-form">{errors.phone && errors.phone.message}</div>
                                 </div>
                                 
                                 <div className="form-group">
                                     <h6 className="head3 req"> Message :</h6>
-                                    <textarea className="form-control" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" data-rule="minlen:4" data-msg="Please write something for us" placeholder="Message" required></textarea>
-                                    <div className="validate"></div>
+                                    <textarea  rows="5"  className="form-control"{...register('message',{ required: 'Message is required', pattern:{value:/^[a-zA-Z0-9\s\.,\-_()]+$/, message: 'Please provide the valid Message without special characters'} })} />
+                                    <div className="error-message-form">{errors.message && errors.message.message}</div>
                                 </div>
                                 <div className="mb-3">
                                     {/* <div className="loading">Loading</div> */}
                                     {/* <div className="error-message"></div> */}
                                     {/* <div className="sent-message">Your message has been sent. Thank you!</div> */}
                                 </div>
-                                <div className="text-center"><button onClick={addCallbackInfo} type="submit">Send Message</button></div>
+                                <div className="text-center"><button onClick={handleSubmit(addCallbackInfo)} type="submit">Send Message</button></div>
 
                                 <hr />
 
