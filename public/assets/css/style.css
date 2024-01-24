@@ -1771,7 +1771,7 @@ section {
   min-height: 350px;
   background:url(../images/Personal.jpg);
   z-index: 1 ;
-  background-position: end;
+  background-position: 69%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
