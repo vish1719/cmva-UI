@@ -7,8 +7,11 @@ import config from '../../config';
 import {toast} from 'react-toastify';
 import {useForm} from 'react-hook-form';
 import { useEffect } from 'react';
+//import ReactGA from 'react-ga4';
+
 const Refer = () => {
     useEffect(() => {
+       // ReactGA.send({ hitType: "refer", page: window.location.pathname + window.location.search, title: "Refer a friend" });
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
       }, [])
 
@@ -29,6 +32,11 @@ const Refer = () => {
     const history = useHistory()
 
     const addContactInfo =async(data) => {
+       /* ReactGA.event({
+            category: 'User',
+            action: 'Clicked Refer Button',
+            label: 'ReferPage',
+         });*/
         let formField = new FormData()
         formField.append('name', data.name)
         formField.append('email', data.email)

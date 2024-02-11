@@ -86,18 +86,18 @@ h6,
 } */
 
 .quote {
-  position: fixed;
+  position:fixed;
   /* display: none; */
   /* width: 200px; */
   /* height: 0px; */
   padding: 10px;
   border-radius: 3px;
   right: -62px;
-  top: 310px;
+  top: 50%;
   background: #58b958;
   color: #fff;
   font-weight: 600;
-  transition: display 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
   z-index: 99999;
   text-transform: uppercase;
   transform: rotate(270deg);
@@ -404,7 +404,8 @@ h6,
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 65px;
+  max-height: 5rem; /* Use relative units for responsiveness */
+  width: auto; /* Maintain aspect ratio */
 }
 
 /*--------------------------------------------------------------
@@ -412,7 +413,7 @@ h6,
 --------------------------------------------------------------*/
 #collasible-nav-dropdown {
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   transition: 0.3s;
 
   font-size: 14px;
@@ -451,7 +452,7 @@ h6,
   color: #fff;
   padding: 8px 5px;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -1503,7 +1504,7 @@ section {
   min-height: 300px;
   background:url(../images/About.jpg);
   z-index: 1;
-  background-position: center;
+  background-position: 69%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -1518,7 +1519,7 @@ section {
   min-height: 330px;
   background:url(../images/Pricing&Plan.jpg);
   z-index: 1;
-  background-position: end;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -1533,7 +1534,7 @@ section {
   min-height: 330px;
   background:url(../images/Subscription.jpg);
   z-index: 1;
-  background-position: end;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -1787,7 +1788,7 @@ section {
   min-height: 350px;
   background:url(../images/executive.jpg);
   z-index: 1 ;
-  background-position: center;
+  background-position: 69%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -1806,8 +1807,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
- 
+  background-size: cover; 
   width: 100%;
  
 }
@@ -1889,7 +1889,23 @@ section {
   z-index: 1;
   
 }
+.banner {
+  max-width: 100%;
+  height: auto;
+}
 
+.bannerImage {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .bannerImage {
+    width: 100%;
+    height: 200px;
+  }
+}
 /* .banner_area .banner_inner .overlayAbt {
   background: url(../images/About.jpg) no-repeat scroll center center;
   position: absolute;

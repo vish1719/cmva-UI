@@ -6,13 +6,12 @@ function TravelBanner() {
     
     return (
         <>
-
-            
-            <div className="banner_area">
-            <div className="banner_inner banner_inner_travel d-flex align-items-center">
-            	<div className=" bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-				
-            </div>
+        <div className="banner">
+            <img
+                src='../../assets/images/travel.jpg'
+                alt="Responsive Banner"
+                className="bannerImage"
+            />			
         </div>
             
 

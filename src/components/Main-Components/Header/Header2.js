@@ -2,20 +2,7 @@ import { Link } from '@material-ui/core';
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
-// import styled from 'styled-components';
-// import { useHistory } from 'react-router-dom';
 
-
-// const Navbar = styled.span `
-// color: #fff;
-// `;
-
-// (document).ready(function () {
-//     ("ul.navbar-nav > li").click(function (e) {
-//      ("ul.navbar-nav > li").removeClass("active");
-//      (this).addClass("active");
-//       });
-//   });
 function Header2() {
 
 
@@ -24,8 +11,8 @@ function Header2() {
 
             <Navbar id="header" sticky="top" collapseOnSelect expand="lg" variant="dark">
                 <div className="container-fluid">
-                    <Navbar.Brand href="/" className="logo float-left"><img src="/assets/img/logo1.png" alt="" /></Navbar.Brand>
-
+                    <Navbar.Brand href="/" className="logo float-left "><img src="/assets/img/logo1.png" alt=""/></Navbar.Brand>
+                    <br></br>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
                     <Navbar.Collapse id="responsive-navbar-nav" className="my-0">
@@ -42,7 +29,7 @@ function Header2() {
                             <LinkContainer to="/about">
                             <Nav.Link className="navbar-link text-white linkHere">About</Nav.Link>
                             </LinkContainer>
-                            <NavDropdown className="area active" style={{ Color: "#58b958", hover: "color:#fff" }} title={"Services"} id="collasible-nav-dropdown">
+                            <NavDropdown className="area active" style={{ Color: "#58b958", hover: "color:#fff", marginBottom:"10px" }} title={"Services"} id="collasible-nav-dropdown">
                                 <div className="unorderedList">
                                     {/* <NavDropdown className="area" style={{ Color: "#58b958", hover: "color:#fff" }} title={"Services"} id="collasible-nav-dropdown">
                                         <div className="unorderedList">
@@ -75,7 +62,8 @@ function Header2() {
                                     </LinkContainer>
                                 </div>
                             </NavDropdown>
-                            <NavDropdown className="area " style={{ Color: "#58b958", hover: "color:#fff" }} title={"Industry"} id="collasible-nav-dropdown">
+                            <div></div>
+                            <NavDropdown className="area " style={{ Color: "#58b958", hover: "color:#fff"}} title={"Industry"} id="collasible-nav-dropdown">
                                 <div className="unorderedList">
                                     
                                 <LinkContainer to="/education-and-training">
@@ -152,6 +140,12 @@ function Header2() {
                             </LinkContainer>
                             <LinkContainer to="/contact2">
                             <Nav.Link className="navbar-link text-white linkHere" href="">Contact Us</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/faq">
+                            <Nav.Link className="navbar-link text-white linkHere" href="">FAQ</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/refer">
+                            <Nav.Link className="navbar-link text-white linkHere" href="">Refer</Nav.Link>
                             </LinkContainer>
                             {/* <LinkContainer to="/customerServices"> */}
                             <Nav.Link className="navbar-link text-white search-box " href="#">

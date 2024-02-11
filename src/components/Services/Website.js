@@ -11,7 +11,7 @@ function Website() {
       }, [])
 	return (
 		<>
-			{/*<WebsiteBanner/>*/}
+			<WebsiteBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
 

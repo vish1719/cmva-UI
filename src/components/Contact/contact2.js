@@ -97,7 +97,7 @@ const ShowContacts = () => {
 
                     <div className="row">
 
-                        <div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+                        <div className="col-lg-6 d-flex align-items-stretch" >
                             <div className="info-box">
 
                                 <h3>GOT QUESTIONS?</h3>
@@ -105,7 +105,7 @@ const ShowContacts = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div className="col-lg-6 d-flex align-items-stretch">
                             <div className="info-box">
 
                                 <h3>WE'RE HERE TO HELP</h3>
@@ -113,7 +113,7 @@ const ShowContacts = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div className="col-lg-8" >
                             <form role="form" className="php-email-form">
                                 <div className="form-group">
                                     <h6 className="head req"> Full Name :</h6>

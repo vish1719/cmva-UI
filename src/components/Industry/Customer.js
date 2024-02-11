@@ -3,9 +3,10 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import CustomerBanner from './CustomerBanner'
 import { useEffect } from 'react'
+//import ReactGA from 'react-ga';
 function Customer() {
 	useEffect(() => {
-        
+       // ReactGA.pageview(window.location.pathname + window.location.search);
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
       }, [])
 	return (

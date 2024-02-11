@@ -2,6 +2,7 @@ import React from 'react'
 import BusinessTabs from './BusinessTabs'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import BusinessBanner from './BusinessBanner';
 function Business() {
     useEffect(() => {
         
@@ -9,6 +10,7 @@ function Business() {
       }, [])
     return (
         <>
+        <BusinessBanner></BusinessBanner>
             <section id="contact" className="contact new-contact">
                 <div className="container" style={{ paddingLeft: "0", paddingRight: "0" }}>
 

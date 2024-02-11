@@ -116,14 +116,7 @@ class App extends Component {
 
         <Router >
 
-
-          {
-            this.props.authenticated ? (<Header3 />) :
-              (<Topbar1 />)}
-          {
-            this.props.authenticated ? (<Top2 />) :
-              (<Header2 />)}
-
+        <Header2 />
 
 
 

@@ -9,7 +9,7 @@ function Event() {
       }, [])
     return (
         <>
-        <EventBanner/>
+            <EventBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">
                     <div className="section-title">
@@ -17,7 +17,7 @@ function Event() {
                     </div>
                     <div className="row  d-flex align-items-stretch">
 
-                        <div className="col-lg-12 faq-item" data-aos="fade-up">
+                        <div className="col-lg-12 faq-item" >
 
                             
                             <ul>
