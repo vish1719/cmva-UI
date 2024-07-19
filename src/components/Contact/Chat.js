@@ -33,7 +33,10 @@ const Chat= () => {
         formField.append('message', data.message)
         const widgetCode = '6ee9d37906c7b20e8fb4da063dffef463ec27de171190bbe7dd94fd96bd6dd60';
         const thriveRefId = localStorage.getItem(widgetCode + '_thrive_ref_id');
-        formField.append('thriveRefId', thriveRefId)
+        if(thriveRefId)
+            formField.append('thriveRefId', thriveRefId)
+        else
+            formField.append('thriveRefId', '')
         if (data.mode !== null) {
             formField.append('mode', data.mode)
         }
