@@ -65,7 +65,7 @@ function Footer() {
                             </div>
                             <div className="col-lg-4 col-md-6 footer-links footer-info">
                             <div className="copyright2">
-                            USA TOLL FREE NUMBER: <strong><span><a href="tel: 1 888-693-1297">1 888-693-1297</a></span></strong>
+                            USA TOLL FREE NUMBER: <strong><span><a href="tel: 1 866-610-8976">1 866-610-8976</a></span></strong>
                                 </div>
                                 <div className="credits">
                                    

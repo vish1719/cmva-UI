@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import PersonalBanner from './PersonalBanner'
 import { useEffect } from 'react'
@@ -9,6 +11,14 @@ function Personal() {
       }, [])
     return (
         <>
+        <Helmet>
+    <title>Personal Tasks Support | ConnectMyVA Virtual Assistants</title>
+    <meta
+      name="description"
+      content="Let ConnectMyVA handle your personal tasks! From booking hotels and dinner reservations to finding schools or planning events, our virtual assistants save you time and effort. Contact us today!"
+    />
+    <link rel="canonical" href="https://connectmyva.com/personal-tasks" />
+  </Helmet>
         <PersonalBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">

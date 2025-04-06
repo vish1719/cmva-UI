@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 // import FAQBanner from './FAQBanner'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import DigitalBanner from './DigitalBanner'
@@ -10,6 +12,15 @@ function Digital() {
       }, [])
 	return (
 		<>
+
+<Helmet>
+    <title>Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing</title>
+    <meta
+      name="description"
+      content="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online."
+    />
+    <link rel="canonical" href="https://connectmyva.com/digital" />
+  </Helmet>
 			<DigitalBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">

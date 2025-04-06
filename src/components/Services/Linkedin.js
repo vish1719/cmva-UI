@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import LinkedinBanner from './LinkedinBanner'
 import LinkedinProcess from './LinkedinProcess'
@@ -11,6 +13,18 @@ function LinkedIn() {
       }, [])
     return (
         <>
+         <Helmet>
+    <title>Assistance LinkedIn | ConnectMyVA Virtual LinkedIn Services</title>
+    <meta
+      name="description"
+      content="Grow your business with ConnectMyVA’s LinkedIn assistance! Our expert virtual assistants offer lead generation, profile enhancement, and content writing on LinkedIn. Boost your personal branding and reach target audience."
+    />
+    <meta
+      name="keywords"
+      content="assistance linkedin"
+    />
+    <link rel="canonical" href="https://connectmyva.com/linkedin" />
+  </Helmet>
         <LinkedinBanner/>
             <section id="faq" className="faq section-bg">
                 

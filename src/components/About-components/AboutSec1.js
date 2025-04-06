@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 import { useEffect } from 'react';
 
 function AboutSec1() {
@@ -8,6 +10,14 @@ function AboutSec1() {
       }, [])
     return (
         <>
+        <Helmet>
+  <title>About ConnectMyVA | Top Virtual Assistant Services</title>
+  <meta
+    name="description"
+    content="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
+  />
+  <link rel="canonical" href="https://connectmyva.com/about" />
+</Helmet>
             <section id="faq" className="faq section-bg">
                 <div className="container">
 

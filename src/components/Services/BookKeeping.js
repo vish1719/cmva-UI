@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import BookKeepBanner from './BookKeepBanner'
 import { useEffect } from 'react'
@@ -9,6 +11,18 @@ function BookKeeping() {
       }, [])
     return (
         <>
+        <Helmet>
+    <title>Small Business Bookkeeping & Accounting | ConnectMyVA Services</title>
+    <meta
+      name="description"
+      content="Simplify your finances with ConnectMyVA! We offer expert small business bookkeeping, bill payment assistance, and top-notch bookkeeping and accounting services. Save time & money with our team handling your daily entries, invoices, and payroll."
+    />
+    <meta
+      name="keywords"
+      content="Small Business Bookkeeping, Bill Payment Assistance, booking keeping services, book keeping and accounting services"
+    />
+    <link rel="canonical" href="https://connectmyva.com/bookkeeping" />
+  </Helmet>
         <BookKeepBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">

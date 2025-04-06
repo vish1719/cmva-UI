@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 import BusinessTabs from './BusinessTabs'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -10,6 +12,18 @@ function Business() {
       }, [])
     return (
         <>
+        <Helmet>
+    <title>Improve Business Efficiency with ConnectMyVA | Online Business Support</title>
+    <meta
+      name="description"
+      content="Boost your business with ConnectMyVA! We help improve business efficiency and provide expert online business support. Our dedicated assistants manage tasks, streamline processes, and save you time at an affordable cost."
+    />
+    <meta
+      name="keywords"
+      content="Improve Business Efficiency, Online Business Support"
+    />
+    <link rel="canonical" href="https://connectmyva.com/business" />
+  </Helmet>
         <BusinessBanner></BusinessBanner>
             <section id="contact" className="contact new-contact">
                 <div className="container" style={{ paddingLeft: "0", paddingRight: "0" }}>

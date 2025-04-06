@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import WebsiteBanner from './WebsiteBanner'
 // import FAQBanner from './FAQBanner'
@@ -11,6 +13,14 @@ function Website() {
       }, [])
 	return (
 		<>
+		<Helmet>
+    <title>Website Services | ConnectMyVA - WordPress, Joomla & More</title>
+    <meta
+      name="description"
+      content="Need a website? ConnectMyVA offers expert website services like WordPress design, Joomla development, eCommerce solutions, and more. From custom designs to SEO optimization, we build fast, affordable, and professional websites for your business."
+    />
+    <link rel="canonical" href="https://connectmyva.com/website" />
+  </Helmet>
 			<WebsiteBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">

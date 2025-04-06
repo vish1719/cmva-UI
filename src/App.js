@@ -98,6 +98,8 @@ import Update from "./components/Profile/Update";
 import Plans from "./components/Profile/Plans";
 import Dashboard from "./components/Profile/Dashboard";
 // import * as actions from "./components/UserAuth/store/actions/auth"
+import { Helmet } from "react-helmet";
+
 
 
 

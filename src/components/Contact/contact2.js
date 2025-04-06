@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Helmet } from "react-helmet";
 import ContactBanner from './ContactBanner'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -88,6 +89,14 @@ const ShowContacts = () => {
 
     return(
         <>
+        <Helmet>
+    <title>Contact ConnectMyVA | Call 1-866-610-8976 for Virtual Assistant Help</title>
+    <meta
+      name="description"
+      content="Ready to simplify your life? Contact ConnectMyVA at 1-866-610-8976! Hire a virtual assistant for your business or personal needs. Reach out today for fast, reliable support and grow with us!"
+    />
+    <link rel="canonical" href="https://connectmyva.com/contact2" />
+  </Helmet>
         {/* <div>
             <h1>Show all contacts</h1>
         </div> */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 function HomeSec1() {
@@ -8,6 +9,12 @@ function HomeSec1() {
       }, [])
     return (
         <>
+        <Helmet>
+        <title>Virtual Assistant for Business | ConnectMyVA Digital Support</title>
+        <meta name="description" content="Need help with your business? ConnectMyVA offers expert virtual assistant services for entrepreneurs and professionals. From e-commerce support to daily tasks, our skilled virtual digital assistants save you time & boost efficiency." />
+        <meta name="keywords" content="Virtual Assistant for Business, Virtual Digital Assistant" />
+        <link rel="canonical" href="https://connectmyva.com/" />
+      </Helmet>
             <section id="services" className="services">
                 <div className="container">
                     <div className="section-title">

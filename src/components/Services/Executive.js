@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
+
 // import FAQBanner from './FAQBanner'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import ExecutiveBanner from './ExecutiveBanner'
@@ -10,6 +12,18 @@ function Executive() {
       }, [])
 	return (
 		<>
+		<Helmet>
+    <title>Market Research for Business | ConnectMyVA Executive Assistants</title>
+    <meta
+      name="description"
+      content="Need market research for business? ConnectMyVA offers expert executive assistants to handle research, and daily management. From scheduling to travel arrangements, our team saves you time & boosts your growth."
+    />
+    <meta
+      name="keywords"
+      content="Market Research for Business"
+    />
+    <link rel="canonical" href="https://connectmyva.com/executive" />
+  </Helmet>
 		<ExecutiveBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
