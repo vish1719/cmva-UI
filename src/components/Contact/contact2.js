@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 import ContactBanner from './ContactBanner'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import PersonalBanner from './PersonalBanner'
