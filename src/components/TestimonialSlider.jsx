@@ -16,7 +16,6 @@ const videoTestimonials = [
     name: "Alec Grant",
     title: "Well Being Advisor And Mentor UK"
   },
-  
 ];
 
 const sliderSettings = {
@@ -30,7 +29,7 @@ const sliderSettings = {
   arrows: false
 };
 
-function HomeSec2() {
+function testimonialSlider() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, []);
@@ -52,6 +51,13 @@ function HomeSec2() {
                       width="100%"
                       height="100%"
                       controls
+                      config={{
+                        youtube: {
+                          playerVars: {
+                            cc_load_policy: 0 // 👈 disable subtitles
+                          }
+                        }
+                      }}
                     />
                   </div>
                   <h3 className="text-center text-lg font-semibold text-green-400 mt-4">{item.name}</h3>
@@ -62,22 +68,17 @@ function HomeSec2() {
           </div>
 
           {/* Text Section */}
-          <div className="col-lg-6 px-14">
+          <div className="col-lg-6 px-4">
             <div className="section-titles mb-4">
-            <h5 className="text-green-400 text-lg font-medium">What Our Clients Say About Us</h5>
-
-
-
-
-
+              <h5 className="text-green-400 text-lg font-medium">What Our Clients Say About Us</h5>
             </div>
             <div className="icon-box">
               <h4 className="text-3xl font-bold leading-tight mb-4">
-              The Impact of Our VAs — In Our Clients’ Words
+                The Impact of Our VAs — In Our Clients’ Words
                 <span className="text-white">QUICK AS A CLICK</span>
               </h4>
               <p className="description text-gray-300 mb-6">
-              At ConnectMyVA, we don’t just promise support — we deliver results that speak for themselves. From CEOs to wellness advisors, our clients trust us to provide reliable, highly-trained virtual assistants who take the pressure off their plates and help their businesses thrive. But don’t just take our word for it — hear it from them.
+                At ConnectMyVA, we don’t just promise support — we deliver results that speak for themselves. From CEOs to wellness advisors, our clients trust us to provide reliable, highly-trained virtual assistants who take the pressure off their plates and help their businesses thrive. But don’t just take our word for it — hear it from them.
               </p>
               {/* <Link to="/how" className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded transition duration-300">
                 Know More
@@ -91,4 +92,4 @@ function HomeSec2() {
   );
 }
 
-export default HomeSec2;
+export default testimonialSlider;
