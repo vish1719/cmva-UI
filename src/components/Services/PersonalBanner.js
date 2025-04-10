@@ -10,8 +10,9 @@ function PersonalBanner() {
             
 		<div className="banner">
             <img
-                src='../../assets/images/personal.jpg'
-                alt="Responsive Banner"
+                src='../../assets/images/Personal.jpg'
+                 alt="Personal Virtual Assistant for Task Support - ConnectMyVA"
+                    title="Delegate Personal Tasks to Virtual Assistants - ConnectMyVA"
                 className="bannerImage"
             />			
         </div>

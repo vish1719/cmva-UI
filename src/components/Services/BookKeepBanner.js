@@ -11,7 +11,8 @@ function BookKeepBanner() {
         <div className="banner">
             <img
                 src='../../assets/images/bookkeep.jpg'
-                alt="Responsive Banner"
+                alt="ConnectMyVA Bookkeeping and Accounting Services"
+                    title="Expert Bookkeeping Support for Small Businesses - ConnectMyVA"
                 className="bannerImage"
             />
         </div>

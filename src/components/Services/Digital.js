@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 // import FAQBanner from './FAQBanner'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import DigitalBanner from './DigitalBanner'
+import Seo from "../Seo";
+
 import { useEffect } from 'react'
 function Digital() {
 	useEffect(() => {
@@ -12,6 +14,12 @@ function Digital() {
       }, [])
 	return (
 		<>
+		<Seo
+  title="Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing"
+  description="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online."
+  path="/digital"
+  keywords="digital marketing services, SEO support, social media VA, email marketing virtual assistant, PPC management, ConnectMyVA marketing, content marketing support"
+/>
 
 <Helmet>
     <title>Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing</title>
@@ -19,7 +27,25 @@ function Digital() {
       name="description"
       content="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online."
     />
+	<meta
+                    name="keywords"
+                    content="digital marketing services, SEO support, social media VA, email marketing virtual assistant, PPC management, ConnectMyVA marketing, content marketing support"
+                />
     <link rel="canonical" href="https://connectmyva.com/digital" />
+	<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing" />
+<meta property="og:description" content="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online." />
+<meta property="og:url" content="https://connectmyva.com/digital" />
+<meta property="og:site_name" content="ConnectMyVA" />
+<meta property="og:image" content="https://connectmyva.com/assets/images/social.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing" />
+<meta name="twitter:description" content="Grow your business online with ConnectMyVA's SEO, SEM, and social media marketing services. Boost visibility and engage your audience today!" />
+<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
+<meta name="twitter:url" content="https://connectmyva.com/digital" />
+
+
   </Helmet>
 			<DigitalBanner/>
 			<section id="faq" className="faq section-bg">
@@ -29,7 +55,7 @@ function Digital() {
 						<div className="col-lg-12">
 							<div className="accordion" id="accordionExample">
 								<div className="section-title">
-									<h2>Digital Services</h2>
+									<h1>Digital Services</h1>
 								</div>
 								<p>
 									Every business requires some marketing tactics to get more limelight to their brands.

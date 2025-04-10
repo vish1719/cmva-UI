@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
+import Seo from "../Seo";
 
 import { useEffect } from 'react';
 
@@ -10,6 +11,11 @@ function AboutSec1() {
       }, [])
     return (
         <>
+        <Seo
+  title="About ConnectMyVA | Top Virtual Assistant Services"
+  description="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
+  path="/about"
+/>
         <Helmet>
   <title>About ConnectMyVA | Top Virtual Assistant Services</title>
   <meta
@@ -22,7 +28,7 @@ function AboutSec1() {
                 <div className="container">
 
                     <div className="section-title">
-                        <h2>About ConnectMyVA</h2>
+                        <h1>About ConnectMyVA</h1>
                     </div>
 
                     <div className="row  d-flex align-items-stretch">

@@ -15,7 +15,8 @@ function TeamSec() {
 
                         <div className="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
                             <div className="member">
-                                <div className="pic"><img src="assets/img/team/team-1.jpg" className="img-fluid" alt="" /></div>
+                                <div className="pic"><img src="assets/img/team/team-1.jpg" className="img-fluid"  alt="Walter White - CEO of ConnectMyVA" 
+  title="Chief Executive Officer - ConnectMyVA Team" /></div>
                                 <div className="member-info">
                                     <h4>Walter White</h4>
                                     <span>Chief Executive Officer</span>
@@ -31,7 +32,8 @@ function TeamSec() {
 
                         <div className="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div className="member">
-                                <div className="pic"><img src="assets/img/team/team-2.jpg" className="img-fluid" alt="" /></div>
+                                <div className="pic"><img src="assets/img/team/team-2.jpg" className="img-fluid" alt="Sarah Jhonson - Product Manager at ConnectMyVA" 
+  title="Product Management Leader - ConnectMyVA Team"  /></div>
                                 <div className="member-info">
                                     <h4>Sarah Jhonson</h4>
                                     <span>Product Manager</span>
@@ -47,7 +49,8 @@ function TeamSec() {
 
                         <div className="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                             <div className="member">
-                                <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt="" /></div>
+                                <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt="William Anderson - CTO of ConnectMyVA" 
+  title="Chief Technology Officer - ConnectMyVA Virtual Team" /></div>
                                 <div className="member-info">
                                     <h4>William Anderson</h4>
                                     <span>CTO</span>
@@ -63,7 +66,8 @@ function TeamSec() {
 
                         <div className="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                             <div className="member">
-                                <div className="pic"><img src="assets/img/team/team-4.jpg" className="img-fluid" alt="" /></div>
+                                <div className="pic"><img src="assets/img/team/team-4.jpg" className="img-fluid" alt="Amanda Jepson - Accountant at ConnectMyVA" 
+  title="Finance and Accounting Expert - ConnectMyVA"  /></div>
                                 <div className="member-info">
                                     <h4>Amanda Jepson</h4>
                                     <span>Accountant</span>

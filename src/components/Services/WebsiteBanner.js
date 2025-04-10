@@ -10,7 +10,8 @@ function WebsiteBanner() {
         <div className="banner">
             <img
                 src='../../assets/images/website.jpg'
-                alt="Responsive Banner"
+                alt="Website Development and Design Services - ConnectMyVA"
+                    title="WordPress, Joomla & eCommerce Website Solutions - ConnectMyVA"
                 className="bannerImage"
             />			
         </div>

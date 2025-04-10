@@ -9,8 +9,9 @@ function LinkedinBanner() {
 
         <div className="banner">
             <img
-                src='../../assets/images/linkedin.jpg'
-                alt="Responsive Banner"
+                src='../../assets/images/Linkedin.jpg'
+                 alt="LinkedIn Lead Generation and Profile Services - ConnectMyVA"
+                    title="Professional LinkedIn Virtual Assistant Services - ConnectMyVA"
                 className="bannerImage"
             />			
         </div>

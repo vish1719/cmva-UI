@@ -30,7 +30,7 @@ class Header3 extends Component {
 
             <Navbar id="header" sticky="top" collapseOnSelect expand="lg" variant="dark">
                 <div className="container-fluid">
-                    <Navbar.Brand href="/" className="logo float-left"><img src="/assets/img/logo1.png" alt="" /></Navbar.Brand>
+                    <Navbar.Brand href="/" className="logo float-left"><img src="/assets/img/logo1.png" alt="Company Logo" title="Company Logo" /></Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 

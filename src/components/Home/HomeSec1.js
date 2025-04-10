@@ -2,6 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import Seo from "../Seo";
+
 function HomeSec1() {
     useEffect(() => {
         
@@ -9,11 +11,31 @@ function HomeSec1() {
       }, [])
     return (
         <>
+        <Seo
+  title="Virtual Assistant for Business | ConnectMyVA Digital Support"
+  description="Need help with your business? ConnectMyVA offers expert virtual assistant services for entrepreneurs and professionals. From e-commerce support to daily tasks, our skilled virtual digital assistants save you time & boost efficiency."
+  path="/"
+  keywords="Virtual Assistant for Business, Virtual Digital Assistant"
+/>
+
         <Helmet>
         <title>Virtual Assistant for Business | ConnectMyVA Digital Support</title>
         <meta name="description" content="Need help with your business? ConnectMyVA offers expert virtual assistant services for entrepreneurs and professionals. From e-commerce support to daily tasks, our skilled virtual digital assistants save you time & boost efficiency." />
         <meta name="keywords" content="Virtual Assistant for Business, Virtual Digital Assistant" />
         <link rel="canonical" href="https://connectmyva.com/" />
+        <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Virtual Assistant for Business | ConnectMyVA Digital Support" />
+  <meta property="og:description" content="Need help with your business? ConnectMyVA offers expert virtual assistant services for entrepreneurs and professionals. From e-commerce support to daily tasks, our skilled virtual digital assistants save you time & boost efficiency." />
+  <meta property="og:url" content="https://connectmyva.com/" />
+  <meta property="og:site_name" content="ConnectMyVA" />
+  <meta property="og:image" content="https://connectmyva.com/assets/img/logo1.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Virtual Assistant for Business | ConnectMyVA Digital Support" />
+<meta name="twitter:description" content="Need help with your business? ConnectMyVA offers expert virtual assistant services for entrepreneurs and professionals. From e-commerce support to daily tasks, our skilled virtual digital assistants save you time & boost efficiency." />
+<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
+<meta name="twitter:url" content="https://connectmyva.com/" />
+
       </Helmet>
             <section id="services" className="services">
                 <div className="container">

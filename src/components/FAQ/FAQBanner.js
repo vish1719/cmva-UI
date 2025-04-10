@@ -8,7 +8,7 @@ function FAQBanner() {
         <>
 		<div className="banner">
             <img
-                src='../../assets/images/faq.jpg'
+                src='../../assets/images/FAQ.jpg'
                 alt="Responsive Banner"
                 className="bannerImage"
             />

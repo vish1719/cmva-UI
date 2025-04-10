@@ -1,5 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
+import Seo from "../Seo";
+
 
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import WebsiteBanner from './WebsiteBanner'
@@ -13,13 +15,38 @@ function Website() {
       }, [])
 	return (
 		<>
+		<Seo
+  title="Website Services | ConnectMyVA - WordPress, Joomla & More"
+  description="Need a website? ConnectMyVA offers expert website services like WordPress design, Joomla development, eCommerce solutions, and more. From custom designs to SEO optimization, we build fast, affordable, and professional websites for your business."
+  path="/website"
+  keywords="wordpress website design services, joomla website development, ecommerce website development services, custom website development services, responsive website design, seo optimized websites"
+/>
+
 		<Helmet>
     <title>Website Services | ConnectMyVA - WordPress, Joomla & More</title>
     <meta
       name="description"
       content="Need a website? ConnectMyVA offers expert website services like WordPress design, Joomla development, eCommerce solutions, and more. From custom designs to SEO optimization, we build fast, affordable, and professional websites for your business."
     />
+	 <meta 
+    name="keywords" 
+    content="wordpress website design services, joomla website development, ecommerce website development services, custom website development services, responsive website design, seo optimized websites"
+  />
     <link rel="canonical" href="https://connectmyva.com/website" />
+	<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Website Design & Development Services | ConnectMyVA" />
+<meta property="og:description" content="ConnectMyVA offers expert website design and development services for businesses. From landing pages to e-commerce, we build fast, responsive, and visually appealing websites tailored to your needs." />
+<meta property="og:url" content="https://connectmyva.com/website" />
+<meta property="og:site_name" content="ConnectMyVA" />
+<meta property="og:image" content="https://connectmyva.com/assets/images/website.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Website Virtual Assistant Services | ConnectMyVA" />
+<meta name="twitter:description" content="Maintain and manage your website with expert support. ConnectMyVA provides virtual assistants for updates, SEO, and content changes." />
+<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
+<meta name="twitter:url" content="https://connectmyva.com/website" />
+
+
   </Helmet>
 			<WebsiteBanner/>
 			<section id="faq" className="faq section-bg">
@@ -29,7 +56,7 @@ function Website() {
 						<div className="col-lg-12">
 							<div className="accordion mb-4" id="accordionExample">
 								<div className="section-title">
-									<h2>Website Services</h2>
+									<h1>Website Services</h1>
 								</div>
 								<ul>
 

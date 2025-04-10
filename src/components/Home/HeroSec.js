@@ -17,7 +17,8 @@ function HeroSec() {
                             <img
                                 // className="d-block"
                                 src="assets/images/slides/Home1.jpg"
-                                alt="First slide"
+                                alt="ConnectMyVA Personal Assistant Support Services"
+                                title="ConnectMyVA Personal Assistant Support Services"
                             />
                             <Carousel.Caption className="carousel-container">
                             
@@ -32,8 +33,9 @@ function HeroSec() {
                         </Carousel.Item>
                         <Carousel.Item  >
                             <img
-                                src="assets/images/slides/Home2.jpg"
-                                alt="First slide"
+                                 src="assets/images/slides/Home2.jpg"
+                                 alt="Virtual Assistant for Entrepreneurs and Professionals"
+                                 title="Virtual Assistant Services for Entrepreneurs and Professionals"
                             />
                             <Carousel.Caption className="carousel-container">
                             
@@ -47,7 +49,8 @@ function HeroSec() {
                         <Carousel.Item >
                             <img
                                  src="assets/images/slides/Home3.jpg"
-                                alt="First slide"
+                                 alt="Ecommerce and Amazon Support Services"
+                                 title="Ecommerce and Amazon Support Virtual Assistant"
                             />
                             <Carousel.Caption className="carousel-container">
                                 <div className="carousel-content container">

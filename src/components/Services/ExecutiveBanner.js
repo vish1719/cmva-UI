@@ -10,7 +10,8 @@ function ExecutiveBanner() {
             <div className="banner">
             <img
                 src='../../assets/images/executive.jpg'
-                alt="Responsive Banner"
+                 alt="Executive Assistant and Market Research Services - ConnectMyVA"
+                    title="Professional Executive Support for Businesses - ConnectMyVA"
                 className="bannerImage"
             />
         </div>

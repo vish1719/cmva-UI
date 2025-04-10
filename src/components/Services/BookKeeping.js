@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import BookKeepBanner from './BookKeepBanner'
+import Seo from "../Seo";
+
 import { useEffect } from 'react'
 function BookKeeping() {
     useEffect(() => {
@@ -11,6 +13,13 @@ function BookKeeping() {
       }, [])
     return (
         <>
+        <Seo
+  title="Small Business Bookkeeping & Accounting | ConnectMyVA Services"
+  description="Simplify your finances with ConnectMyVA! We offer expert small business bookkeeping, bill payment assistance, and top-notch bookkeeping and accounting services. Save time & money with our team handling your daily entries, invoices, and payroll."
+  path="/bookkeeping"
+  keywords="Small Business Bookkeeping, book keeping services, bookkeeping services, accounting and booking keeping services, book keeping and accounting services, Bill Payment Assistance, Business Accounting Solutions, booking keeping services, accounting services, Improve Business Efficiency, Online Business Support, Virtual Assistant for Business, Virtual Digital Assistant"
+/>
+
         <Helmet>
     <title>Small Business Bookkeeping & Accounting | ConnectMyVA Services</title>
     <meta
@@ -19,9 +28,22 @@ function BookKeeping() {
     />
     <meta
       name="keywords"
-      content="Small Business Bookkeeping, Bill Payment Assistance, booking keeping services, book keeping and accounting services"
-    />
+      content="Small Business Bookkeeping, book keeping services, bookkeeping services, accounting and booking keeping services, book keeping and accounting services, Bill Payment Assistance, Business Accounting Solutions, booking keeping services, accounting services, Improve Business Efficiency, Online Business Support, Virtual Assistant for Business, Virtual Digital Assistant"></meta>
     <link rel="canonical" href="https://connectmyva.com/bookkeeping" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Small Business Bookkeeping & Accounting | ConnectMyVA Services" />
+<meta property="og:description" content="Simplify your finances with ConnectMyVA! We offer expert small business bookkeeping, bill payment assistance, and top-notch bookkeeping and accounting services. Save time & money with our team handling your daily entries, invoices, and payroll." />
+<meta property="og:url" content="https://connectmyva.com/bookkeeping" />
+<meta property="og:site_name" content="ConnectMyVA" />
+<meta property="og:image" content="https://connectmyva.com/assets/images/bookkeep.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Small Business Bookkeeping & Accounting | ConnectMyVA Services" />
+<meta name="twitter:description" content="Simplify your finances with expert bookkeeping, bill payment assistance, and payroll management from ConnectMyVA's virtual assistants." />
+<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
+<meta name="twitter:url" content="https://connectmyva.com/bookkeeping" />
+
+
   </Helmet>
         <BookKeepBanner/>
             <section id="faq" className="faq section-bg">
@@ -44,7 +66,8 @@ function BookKeeping() {
 
 
                     <div className="section-title">
-                        <h2>Book Keeping Services</h2>
+                    {/* <h1>Small Business Bookkeeping & Accounting Services</h1> */}
+                    <h1>Book Keeping Services</h1>
                     </div>
 
                     <div className="row  d-flex align-items-stretch">

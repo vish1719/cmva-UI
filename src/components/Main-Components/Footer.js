@@ -41,7 +41,8 @@ function Footer() {
                             </div>
 
                             <div className="col-lg-3 col-md-6 footer-newsletter">
-                                <Link to={"/"}><img src="/assets/img/logo1.png" alt="" /></Link>
+                                <Link to={"/"}><img src="/assets/img/logo1.png"  alt="ConnectMyVA logo" 
+  title="ConnectMyVA - Virtual Assistant Services"  /></Link>
                                 {/* <h4>Our Newsletter</h4> */}
                                 <p>At ConnectMyVA, we hire Graduates and post graduates, detail-oriented people who strive to provide our clients with the best assistance on the planet.</p>
 

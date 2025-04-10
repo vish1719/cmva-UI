@@ -9,8 +9,9 @@ function DigitalBanner() {
 
         <div className="banner">
             <img
-                src='../../assets/images/social.jpg'
-                alt="Responsive Banner"
+                src='../../assets/images/Social.jpg'
+                alt="Digital Marketing and Social Media Services - ConnectMyVA"
+                    title="SEO, SEM & Social Media Solutions for Businesses - ConnectMyVA"
                 className="bannerImage"
             />			
         </div>

@@ -6,6 +6,9 @@ import Footer from "./components/Main-Components/Footer";
 import Header2 from "./components/Main-Components/Header/Header2";
 import HeroSec from "./components/Home/HeroSec";
 import PricingHomeSec from "./components/Home/PricingHomeSec";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import TestimonialSlider from "./components/TestimonialSlider";
 // import PortfolioSec from "./components/Home/PortfolioSec";
 // import ServicesSec from "./components/Home/ServicesSec";
 // import TeamSec from "./components/Home/TeamSec";
@@ -127,6 +130,7 @@ class App extends Component {
               return (
                 <>
                   <HeroSec />
+                  <TestimonialSlider />
                   <main id="main">
                     <HomeSec1 />
                     <HomeSec2 />

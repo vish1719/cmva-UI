@@ -1,15 +1,41 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async';
+import Seo from "../Seo";
 
 function AboutSec() {
     return (
         <>
+        <Seo
+  title="About ConnectMyVA | Top Virtual Assistant Services"
+  description="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
+  path="/about"
+  keywords="about ConnectMyVA, virtual assistant team, our mission ConnectMyVA, expert VA services, website support team, small business support"
+/>
+ <Helmet>
+                <title>About ConnectMyVA | Top Virtual Assistant Services</title>
+                <meta
+                    name="description"
+                    content="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
+                />
+                <meta
+                    name="keywords"
+                    content="about ConnectMyVA, virtual assistant team, our mission ConnectMyVA, expert VA services, website support team, small business support"
+                />
+            
+                
+                <link rel="canonical" href="https://connectmyva.com/about" />
+            </Helmet>
+
+
 
             <section id="about" className="about">
                 <div className="container">
 
                     <div className="row no-gutters">
                         <div className="col-lg-6 video-box">
-                            <img src="assets/img/about.jpg" className="img-fluid" alt="" />
+                            <img src="assets/img/about.jpg" className="img-fluid" alt="About ConnectMyVA Virtual Assistant Services"
+            title="Meet Our Team - ConnectMyVA Virtual Assistant Company"
+ />
                             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" className="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
                         </div>
 

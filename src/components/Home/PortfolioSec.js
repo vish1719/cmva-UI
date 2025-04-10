@@ -26,7 +26,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-1.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-1.jpg" className="img-fluid" alt="Portfolio App Design 1 - ConnectMyVA" 
+  title="Mobile App Portfolio Project - ConnectMyVA" />
                                 <div className="portfolio-info">
                                     <h4>App 1</h4>
                                     <p>App</p>
@@ -40,7 +41,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-2.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-2.jpg" className="img-fluid" alt="Website Development Project - Web 3" 
+  title="Web Design Portfolio Project - ConnectMyVA"  />
                                 <div className="portfolio-info">
                                     <h4>Web 3</h4>
                                     <p>Web</p>
@@ -54,7 +56,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-3.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-3.jpg" className="img-fluid" alt="App UI Design Portfolio - ConnectMyVA" 
+  title="Mobile Application Design by ConnectMyVA"  />
                                 <div className="portfolio-info">
                                     <h4>App 2</h4>
                                     <p>App</p>
@@ -68,7 +71,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-card">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-4.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-4.jpg" className="img-fluid" alt="Business Card Design Portfolio - ConnectMyVA" 
+  title="Print Design Sample - ConnectMyVA" />
                                 <div className="portfolio-info">
                                     <h4>Card 2</h4>
                                     <p>Card</p>
@@ -82,7 +86,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-5.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-5.jpg" className="img-fluid" alt="Responsive Website Development - Web 2 Portfolio" 
+  title="Web Design Project 2 - ConnectMyVA Portfolio"  />
                                 <div className="portfolio-info">
                                     <h4>Web 2</h4>
                                     <p>Web</p>
@@ -96,7 +101,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-6.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-6.jpg" className="img-fluid" alt="Mobile App UI Design - App 3 Portfolio Project" 
+  title="App Design Work by ConnectMyVA - Project 3"  />
                                 <div className="portfolio-info">
                                     <h4>App 3</h4>
                                     <p>App</p>
@@ -110,7 +116,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-card">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-7.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-7.jpg" className="img-fluid" alt="Business Card Design Sample - Card 1" 
+  title="Corporate Card Design Portfolio - ConnectMyVA" />
                                 <div className="portfolio-info">
                                     <h4>Card 1</h4>
                                     <p>Card</p>
@@ -124,7 +131,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-card">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-8.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-8.jpg" className="img-fluid" alt="Creative Card Design Portfolio - Card 3 by ConnectMyVA" 
+  title="Print Material Portfolio - ConnectMyVA Card Design" />
                                 <div className="portfolio-info">
                                     <h4>Card 3</h4>
                                     <p>Card</p>
@@ -138,7 +146,8 @@ function portfolio() {
 
                         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                             <div className="portfolio-wrap">
-                                <img src="assets/img/portfolio/portfolio-9.jpg" className="img-fluid" alt="" />
+                                <img src="assets/img/portfolio/portfolio-9.jpg" className="img-fluid" alt="Modern Website UI/UX Design - Web 3" 
+  title="Website Portfolio Project 3 - ConnectMyVA Web Design"  />
                                 <div className="portfolio-info">
                                     <h4>Web 3</h4>
                                     <p>Web</p>

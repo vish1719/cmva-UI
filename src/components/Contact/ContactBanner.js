@@ -12,8 +12,9 @@ function ContactBanner() {
 
         <div className="banner">
             <img
-                src='../../assets/images/contact.jpg'
-                alt="Responsive Banner"
+                src='../../assets/images/Contact.jpg'
+                alt="Contact ConnectMyVA Virtual Assistant Support"
+                title="Get in Touch with ConnectMyVA - Contact Page"
                 className="bannerImage"
             />
         </div>

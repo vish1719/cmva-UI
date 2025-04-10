@@ -7,8 +7,9 @@ function BusinessBanner() {
         <>
 	    <div className="banner">
             <img
-                src='../../assets/images/process.jpg'
-                alt="Responsive Banner"
+                src="/assets/images/Process.jpg"
+                 alt="Improve Business Efficiency with Virtual Assistants"
+                title="ConnectMyVA - Business Support with Expert Virtual Assistants"
                 className="bannerImage"
             />
         </div>

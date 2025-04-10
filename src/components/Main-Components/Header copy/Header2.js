@@ -17,7 +17,7 @@ function Header2() {
 
             <Navbar id="header" sticky="top" collapseOnSelect expand="lg" variant="dark">
                 <div className="container-fluid">
-                    <Navbar.Brand href="#home" className="logo float-left"><a href="index.html"><img src="/assets/img/logo1.png" alt="" /></a></Navbar.Brand>
+                    <Navbar.Brand href="#home" className="logo float-left"><a href="index.html"><img src="/assets/img/logo1.png" alt="Company Logo" title="Company Logo" /></a></Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 

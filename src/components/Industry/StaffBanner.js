@@ -3,22 +3,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function StaffBanner() {
-    
     return (
         <>
-
-            
-        <div className="banner">
-            <img
-                src='../../assets/images/staffing.jpg'
-                alt="Responsive Banner"
-                className="bannerImage"
-            />			
-        </div>
-            
-
+            <div className="banner">
+                <img
+                    src='../../assets/images/Staffing.jpg'
+                    alt="Virtual assistant staffing solutions"
+                    title="Remote Staffing Services by ConnectMyVA"
+                    className="bannerImage"
+                />			
+            </div>
         </>
-    )
+    );
 }
 
-export default StaffBanner
+export default StaffBanner;

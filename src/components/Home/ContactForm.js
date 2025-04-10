@@ -134,7 +134,8 @@ function ContactForm() {
                             </div>
                         </div>
                         <div className="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
-                            <img width="90%" height="auto" src="assets/images/Girl.png" className="img-flui " alt="" />
+                            <img width="90%" height="auto" src="assets/images/Girl.png" className="img-flui "  alt="Virtual Assistant Illustration - Contact ConnectMyVA" 
+  title="Contact Our Virtual Assistant Support Team - ConnectMyVA" />
                         </div>
 
                     </div>
