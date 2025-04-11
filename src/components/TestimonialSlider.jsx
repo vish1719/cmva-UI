@@ -49,7 +49,7 @@ function testimonialSlider() {
 
   return (
     <section id="about" className="about bg-gray-900 text-white">
-      <div className="container px-4 flex items-center min-h-[700px]">
+      <div className="container px-4 flex items-center min-h-[900px]">
         <div className="row items-center w-full">
           
           {/* Video Testimonial Slider */}
@@ -85,20 +85,25 @@ function testimonialSlider() {
 
           {/* Text Section */}
           <div className="col-lg-6 d-flex flex-column justify-content-center about-content">
+            <div className="section-titles">
+              <h5 className="text-green-400 text-lg font-semibold mb-2 p-3 text-left">
+                What Our Clients Say About Us
+              </h5>
+            </div>
 
-{/* <div className="section-title">
-    <h2>About Us</h2>
-    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-</div> */}
-<div className="section-titles">
-    <h5>What Our Clients Say About Us</h5>
-</div>
-<div className="icon-box" data-aos="fade-up" data-aos-delay="200">
-    {/* <div className="icon"><i className="bx bx-fingerprint"></i></div> */}
-    <h2 className="title">The Impact of Our VAs — In Our Clients <br /><span>WordsQUICK AS A CLICK</span></h2>
-    <p className="description">At ConnectMyVA, we don’t just promise support — we deliver results that speak for themselves. From CEOs to wellness advisors, our clients trust us to provide reliable, highly-trained virtual assistants who take the pressure off their plates and help their businesses thrive. But don’t just take our word for it — hear it from them.</p>
-</div>
-</div>
+            <div className="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <h2 className="title text-4xl font-bold text-white mb-4 leading-snug text-left">
+                The Impact of Our VAs — In Our Clients <br />
+                <span className="text-white font-extrabold">WordsQUICK AS A CLICK</span>
+              </h2>
+              <p className="description text-gray-300 text-base md:text-lg mb-6 text-left">
+                At ConnectMyVA, we don’t just promise support — we deliver results that speak for themselves.
+                From CEOs to wellness advisors, our clients trust us to provide reliable, highly-trained virtual
+                assistants who take the pressure off their plates and help their businesses thrive. But don’t
+                just take our word for it — hear it from them.
+              </p>
+            </div>
+          </div>
 
         </div>
       </div>
