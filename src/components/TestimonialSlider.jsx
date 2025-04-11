@@ -94,7 +94,7 @@ function testimonialSlider() {
             <div className="icon-box" data-aos="fade-up" data-aos-delay="200">
               <h2 className="title text-4xl font-bold text-white mb-4 leading-snug text-left">
                 The Impact of Our VAs — In Our Clients <br />
-                <span className="text-white font-extrabold">WordsQUICK AS A CLICK</span>
+                <span className="text-white font-extrabold">Words QUICK AS A CLICK</span>
               </h2>
               <p className="description text-gray-300 text-base md:text-lg mb-6 text-left">
                 At ConnectMyVA, we don’t just promise support — we deliver results that speak for themselves.
