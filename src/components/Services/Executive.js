@@ -16,7 +16,7 @@ function Executive() {
 		<Seo
   title="Market Research for Business | ConnectMyVA Executive Assistants"
   description="Need market research for business? ConnectMyVA offers expert executive assistants to handle research, and daily management. From scheduling to travel arrangements, our team saves you time & boosts your growth."
-  path="/executive"
+  path="https://connectmyva.com/executive-secretarial-task/"
   keywords="Market Research for Business"
 />
 
