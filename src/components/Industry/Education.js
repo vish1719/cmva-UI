@@ -3,6 +3,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import EducationBanner from './EducationBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Education() {
 	useEffect(() => {
         
@@ -10,6 +11,12 @@ function Education() {
       }, [])
 	return (
 		<>
+		<Seo
+  title="Virtual Assistant for Education & Training | ConnectMyVA"
+  description="ConnectMyVA offers dedicated virtual assistants for the education sector. We help with course updates, student enrollment, assessment evaluation, admin support, and more so educators can focus on teaching."
+  path="/industries/education"
+  keywords="virtual assistant for education, education admin support, online training assistant, course management VA, student support VA"
+  />
 			<EducationBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
@@ -18,7 +25,7 @@ function Education() {
 						<div className="col-lg-12">
 							<div className="accordion" id="accordionExample">
 								<div className="section-title">
-									<h2>Education &amp; Training</h2>
+									<h1>Education &amp; Training</h1>
 								</div>
 								<p>
 

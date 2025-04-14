@@ -1,6 +1,7 @@
 import React from 'react'
 import FAQBanner from './FAQBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 
 function Faq() {
 	useEffect(() => {
@@ -9,6 +10,17 @@ function Faq() {
       }, [])
 	return (
 		<>
+		<>
+  <Seo
+    title="FAQs | Common Questions | ConnectMyVA Virtual Assistants"
+    description="Get answers to frequently asked questions about ConnectMyVA services, pricing, communication methods, billing, and more,virtual assistant FAQ, ConnectMyVA questions, support, billing, assistant help."
+    path="/faq"
+    keywords="virtual assistant FAQ, ConnectMyVA questions, support, billing, assistant help"
+   />
+  <FAQBanner />
+  {/* ...rest of your code */}
+</>
+
 		<FAQBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
@@ -110,7 +122,7 @@ function Faq() {
 								</div>
 
 								<div className="section-title">
-									<h2>Pricing/ Billing/ Plan Change</h2>
+									<h1>Pricing/ Billing/ Plan Change</h1>
 								</div>
 								<div className="card">
 

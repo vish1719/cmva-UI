@@ -2,6 +2,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import StaffBanner from './StaffBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Staff() {
     useEffect(() => {
         
@@ -9,11 +10,18 @@ function Staff() {
       }, [])
     return (
         <>
+        <Seo
+  title="Virtual Assistant for Staffing & Recruitment | ConnectMyVA"
+  description="ConnectMyVA provides virtual assistants to support your staffing and recruitment process. From job postings and resume management to interview coordination, payroll, and HR support — we handle it all."
+  path="/industries/staffing"
+  keywords="staffing virtual assistant, recruitment assistant, HR VA, resume screening, payroll assistant, virtual HR support"
+  />
+
         <StaffBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Staffing and Recruitment</h2>
+                        <h1>Staffing and Recruitment</h1>
                     </div>
                     <div className="row  d-flex align-items-stretch">
 

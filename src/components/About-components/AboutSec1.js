@@ -16,19 +16,12 @@ function AboutSec1() {
   description="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
   path="/about"
 />
-        <Helmet>
-  <title>About ConnectMyVA | Top Virtual Assistant Services</title>
-  <meta
-    name="description"
-    content="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
-  />
-  <link rel="canonical" href="https://connectmyva.com/about" />
-</Helmet>
+        
             <section id="faq" className="faq section-bg">
                 <div className="container">
 
                     <div className="section-title">
-                        <h1>About ConnectMyVA</h1>
+                        <h2>About ConnectMyVA</h2>
                     </div>
 
                     <div className="row  d-flex align-items-stretch">

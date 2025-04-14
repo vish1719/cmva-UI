@@ -2,6 +2,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import EventBanner from './EventBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Event() {
     useEffect(() => {
         
@@ -9,11 +10,18 @@ function Event() {
       }, [])
     return (
         <>
+        <Seo
+  title="Virtual Assistant for Event Management | ConnectMyVA"
+  description="ConnectMyVA provides virtual assistants for entertainment and event management. We assist with event calendars, customer support, registrations, promotions, and invoice tracking to streamline your events."
+  path="/industries/event"
+  keywords="event management virtual assistant, entertainment assistant, event registration VA, virtual assistant for events, event planning support"
+  
+/>
             <EventBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Entertainment &amp; Event management</h2>
+                        <h1>Entertainment &amp; Event management</h1>
                     </div>
                     <div className="row  d-flex align-items-stretch">
 

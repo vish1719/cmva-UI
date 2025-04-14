@@ -20,32 +20,7 @@ function Executive() {
   keywords="Market Research for Business"
 />
 
-		<Helmet>
-    <title>Market Research for Business | ConnectMyVA Executive Assistants</title>
-    <meta
-      name="description"
-      content="Need market research for business? ConnectMyVA offers expert executive assistants to handle research, and daily management. From scheduling to travel arrangements, our team saves you time & boosts your growth."
-    />
-    <meta
-      name="keywords"
-      content="Market Research for Business"
-    />
-    <link rel="canonical" href="https://connectmyva.com/executive" />
-	<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Executive Secretarial Tasks | ConnectMyVA Virtual Assistant Services" />
-<meta property="og:description" content="Outsource executive secretarial tasks to ConnectMyVA. Our virtual assistants handle scheduling, document management, email communication, and more with professionalism and precision." />
-<meta property="og:url" content="https://connectmyva.com/executive" />
-<meta property="og:site_name" content="ConnectMyVA" />
-<meta property="og:image" content="https://connectmyva.com/assets/images/executive.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Executive Virtual Assistant Services | ConnectMyVA" />
-<meta name="twitter:description" content="Boost productivity with executive VA support from ConnectMyVA. Schedule management, email handling, and everything your executive needs." />
-<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
-<meta name="twitter:url" content="https://connectmyva.com/executive" />
-
-
-  </Helmet>
+		
 		<ExecutiveBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">

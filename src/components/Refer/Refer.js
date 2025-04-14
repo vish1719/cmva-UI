@@ -7,6 +7,7 @@ import config from '../../config';
 import {toast} from 'react-toastify';
 import {useForm} from 'react-hook-form';
 import { useEffect } from 'react';
+import Seo from "../Seo";
 //import ReactGA from 'react-ga4';
 
 const Refer = () => {
@@ -83,6 +84,13 @@ const Refer = () => {
 
     return (
         <>
+        <Seo
+  title="Refer a Friend | Get 10% Off | ConnectMyVA"
+  description="Refer a friend to ConnectMyVA and get 10% off on their monthly billing. Fill the form and enjoy exclusive savings for both you and your friend."
+  path="/refer"
+  keywords="refer a friend, ConnectMyVA referral, virtual assistant referral, 10% off, referral program"
+ />
+
             {/* <div>
             <h1>Show all contacts</h1>
         </div> */}
@@ -91,7 +99,7 @@ const Refer = () => {
                 <div className="container">
 
                     <div className="section-title">
-                        <h2>Fill &amp; Refer</h2>
+                        <h1>Fill &amp; Refer</h1>
                     </div>
 
                     <div className="row">

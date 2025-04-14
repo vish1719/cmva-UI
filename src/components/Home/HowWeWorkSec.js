@@ -13,7 +13,7 @@ function HowWeWorkSec() {
                     </div>
 
                     <div className="section-title">
-                        <h1>How <span>Special Tactics Team </span><br />of ConnectMyVA operates</h1>
+                        <h2>How <span>Special Tactics Team </span><br />of ConnectMyVA operates</h2>
                         <p className="my-6">Starting with getting in touch with a Virtual Assistant for the first time to gaining trust and get the hang 
                             of assigning tasks are the main concerns for all new clients. Our Personalized Strategical team is at your 
                             command to make you get started and lead the way for your enlarging needs.</p>

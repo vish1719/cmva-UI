@@ -27,7 +27,7 @@ moments.</p>
                             <div className="row">
                                 <div className="col-lg-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                                     <div className="info-box1 fourth">
-                                        <h3>Pricing &amp; plans</h3>
+                                        <h2>Pricing &amp; plans</h2>
                                         <p>Paying high salary to your in-house employee!!! <br/>
                                         <br/>
 
@@ -39,7 +39,7 @@ Select our A monthly plan to get all the benefits from your personal assistant.<
 
                                 <div className="col-lg-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                                     <div className="info-box1 fifth">
-                                        <h3>Do you have any questions?</h3>
+                                        <h2>Do you have any questions?</h2>
                                         <p>Want to know more about our services and plans. Contact us and feel free to get clarifications? Give us a call or email before Signup
 
 </p>

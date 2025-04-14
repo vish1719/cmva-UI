@@ -2,6 +2,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import TravelBanner from './TravelBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Travel() {
     useEffect(() => {
         
@@ -9,6 +10,13 @@ function Travel() {
       }, [])
     return (
         <>
+        <Seo
+  title="Virtual Assistant for Travel & Hospitality | ConnectMyVA"
+  description="ConnectMyVA provides virtual assistant services for travel planning, bookings, itinerary management, vendor coordination, and hospitality support. Focus on the trip — we handle the rest."
+  path="/industries/travel"
+  keywords="travel virtual assistant, itinerary assistant, hospitality VA, travel planning VA, travel bookings, virtual concierge"
+  />
+
         <TravelBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">

@@ -3,6 +3,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import HealthcareBanner from './HealthcareBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Healthcare() {
 	useEffect(() => {
         
@@ -10,6 +11,14 @@ function Healthcare() {
       }, [])
 	return (
 		<>
+		<Seo
+  title="Virtual Assistant for Healthcare & Fitness | ConnectMyVA"
+  description="ConnectMyVA provides expert virtual assistants for healthcare professionals and fitness trainers. From appointment scheduling to billing, EHR, and client management — we help streamline your practice."
+  path="/industries/healthcare"
+  keywords="virtual assistant for healthcare, fitness assistant, EHR support, fitness client billing, medical transcription VA"
+  
+/>
+
 			<HealthcareBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
@@ -18,7 +27,7 @@ function Healthcare() {
 						<div className="col-lg-12">
 							<div className="accordion" id="accordionExample">
 								<div className="section-title">
-									<h2>Healthcare &amp; Fitness</h2>
+									<h1>Healthcare &amp; Fitness</h1>
 								</div>
 								<p>
 

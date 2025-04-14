@@ -3,6 +3,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import SalesBanner from './SalesBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Sales() {
 	useEffect(() => {
         
@@ -10,6 +11,14 @@ function Sales() {
       }, [])
 	return (
 		<>
+		<Seo
+  title="Virtual Assistant for Sales & Marketing | ConnectMyVA"
+  description="ConnectMyVA helps businesses grow with expert virtual assistants for sales and marketing. We assist in lead generation, campaign management, CRM, market research, and sales reporting."
+  path="/industries/sales"
+  keywords="sales virtual assistant, marketing VA, lead generation assistant, campaign management support, sales reporting virtual assistant"
+  
+/>
+
 			<SalesBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
@@ -18,7 +27,7 @@ function Sales() {
 						<div className="col-lg-12">
 							<div className="accordion" id="accordionExample">
 								<div className="section-title">
-									<h2>Sales &amp; Marketing</h2>
+									<h1>Sales &amp; Marketing</h1>
 								</div>
 								<p>
 

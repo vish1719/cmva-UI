@@ -98,32 +98,7 @@ const ShowContacts = () => {
   keywords="contact ConnectMyVA, get in touch ConnectMyVA, virtual assistant help, contact for website development, digital marketing contact"
 />
 
-        <Helmet>
-    <title>Contact ConnectMyVA | Call 1-866-610-8976 for Virtual Assistant Help</title>
-    <meta
-      name="description"
-      content="Ready to simplify your life? Contact ConnectMyVA at 1-866-610-8976! Hire a virtual assistant for your business or personal needs. Reach out today for fast, reliable support and grow with us!"
-    />
-    <meta
-        name="keywords"
-         content="contact ConnectMyVA, get in touch ConnectMyVA, virtual assistant help, contact for website development, digital marketing contact"
-     />
-    <link rel="canonical" href="https://connectmyva.com/contact2" />
-    <meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Contact ConnectMyVA | Call 1-866-610-8976 for Virtual Assistant Help" />
-<meta property="og:description" content="Ready to simplify your life? Contact ConnectMyVA at 1-866-610-8976! Hire a virtual assistant for your business or personal needs. Reach out today for fast, reliable support and grow with us!" />
-<meta property="og:url" content="https://connectmyva.com/contact" />
-<meta property="og:site_name" content="ConnectMyVA" />
-<meta property="og:image" content="https://connectmyva.com/assets/images/contact.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Contact ConnectMyVA | Call 1-866-610-8976 for Virtual Assistant Help" />
-<meta name="twitter:description" content="Ready to simplify your life? Hire a virtual assistant for business or personal needs. Contact ConnectMyVA for fast, reliable support!" />
-<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
-<meta name="twitter:url" content="https://connectmyva.com/contact2" />
-
-
-  </Helmet>
+        
         {/* <div>
             <h1>Show all contacts</h1>
         </div> */}
@@ -142,7 +117,7 @@ const ShowContacts = () => {
                         <div className="col-lg-6 d-flex align-items-stretch" >
                             <div className="info-box">
 
-                                <h3>GOT QUESTIONS?</h3>
+                                <h2>GOT QUESTIONS?</h2>
                                 <Link to={"/chat"}>SCHEDULE A CHAT</Link>
                             </div>
                         </div>

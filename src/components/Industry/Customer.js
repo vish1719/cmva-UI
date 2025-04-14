@@ -3,6 +3,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import CustomerBanner from './CustomerBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 //import ReactGA from 'react-ga';
 function Customer() {
 	useEffect(() => {
@@ -11,6 +12,13 @@ function Customer() {
       }, [])
 	return (
 		<>
+		<Seo
+  title="Virtual Assistant for Customer Services | ConnectMyVA"
+  description="ConnectMyVA provides experienced virtual assistants for CRM management, customer support, lead generation, email handling, and phone supervision to boost client satisfaction and retention."
+  path="/industries/customer-service"
+  keywords="customer service virtual assistant, CRM management VA, lead generation VA, email support, call handling VA"
+  />
+
 			<CustomerBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">
@@ -19,7 +27,7 @@ function Customer() {
 						<div className="col-lg-12">
 							<div className="accordion" id="accordionExample">
 								<div className="section-title">
-									<h2>Customer Services</h2>
+									<h1>Customer Services</h1>
 								</div>
 								<p>
 

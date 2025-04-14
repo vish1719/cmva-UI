@@ -10,11 +10,20 @@ import Work from './work';
 import Hyperlinks4 from '../Main-Components/Hyperlinks/Hyperlinks4';
 import Video from './video';
 import { useEffect } from 'react';
+import Seo from "../Seo";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
+   <>
+    <Seo
+    title="How It Works | Our Process | ConnectMyVA Virtual Assistants"
+    description="Learn how ConnectMyVA works. From global time zone support to expert task handling, discover the simple and effective process of working with our virtual assistants."
+    path="/how-it-works"
+    keywords="how virtual assistants work, virtual assistant process, ConnectMyVA work flow, our process, virtual support system"
+    image="https://connectmyva.com/assets/images/how-it-works-banner.jpg"
+  />
     <div
       role="tabpanel"
       hidden={value !== index}
@@ -28,6 +37,7 @@ function TabPanel(props) {
         </Box>
       )}
     </div>
+    </>
   );
 }
 

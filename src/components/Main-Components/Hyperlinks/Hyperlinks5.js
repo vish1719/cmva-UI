@@ -17,7 +17,7 @@ function Hyperlinks5() {
 
                             <div className="col-lg-12 d-flex align-items-stretch" data-aos="fade-up" >
                                     <div className="info-box1 first">
-                                        <h3>Services we offer</h3>
+                                        <h2>Services we offer</h2>
                                         <p>What does Our Virtual assistant help you with?
                                             Check out this list of the best virtual assistant services for your budget and business needs</p>
                                         <p>

@@ -11,20 +11,7 @@ function AboutSec() {
   path="/about"
   keywords="about ConnectMyVA, virtual assistant team, our mission ConnectMyVA, expert VA services, website support team, small business support"
 />
- <Helmet>
-                <title>About ConnectMyVA | Top Virtual Assistant Services</title>
-                <meta
-                    name="description"
-                    content="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
-                />
-                <meta
-                    name="keywords"
-                    content="about ConnectMyVA, virtual assistant team, our mission ConnectMyVA, expert VA services, website support team, small business support"
-                />
-            
-                
-                <link rel="canonical" href="https://connectmyva.com/about" />
-            </Helmet>
+ 
 
 
 

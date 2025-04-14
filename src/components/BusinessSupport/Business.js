@@ -20,32 +20,7 @@ function Business() {
                 keywords="Improve Business Efficiency, Online Business Support"
             />
 
-            <Helmet>
-                <title>Improve Business Efficiency with ConnectMyVA | Online Business Support</title>
-                <meta
-                    name="description"
-                    content="Boost your business with ConnectMyVA! We help improve business efficiency and provide expert online business support. Our dedicated assistants manage tasks, streamline processes, and save you time at an affordable cost."
-                />
-                <meta
-                    name="keywords"
-                    content="Improve Business Efficiency, Online Business Support"
-                />
-                <link rel="canonical" href="https://connectmyva.com/business" />
-                <meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Improve Business Efficiency with ConnectMyVA | Online Business Support" />
-<meta property="og:description" content="Boost your business with ConnectMyVA! We help improve business efficiency and provide expert online business support. Our dedicated assistants manage tasks, streamline processes, and save you time at an affordable cost." />
-<meta property="og:url" content="https://connectmyva.com/business" />
-<meta property="og:site_name" content="ConnectMyVA" />
-<meta property="og:image" content="https://connectmyva.com/assets/images/business.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Improve Business Efficiency with ConnectMyVA | Online Business Support" />
-<meta name="twitter:description" content="Streamline business operations with ConnectMyVA’s online support. Virtual assistants help manage tasks, projects, and customer service efficiently." />
-<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
-<meta name="twitter:url" content="https://connectmyva.com/business" />
-
-
-            </Helmet>
+            
 
             <BusinessBanner />
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import EcommerceBanner from './EcommerceBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function Ecommerce() {
     useEffect(() => {
         
@@ -9,11 +10,19 @@ function Ecommerce() {
       }, [])
     return (
         <>
+        <Seo
+  title="Virtual Assistant for Ecommerce & Retail | ConnectMyVA"
+  description="ConnectMyVA offers expert virtual assistant services for ecommerce and retail businesses. From order processing to inventory management and storefront handling, we help scale your online business with ease."
+  path="/industries/ecommerce"
+  keywords="ecommerce virtual assistant, retail assistant, Amazon FBA support, order processing VA, ecommerce inventory management, online store management"
+  
+/>
+
         <EcommerceBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Retail &amp; Ecommerce</h2>
+                        <h1>Retail &amp; Ecommerce</h1>
                     </div>
                     <div className="row  d-flex align-items-stretch">
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2'
 import RealEstateBanner from './RealEstateBanner'
 import { useEffect } from 'react'
+import Seo from "../Seo";
 function RealEstate() {
     useEffect(() => {
         
@@ -9,6 +10,13 @@ function RealEstate() {
       }, [])
     return (
         <>
+        <Seo
+  title="Virtual Assistant for Real Estate | ConnectMyVA"
+  description="ConnectMyVA offers professional virtual assistant services for real estate businesses. We help with listings, lead management, scheduling, invoicing, and property coordination to boost productivity."
+  path="/industries/real-estate"
+  keywords="real estate virtual assistant, real estate support, VA for realtors, property management assistant, CRM virtual assistant"
+  />
+
         <RealEstateBanner/>
             <section id="faq" className="faq section-bg">
                 <div className="container">
@@ -16,7 +24,7 @@ function RealEstate() {
 
                         <div className="col-lg-12 faq-item" data-aos="fade-up">
                         <div className="section-title">
-									<h2>Real Estate</h2>
+									<h1>Real Estate</h1>
 								</div>
                             <p>
                             <strong style={{ color: "#58b958" }}>ConnectMyVA</strong> virtual assistants can assist you in organizing your busy schedule and save your time. So that you prioritize your business proceedings and take it to the next level. Our VAs can

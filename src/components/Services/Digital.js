@@ -21,32 +21,7 @@ function Digital() {
   keywords="digital marketing services, SEO support, social media VA, email marketing virtual assistant, PPC management, ConnectMyVA marketing, content marketing support"
 />
 
-<Helmet>
-    <title>Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing</title>
-    <meta
-      name="description"
-      content="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online."
-    />
-	<meta
-                    name="keywords"
-                    content="digital marketing services, SEO support, social media VA, email marketing virtual assistant, PPC management, ConnectMyVA marketing, content marketing support"
-                />
-    <link rel="canonical" href="https://connectmyva.com/digital" />
-	<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing" />
-<meta property="og:description" content="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online." />
-<meta property="og:url" content="https://connectmyva.com/digital" />
-<meta property="og:site_name" content="ConnectMyVA" />
-<meta property="og:image" content="https://connectmyva.com/assets/images/social.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing" />
-<meta name="twitter:description" content="Grow your business online with ConnectMyVA's SEO, SEM, and social media marketing services. Boost visibility and engage your audience today!" />
-<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
-<meta name="twitter:url" content="https://connectmyva.com/digital" />
 
-
-  </Helmet>
 			<DigitalBanner/>
 			<section id="faq" className="faq section-bg">
 				<div className="container">

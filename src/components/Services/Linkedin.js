@@ -22,32 +22,7 @@ function LinkedIn() {
   keywords="assistance linkedin"
 />
 
-         <Helmet>
-    <title>Assistance LinkedIn | ConnectMyVA Virtual LinkedIn Services</title>
-    <meta
-      name="description"
-      content="Grow your business with ConnectMyVA’s LinkedIn assistance! Our expert virtual assistants offer lead generation, profile enhancement, and content writing on LinkedIn. Boost your personal branding and reach target audience."
-    />
-    <meta
-      name="keywords"
-      content="assistance linkedin"
-    />
-    <link rel="canonical" href="https://connectmyva.com/linkedin" />
-    <meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="LinkedIn Virtual Assistant Services | ConnectMyVA Experts" />
-<meta property="og:description" content="Get noticed on LinkedIn with ConnectMyVA! Our virtual assistants optimize profiles, generate leads, and handle outreach so you can build professional connections effortlessly." />
-<meta property="og:url" content="https://connectmyva.com/linkedin" />
-<meta property="og:site_name" content="ConnectMyVA" />
-<meta property="og:image" content="https://connectmyva.com/assets/images/linkedin.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="LinkedIn Virtual Assistant Services | ConnectMyVA" />
-<meta name="twitter:description" content="Enhance your LinkedIn presence with ConnectMyVA. Our assistants help you grow connections, manage messages, and build professional visibility." />
-<meta name="twitter:image" content="https://connectmyva.com/assets/img/logo1.png" />
-<meta name="twitter:url" content="https://connectmyva.com/linkedin" />
-
-
-  </Helmet>
+        
         <LinkedinBanner/>
             <section id="faq" className="faq section-bg">
                 
