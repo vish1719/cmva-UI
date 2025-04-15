@@ -21,6 +21,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   Link
 } from "react-router-dom";
 import HomeSec1 from "./components/Home/HomeSec1";
@@ -107,6 +108,8 @@ import { Helmet } from "react-helmet";
 
 
 
+
+
 class App extends Component {
   componentDidMount() {
     this.props.onLoad()
@@ -118,6 +121,7 @@ class App extends Component {
 
     return (
       <>
+       
 
         <Router >
 
@@ -291,7 +295,7 @@ class App extends Component {
               </>
 
             </Route>
-            <Route exact path="/bookkeeping">
+            <Route exact path="/bookkeeping-services">
               <BookKeeping />
               <>
                 <div className="quote-grp">
@@ -304,8 +308,11 @@ class App extends Component {
                 </div>
               </>
             </Route>
+            <Redirect from="/bookkeeping" to="/bookkeeping-services" />
 
-            <Route exact path="/linkedin">
+
+            <Route exact path="/linkedin-assistance">
+
               <LinkedIn />
               <>
                 <div className="quote-grp">
@@ -318,6 +325,8 @@ class App extends Component {
                 </div>
               </>
             </Route>
+            <Redirect from="/linkedin" to="/linkedin-assistance" />
+
             <Route exact path="/realEstate">
               <RealEstate />
               <>
@@ -331,7 +340,8 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Route exact path="/business">
+            <Route exact path="/business-services">
+
               <Business />
               <>
                 <div className="quote-grp">
@@ -340,7 +350,9 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Route exact path="/executive">
+            <Redirect from="/business" to="/business-services" />
+
+            <Route exact path="/executive-secretarial-task">
               <Executive />
               <>
                 <div className="quote-grp">
@@ -353,8 +365,10 @@ class App extends Component {
                 </div>
               </>
             </Route>
+            <Redirect from="/executive" to="/executive-secretarial-task" />
 
-            <Route exact path="/digital">
+            <Route exact path="/digital-services">
+
               <Digital />
               <>
                 <div className="quote-grp">
@@ -367,7 +381,9 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Route exact path="/website">
+            <Redirect from="/digital" to="/digital-services" />
+
+            <Route exact path="/website-services">
               <Website />
               <>
                 <div className="quote-grp">
@@ -380,6 +396,8 @@ class App extends Component {
                 </div>
               </>
             </Route>
+            <Redirect from="/website" to="/website-services" />
+
             <Route exact path="/staff">
               <Staff />
               <>
