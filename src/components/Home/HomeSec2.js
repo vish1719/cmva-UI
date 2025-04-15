@@ -51,7 +51,7 @@ function HomeSec2() {
                                 <p className="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
                             </div> */}
                             <div className="services abt-btn">
-                                <Link to="/how" className=" common-btn animated fadeInUp scrollto">Know More</Link>
+                                <Link to="/how-it-works" className=" common-btn animated fadeInUp scrollto">Know More</Link>
                             </div>
 
                         </div>

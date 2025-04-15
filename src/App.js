@@ -187,7 +187,7 @@ class App extends Component {
               </>
 
             </Route>
-            <Redirect from="/about" to="/about-us" />
+            {/* <Redirect from="/about" to="/about-us" /> */}
 
 
 
@@ -208,7 +208,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/contact2" to="/contact-us" />
+{/* <Redirect from="/contact2" to="/contact-us" /> */}
 
             <Route exact path="/faq">
               <Faq />
@@ -246,7 +246,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/pricing1" to="/pricing-plans" />
+{/* <Redirect from="/pricing1" to="/pricing-plans" /> */}
 
 <Route exact path="/monthly-subscription-plans">
   <SubsBanner />
@@ -264,7 +264,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/pricing2" to="/monthly-subscription-plans" />
+{/* <Redirect from="/pricing2" to="/monthly-subscription-plans" /> */}
 
             <Route exact path="/how-it-works">
   <HowBanner />
@@ -281,7 +281,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/how" to="/how-it-works" />
+{/* <Redirect from="/how" to="/how-it-works" /> */}
 
 
             <Route exact path="/process">
@@ -314,7 +314,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/bookkeeping" to="/bookkeeping-services" />
+            
 
 
             <Route exact path="/linkedin-assistance">
@@ -331,7 +331,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/linkedin" to="/linkedin-assistance" />
+            {/* <Redirect from="/linkedin" to="/linkedin-assistance" /> */}
 
             <Route exact path="/real-estate-services">
   <RealEstate />
@@ -346,7 +346,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/realEstate" to="/real-estate-services" />
+{/* <Redirect from="/realEstate" to="/real-estate-services" /> */}
 
             <Route exact path="/business-services">
 
@@ -358,7 +358,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/business" to="/business-services" />
+            {/* <Redirect from="/business" to="/business-services" /> */}
 
             <Route exact path="/executive-secretarial-task">
               <Executive />
@@ -373,7 +373,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/executive" to="/executive-secretarial-task" />
+            {/* <Redirect from="/executive" to="/executive-secretarial-task" /> */}
 
             <Route exact path="/digital-services">
 
@@ -389,7 +389,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/digital" to="/digital-services" />
+            {/* <Redirect from="/digital" to="/digital-services" /> */}
 
             <Route exact path="/website-services">
               <Website />
@@ -404,7 +404,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/website" to="/website-services" />
+            {/* <Redirect from="/website" to="/website-services" /> */}
             <Route exact path="/staffing-recruitment-service">
   <Staff />
   <>
@@ -418,7 +418,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/staff" to="/staffing-recruitment-service" />
+{/* <Redirect from="/staff" to="/staffing-recruitment-service" /> */}
 
 <Route exact path="/customer-services">
   <Customer />
@@ -433,7 +433,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/customerServices" to="/customer-services" />
+{/* <Redirect from="/customerServices" to="/customer-services" /> */}
 
             <Route exact path="/travel-vacation-rentals-service">
   <Travel />
@@ -448,7 +448,7 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/travel" to="/travel-vacation-rentals-service" />
+{/* <Redirect from="/travel" to="/travel-vacation-rentals-service" /> */}
 
             <Route exact path="/entertainment-and-event-management">
               <Event />
@@ -534,13 +534,13 @@ class App extends Component {
   <Refer />
 </Route>
 
-<Redirect from="/refer" to="/refer-a-friend" />
+{/* <Redirect from="/refer" to="/refer-a-friend" /> */}
 
 <Route exact path="/refund-policy">
   <Refund />
 </Route>
 
-<Redirect from="/refund" to="/refund-policy" />
+{/* <Redirect from="/refund" to="/refund-policy" /> */}
 
 
             <Route exact path="/ad_hoc">
@@ -589,7 +589,7 @@ class App extends Component {
             <Route exact path="/privacy-policy">
   <Privacy />
 </Route>
-<Redirect from="/privacy" to="/privacy-policy" />
+{/* <Redirect from="/privacy" to="/privacy-policy" /> */}
 
 
 

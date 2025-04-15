@@ -13,7 +13,7 @@ function NavbarHow() {
                     <div className="page"  >
                         <nav className="page__menu menu" style={{backgroundColor:"#58b958"}}>
                             <ol className="menu__list r-list">
-                                <li className="menu__group"><Link to="/how" className="menu__link r-link text-underlined"><CategoryTab/></Link></li>
+                                <li className="menu__group"><Link to="/how-it-works" className="menu__link r-link text-underlined"><CategoryTab/></Link></li>
                                 <li className="menu__group"><Link to="/process" className="menu__link r-link text-underlined"><CategoryTab1/></Link></li>
                                 {/* <li className="menu__group"><a href="#0" className="menu__link r-link text-underlined">Option #3</a></li> */}
                             </ol>

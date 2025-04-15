@@ -26,7 +26,7 @@ function Header2() {
                         <LinkContainer to="/" activeClassName="active-link" isActive={checkActive}>
                             <Nav.Link  className="navbar-link text-white linkHere">Home</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/about">
+                            <LinkContainer to="/about-us">
                             <Nav.Link className="navbar-link text-white linkHere">About</Nav.Link>
                             </LinkContainer>
                             <NavDropdown className="area active" style={{ Color: "#58b958", hover: "color:#fff", marginBottom:"10px" }} title={"Services"} id="collasible-nav-dropdown">
@@ -42,22 +42,22 @@ function Header2() {
                                     <LinkContainer to="/personal-tasks">
                                     <NavDropdown.Item>Personal VA Service</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/executive">
+                                    <LinkContainer to="/executive-secretarial-task">
                                     <NavDropdown.Item>Executive Secretarial Task</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/bookkeeping">
+                                    <LinkContainer to="/bookkeeping-services">
                                     <NavDropdown.Item>Book Keeping</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/website">
+                                    <LinkContainer to="/website-services">
                                     <NavDropdown.Item>Website Service</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/linkedin">
+                                    <LinkContainer to="/linkedin-assistance">
                                     <NavDropdown.Item>Linkedin Services</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/digital">
+                                    <LinkContainer to="/digital-services">
                                     <NavDropdown.Item>Digital Services</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/business">
+                                    <LinkContainer to="/business-services">
                                     <NavDropdown.Item>Business Process Support</NavDropdown.Item>
                                     </LinkContainer>
                                 </div>
@@ -81,16 +81,16 @@ function Header2() {
                                     <LinkContainer to="/sales-and-marketing">
                                     <NavDropdown.Item >Sales &amp; Marketing</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/realEstate">
+                                    <LinkContainer to="/real-estate-services">
                                     <NavDropdown.Item >Real Estate</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/staff">
+                                    <LinkContainer to="/staffing-recruitment-service">
                                     <NavDropdown.Item >Staffing &amp; Recruitment</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/travel">
+                                    <LinkContainer to="/travel-vacation-rentals-service">
                                     <NavDropdown.Item >Travel &amp; Vacation Rentals</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/customerServices">
+                                    <LinkContainer to="/customer-services">
                                     <NavDropdown.Item >Customer service</NavDropdown.Item>
                                     </LinkContainer>
                                     
@@ -132,19 +132,19 @@ function Header2() {
                                 </ul>
                             </Nav.Link>
                              */}
-                             <LinkContainer to="/how">
+                             <LinkContainer to="/how-it-works">
                             <Nav.Link className="navbar-link text-white linkHere" href="">How it works?</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/pricing1">
+                            <LinkContainer to="/pricing-plans">
                             <Nav.Link className="navbar-link text-white linkHere" href="">Pricing &amp; Plans</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/contact2">
+                            <LinkContainer to="/contact-us">
                             <Nav.Link className="navbar-link text-white linkHere" href="">Contact Us</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/faq">
                             <Nav.Link className="navbar-link text-white linkHere" href="">FAQ</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/refer">
+                            <LinkContainer to="/refer-a-friend">
                             <Nav.Link className="navbar-link text-white linkHere" href="">Refer</Nav.Link>
                             </LinkContainer>
                             {/* <LinkContainer to="/customerServices"> */}

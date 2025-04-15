@@ -8,7 +8,7 @@ function AboutSec() {
         <Seo
   title="About ConnectMyVA | Top Virtual Assistant Services"
   description="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
-  path="/about"
+  path="/about-us"
   keywords="about ConnectMyVA, virtual assistant team, our mission ConnectMyVA, expert VA services, website support team, small business support"
 />
  

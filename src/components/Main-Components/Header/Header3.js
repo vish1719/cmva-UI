@@ -42,7 +42,7 @@ class Header3 extends Component {
 
 
                         <Nav className="nav-menu">
-                        <LinkContainer to="/plans">
+                        <LinkContainer to="/monthly-subscription-plans">
                             <Nav.Link className="navbar-link text-white linkHere">Plans</Nav.Link>
                             </LinkContainer>
 

@@ -40,7 +40,7 @@ function IndustrySec() {
                         </div>
 
                         <div className="col-lg-4 col-md-6 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="600">
-                        <a href="/realEstate">
+                        <a href="/real-estate-services">
                         <div className="count-box">
                                 <i className="icofont-home" styles="color: #63be63;"></i>
                                 <h5 className="title">Real <br/>Estate</h5>
@@ -66,7 +66,7 @@ function IndustrySec() {
                         </div>
 
                         <div className="col-lg-4 col-md-6 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="1200">
-                        <a href="/staff">
+                        <a href="/staffing-recruitment-service">
                         <div className="count-box">
                                 <i className="icofont-users-alt-5" styles="color: #63be63;"></i>
                                 <h5 className="title">Staffing &amp; <br/>Recruitment</h5>
@@ -75,7 +75,7 @@ function IndustrySec() {
                         </div>
 
                         <div className="col-lg-4 col-md-6 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="1400">
-                        <a href="/travel">
+                        <a href="/travel-vacation-rentals-service">
                         <div className="count-box">
                                 <i className="icofont-travelling" styles="color: #63be63;"></i>
                                 <h5 className="title">Travel &amp; <br/>Vacation Rentals</h5>
@@ -83,7 +83,7 @@ function IndustrySec() {
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="1600">
-                        <a href="/customerServices">
+                        <a href="/customer-services">
                             <div className="count-box ">
                                 <i className="icofont-search-user" styles="color: #63be63;"></i>
                                 <h5 className="title" >Customer <br/>Services</h5>

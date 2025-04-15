@@ -13,7 +13,7 @@ function BookKeeping() {
       <Seo
         title="Small Business Bookkeeping & Accounting | ConnectMyVA Services"
         description="Simplify your finances with ConnectMyVA! We offer expert small business bookkeeping, bill payment assistance, and top-notch bookkeeping and accounting services. Save time & money with our team handling your daily entries, invoices, and payroll."
-        path="/small-business-bookkeeping-services"
+        path="/bookkeeping-services"
 
         keywords="small business bookkeeping, bookkeeping services, virtual accounting assistant, invoicing, payroll, financial reporting"
       />

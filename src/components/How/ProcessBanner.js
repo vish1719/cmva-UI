@@ -9,7 +9,7 @@ function ProcessBanner() {
 
 		<div className="banner">
             <img
-                src='../../assets/images/process.jpg'
+                src='../../assets/images/Process.jpg'
                 alt="ConnectMyVA Virtual Assistant Process Banner"
                 title="Our Simple Process - ConnectMyVA Virtual Assistant Services"
                 className="bannerImage"

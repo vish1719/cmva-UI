@@ -21,7 +21,7 @@ function Faq() {
   {/* ...rest of your code */}
 </>
 
-		<FAQBanner/>
+		{/* <FAQBanner/> */}
 			<section id="faq" className="faq section-bg">
 				<div className="container">
 

@@ -117,7 +117,7 @@ export default function SimpleTabs() {
                                 membership plan where you can profit the administrations of a Virtual Assistant for limited
                                 number of hours consistently. You can utilize those hours to do any of your jobs.<br/><br/>
                                 
-                                Check our monthly <Link className="forLiCol" to="/pricing2"> subscription plans</Link> and <Link to={"/ad_hoc"}>ad
+                                Check our monthly <Link className="forLiCol" to="/monthly-subscription-plans"> subscription plans</Link> and <Link to={"/ad_hoc"}>ad
 hoc project plans</Link> here.</p>
 
                                 <p></p>

@@ -13,8 +13,8 @@ function NavbarComp() {
                     <div className="page"  >
                         <nav className="page__menu menu" style={{backgroundColor:"#fff"}}>
                             <ol className="menu__list r-list">
-                                <li className="menu__group"><Link to="/pricing1" className="menu__link r-link text-underlined"><CategoryTabNav/></Link></li>
-                                <li className="menu__group"><Link to="/pricing2" className="menu__link r-link text-underlined"><CategoryTabNav1/></Link></li>
+                                <li className="menu__group"><Link to="/pricing-plans" className="menu__link r-link text-underlined"><CategoryTabNav/></Link></li>
+                                <li className="menu__group"><Link to="/monthly-subscription-plans" className="menu__link r-link text-underlined"><CategoryTabNav1/></Link></li>
                                 {/* <li className="menu__group"><a href="#0" className="menu__link r-link text-underlined">Option #3</a></li> */}
                             </ol>
                         </nav>

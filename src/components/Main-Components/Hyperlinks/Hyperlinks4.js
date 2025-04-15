@@ -32,11 +32,11 @@ function Hyperlinks4() {
                                             <ul className="toRemLi">
                                                 <li><Link to={"/retail-and-ecommerce"}>E-Commerce</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/executive"}>Executive assistant</Link></li>
+                                                <li><Link to={"/executive-secretarial-task"}>Executive assistant</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/customerServices"}>Customer Services</Link></li>
+                                                <li><Link to={"/customer-services"}>Customer Services</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/business"}>Services</Link></li>
+                                                <li><Link to={"/business-services"}>Services</Link></li>
                                             </ul>
                                         </p>
                                     </div>
@@ -51,7 +51,7 @@ function Hyperlinks4() {
                                         <p>ConnectMyVA monthly subscription plans are designed to match our clients
 planned budget and requirements.</p>
 
-                                        <Link to={"/pricing2"}>Monthly Subscription Plans</Link>
+                                        <Link to={"/monthly-subscription-plans"}>Monthly Subscription Plans</Link>
                                     </div>
                                 </div>
                                 
@@ -69,7 +69,7 @@ our clients to grow drastically in digital marketing environment</p>
                                                 <li>Customer Services</li>
                                             </ul>
                                         </p> */}
-                                        <Link to={"/business"}>Industry</Link>
+                                        <Link to={"/business-services"}>Industry</Link>
                                     </div>
                                 </div>
                             </div>

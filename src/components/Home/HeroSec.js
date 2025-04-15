@@ -26,7 +26,7 @@ function HeroSec() {
                                     
                                     <h2 className="animated fadeInDown"><br></br><br></br><br></br>ConnectMyVA Personal Assistant Support Services To Your Business</h2>
                                     <p className="animated fadeInUp">Our skilled professionals are here to relieve your business errands and personal duties giving you more time to creep up on essential things like taking time off for your loved ones.</p>
-                                    <Link to={"/How"} className="btn-get-started animated fadeInUp scrollto">Read More</Link>
+                                    <Link to={"/how-it-works"} className="btn-get-started animated fadeInUp scrollto">Read More</Link>
                                 </div>
                             
                             </Carousel.Caption>
@@ -42,7 +42,7 @@ function HeroSec() {
                                 <div className="carousel-content container">
                                     <h2 className="animated fadeInDown"><br></br>Virtual assistant for entrepreneurs and professionals</h2>
                                     <p className="animated fadeInUp">Our specialist for succoring your business needs.</p>
-                                    <Link to={"/executive"} className="btn-get-started animated fadeInUp scrollto">Read More</Link>
+                                    <Link to={"/executive-secretarial-task"} className="btn-get-started animated fadeInUp scrollto">Read More</Link>
                                 </div>                            
                             </Carousel.Caption>
                         </Carousel.Item>

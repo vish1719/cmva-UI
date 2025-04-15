@@ -33,7 +33,7 @@ moments.</p>
 
 Select our A monthly plan to get all the benefits from your personal assistant.</p>
 
-                                        <Link to={"/pricing1"}>Pricing &amp; plans</Link>
+                                        <Link to={"/pricing-plans"}>Pricing &amp; plans</Link>
                                     </div>
                                 </div>
 
@@ -45,7 +45,8 @@ Select our A monthly plan to get all the benefits from your personal assistant.<
 </p>
 
                                         
-                                        <Link to={"/contact2"}>Contact us</Link>
+                                        <Link to={"/contact-us"}>Contact us</Link>
+                                        
                                     </div>
                                 </div>
                             </div>

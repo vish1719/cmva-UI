@@ -94,7 +94,7 @@ const ShowContacts = () => {
         <Seo
   title="Contact ConnectMyVA | Call 1-866-610-8976 for Virtual Assistant Help"
   description="Ready to simplify your life? Contact ConnectMyVA at 1-866-610-8976! Hire a virtual assistant for your business or personal needs. Reach out today for fast, reliable support and grow with us!"
-  path="/contact2"
+  path="/contact-us"
   keywords="contact ConnectMyVA, get in touch ConnectMyVA, virtual assistant help, contact for website development, digital marketing contact"
 />
 

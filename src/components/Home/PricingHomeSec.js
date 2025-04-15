@@ -89,7 +89,7 @@ function PricingHomeSec() {
                     </div>
 
                     <div className="section-title my-6" data-aos="fade-up" data-aos-delay="600">
-                        <a href="/pricing2" className="common-btn animated fadeInUp scrollto">View All Plans</a>
+                        <a href="/pricing-plans" className="common-btn animated fadeInUp scrollto">View All Plans</a>
                         
                     </div>
                 </div>

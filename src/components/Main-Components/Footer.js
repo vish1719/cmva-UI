@@ -13,9 +13,9 @@ function Footer() {
                                 <h3>Services</h3>
                                 <ul>
                                     <li><i className="bx bx-chevron-right"></i> <Link to={"/personal-tasks"}>Personal Tasks</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/business"}>Business Support Services</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/digital"}>Digital Marketing</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/website"}>IT/Website Services</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/business-services"}>Business Support Services</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/digital-services"}>Digital Marketing</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/website-services"}>IT/Website Services</Link></li>
                                     
                                 </ul>
                             </div>
@@ -24,8 +24,8 @@ function Footer() {
                                 <h3>Terms Of Use</h3>
                                 <ul>
                                     <li><i className="bx bx-chevron-right"></i> <Link to={"/copyright"}>Copyright</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/refund"}>Refund policy</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/privacy"}>Privacy Policy</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/refund-policy"}>Refund policy</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/privacy-policy"}>Privacy Policy</Link></li>
                                     
                                 </ul>
                             </div>
@@ -34,8 +34,8 @@ function Footer() {
                                 <h3>More Links</h3>
                                 <ul>
                                     <li><i className="bx bx-chevron-right"></i> <Link to={"/"}>Home</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/how"}>How it works?</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/pricing1"}>Pricing &amp; Plans</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/how-it-works"}>How it works?</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/pricing-plans"}>Pricing &amp; Plans</Link></li>
                                     
                                 </ul>
                             </div>

@@ -11,7 +11,7 @@ function PricingComp() {
     <>
       <Router>
         <Switch>
-          <Route exact path="/pricing1">
+          <Route exact path="/pricing-plans">
             <PriceBanner />
             <NavbarComp/>
             <Pricing />
@@ -21,7 +21,7 @@ function PricingComp() {
           
 
           
-          <Route exact path="/pricing2">
+          <Route exact path="/monthly-subscription-plans">
             <ContactBanner />
             <NavbarComp/>
             <Contact />
