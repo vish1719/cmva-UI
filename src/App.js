@@ -103,6 +103,7 @@ import Plans from "./components/Profile/Plans";
 import Dashboard from "./components/Profile/Dashboard";
 // import * as actions from "./components/UserAuth/store/actions/auth"
 import { Helmet } from "react-helmet";
+import NotFound from "./components/NotFound";
 
 
 
@@ -165,7 +166,7 @@ class App extends Component {
 
 
 
-            <Route exact path="/about">
+            <Route exact path="/about-us">
               {/* <Template/> */}
               <Banner />
               <AboutSec1 />
@@ -186,24 +187,29 @@ class App extends Component {
               </>
 
             </Route>
+            <Redirect from="/about" to="/about-us" />
 
 
-            <Route exact path="/contact">
-              <Contact5 />
-            </Route>
-            <Route exact path="/contact2">
-              <ShowContacts />
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
 
-                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
+            {/* <Route exact path="/contact"> */}
+             
+            {/* </Route> */}
+            <Route exact path="/contact-us">
+  <Contact5 />
+  {/* <ShowContacts /> */}
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
+    </div>
+    <div className="quote-grp">
+      {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
+    </div>
+  </>
+</Route>
+
+<Redirect from="/contact2" to="/contact-us" />
+
             <Route exact path="/faq">
               <Faq />
               <>
@@ -225,58 +231,58 @@ class App extends Component {
           <PriceSec1/>  */}
 
             </Route>
-            <Route exact path="/pricing1">
-              <PriceBanner />
-              <NavbarComp />
-              <Price1 />
-              {/* <Pricing /> */}
+            <Route exact path="/pricing-plans">
+  <PriceBanner />
+  <NavbarComp />
+  <Price1 />
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/* <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link> */}
+    </div>
+    <div className="quote-grp">
+      {/* <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i className="icofont-chat"></i></span></Link> */}
+    </div>
+  </>
+</Route>
 
+<Redirect from="/pricing1" to="/pricing-plans" />
 
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+<Route exact path="/monthly-subscription-plans">
+  <SubsBanner />
+  {/* <ContactBanner /> */}
+  <NavbarComp />
+  <Pricing />
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
+    </div>
+    <div className="quote-grp">
+      {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
+    </div>
+  </>
+</Route>
 
-                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
-            <Route exact path="/pricing2">
-              <SubsBanner />
-              {/* <ContactBanner /> */}
-              <NavbarComp />
-              <Pricing />
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+<Redirect from="/pricing2" to="/monthly-subscription-plans" />
 
-                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
+            <Route exact path="/how-it-works">
+  <HowBanner />
+  <NavbarHow />
+  <How1 />
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/* <Link to={{ pathname: "tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link> */}
+    </div>
+    <div className="quote-grp">
+      {/* <Link to={{ pathname: "https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i className="icofont-chat"></i></span></Link> */}
+    </div>
+  </>
+</Route>
 
-            <Route exact path="/how">
-              <HowBanner />
-              <NavbarHow />
-              <How1 />
-              {/* <How1 /> */}
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+<Redirect from="/how" to="/how-it-works" />
 
-                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-
-            </Route>
 
             <Route exact path="/process">
               <ProcessBanner />
@@ -327,19 +333,21 @@ class App extends Component {
             </Route>
             <Redirect from="/linkedin" to="/linkedin-assistance" />
 
-            <Route exact path="/realEstate">
-              <RealEstate />
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                  {/*<Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+            <Route exact path="/real-estate-services">
+  <RealEstate />
+  <>
+    <div className="quote-grp">
+      <Link to="/quote" className="quote"><span>Get a free quote</span></Link>
+      {/*<Link to={{ pathname: "tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
+    </div>
+    <div className="quote-grp">
+      {/*<Link to={{ pathname: "https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i className="icofont-chat"></i></span></Link>*/}
+    </div>
+  </>
+</Route>
 
-                  {/*<Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
+<Redirect from="/realEstate" to="/real-estate-services" />
+
             <Route exact path="/business-services">
 
               <Business />
@@ -397,46 +405,51 @@ class App extends Component {
               </>
             </Route>
             <Redirect from="/website" to="/website-services" />
+            <Route exact path="/staffing-recruitment-service">
+  <Staff />
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/* <Link to={{ pathname: "tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link> */}
+    </div>
+    <div className="quote-grp">
+      {/* <Link to={{ pathname: "https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i className="icofont-chat"></i></span></Link> */}
+    </div>
+  </>
+</Route>
 
-            <Route exact path="/staff">
-              <Staff />
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+<Redirect from="/staff" to="/staffing-recruitment-service" />
 
-                {/* <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
-            <Route exact path="/customerServices">
-              <Customer />
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+<Route exact path="/customer-services">
+  <Customer />
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/* <Link to={{ pathname: "tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link> */}
+    </div>
+    <div className="quote-grp">
+      {/* <Link to={{ pathname: "https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i className="icofont-chat"></i></span></Link> */}
+    </div>
+  </>
+</Route>
 
-                {/*  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
-            <Route exact path="/travel">
-              <Travel />
-              <>
-                <div className="quote-grp">
-                  <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
-                {/*  <Link to={{ pathname: " tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link>*/}
-                </div>
-                <div className="quote-grp">
+<Redirect from="/customerServices" to="/customer-services" />
 
-                {/*  <Link to={{ pathname: " https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i class="icofont-chat"></i></span></Link>*/}
-                </div>
-              </>
-            </Route>
+            <Route exact path="/travel-vacation-rentals-service">
+  <Travel />
+  <>
+    <div className="quote-grp">
+      <Link to={"/quote"} className="quote"><span>Get a free quote</span></Link>
+      {/* <Link to={{ pathname: "tel:+917829800669" }} target="_blank" className="cold-call"><span className="round-bgnd"><i className="icofont-ui-call"></i></span></Link> */}
+    </div>
+    <div className="quote-grp">
+      {/* <Link to={{ pathname: "https://wa.me/917829800669" }} target="_blank" className="wchat"><span>Lets have a chat <i className="icofont-chat"></i></span></Link> */}
+    </div>
+  </>
+</Route>
+
+<Redirect from="/travel" to="/travel-vacation-rentals-service" />
+
             <Route exact path="/entertainment-and-event-management">
               <Event />
               <>
@@ -517,12 +530,18 @@ class App extends Component {
             </Route>
 
 
-            <Route exact path="/refer">
-              <Refer />
-            </Route>
-            <Route exact path="/refund">
-              <Refund />
-            </Route>
+            <Route exact path="/refer-a-friend">
+  <Refer />
+</Route>
+
+<Redirect from="/refer" to="/refer-a-friend" />
+
+<Route exact path="/refund-policy">
+  <Refund />
+</Route>
+
+<Redirect from="/refund" to="/refund-policy" />
+
 
             <Route exact path="/ad_hoc">
               <Ad_hoc />
@@ -567,9 +586,12 @@ class App extends Component {
             <Route exact path="/copyright">
               <Copyright />
             </Route>
-            <Route exact path="/privacy">
-              <Privacy />
-            </Route>
+            <Route exact path="/privacy-policy">
+  <Privacy />
+</Route>
+<Redirect from="/privacy" to="/privacy-policy" />
+
+
 
 
 
@@ -600,6 +622,7 @@ class App extends Component {
             <Route exact path="/dashboard">
               <Protected Cmp={Dashboard} />
             </Route>
+            <Route component={NotFound} />
 
 
 

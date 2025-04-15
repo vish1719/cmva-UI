@@ -6,7 +6,7 @@ function SubsBanner() {
         <>
             <div className="banner">
                 <img
-                    src='../../assets/images/subscription.jpg'
+                    src='../../assets/images/Subscription.jpg'
                     alt="Subscription Plans Banner"
                     title="Subscription Plans"
                     className="bannerImage"
