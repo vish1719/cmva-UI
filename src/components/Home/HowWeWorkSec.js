@@ -5,42 +5,45 @@ function HowWeWorkSec() {
     return (
         <>
 
-            <section id="howSec" className="howSec services">
-                <div className="container">
+<section id="faq" className="faq section-bg">
+        <div className="container">
+          <div className="row d-flex align-items-stretch">
+            <div className="col-lg-12 faq-item" data-aos="fade-up">
+            <h2>Enhance Efficiency with a Virtual Assistant for Business</h2>
+            <br/>
+            <p>
+            The Virtual Assistant for Business becomes challenging when only one person 
+            manages all aspects of the Business. At this point, the <strong>virtual assistant for 
+            Business</strong> performs its role. A professional Virtual Digital Assistant enables you 
+            to free your time by delegating common work so you can concentrate on expanding your business operations.<br/>
+            Virtual Assistant services for business operations provide adaptability and budget savings above traditional 
+            workplace employment models for independent entrepreneurs and developing startups. The Virtual Digital Assistant 
+            system helps you prioritize essential tasks by scheduling meetings and managing emails.<br/>
+            Organizations requiring dependable virtual services obtain employee support to handle social media activities 
+            alongside CRM record-keeping and lead-generation duties. Virtual digital assistants operate at a distance, reducing
+            operational costs and improving business productivity.
+            </p>
 
-                    <div className="section-title">
-                        <h5>How We Work</h5>
-                    </div>
-
-                    <div className="section-title">
-                        <h2>How <span>Special Tactics Team </span><br />of ConnectMyVA operates</h2>
-                        <p className="my-6">Starting with getting in touch with a Virtual Assistant for the first time to gaining trust and get the hang 
-                            of assigning tasks are the main concerns for all new clients. Our Personalized Strategical team is at your 
-                            command to make you get started and lead the way for your enlarging needs.</p>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-lg-4 col-md-6 icon-box howSecCard" data-aos="fade-up">
-                            <div className="icon"><p>1</p></div>
-                            <h4 className="title"><a href="">Describe your Ideal Assistant</a></h4>
-                            <p className="description">We understand that every business is distinctive with precise requirements. And, we make meetings work.</p>
-                        </div>
-                        <div className="col-lg-4 col-md-6 icon-box howSecCard" data-aos="fade-up" data-aos-delay="100">
-                        <div className="icon"><p>2</p></div>
-                            <h4 className="title"><a href="">Get to know your Assistant</a></h4>
-                            <p className="description">ConnectMyVA will put forward to you an elite virtual assistant as per your business requirements. Your assistant will converse with you.</p>
-                        </div>
-                        <div className="col-lg-4 col-md-6 icon-box howSecCard" data-aos="fade-up" data-aos-delay="200">
-                        <div className="icon"><p>3</p></div>
-                            <h4 className="title"><a href="">Authorize and Keep a tab on</a></h4>
-                            <p className="description desc">After approval, your assistant will track your business, comply with your work environment according to the tools of your choice.</p>
-                        </div>
-                        
-                    </div>
-
-                </div>
-            </section>
-
+            </div>
+            </div>
+            <div className="row d-flex align-items-stretch">
+            <div className="col-lg-12 faq-item" data-aos="fade-up">
+            <h3>Why Every Company Needs a Virtual Assistant for Business</h3>
+             <br/>
+             <p>
+             A Virtual Digital Assistant performs duties that extend past traditional administrative work. <strong>Virtual digital assistant</strong> 
+             frequently uses their services to produce content content, conduct research, and provide customer assistance services. 
+             Your organization will achieve operational streamlining through an appropriate Virtual Assistant for Business solutions.<br/>
+             A Virtual Digital Assistant delivers the greatest value to small and medium-sized enterprises that add it to their workforce team. 
+             These experts' capacity allows them to understand systems rapidly, meet immediate support needs and remove micromanagement requirements.<br/>
+             According to their reports, many businesses using Virtual Assistant for Business solutions have observed enhanced time management and performance 
+             improvement. When you assign work to a virtual digital assistant, your scheduled time becomes more available, enabling you to dedicate efforts to 
+             client engagement and company expansion.
+             </p>
+            </div>
+            </div> 
+            </div>  
+      </section>
         </>
     )
 }

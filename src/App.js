@@ -301,7 +301,7 @@ class App extends Component {
               </>
 
             </Route>
-            <Route exact path="/bookkeeping-services">
+            <Route exact path="/bookkeeping">
               <BookKeeping />
               <>
                 <div className="quote-grp">
@@ -314,10 +314,10 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            
+            <Redirect from="/bookkeeping" to="/bookkeeping-services" />
 
 
-            <Route exact path="/linkedin-assistance">
+            <Route exact path="/linkedin">
 
               <LinkedIn />
               <>
@@ -331,7 +331,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            {/* <Redirect from="/linkedin" to="/linkedin-assistance" /> */}
+            <Redirect from="/linkedin" to="/linkedin-assistance" />
 
             <Route exact path="/real-estate-services">
   <RealEstate />
@@ -348,7 +348,8 @@ class App extends Component {
 
 {/* <Redirect from="/realEstate" to="/real-estate-services" /> */}
 
-            <Route exact path="/business-services">
+
+            <Route exact path="/business">
 
               <Business />
               <>
@@ -358,9 +359,9 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            {/* <Redirect from="/business" to="/business-services" /> */}
+            <Redirect from="/business" to="/business-services" />
 
-            <Route exact path="/executive-secretarial-task">
+            <Route exact path="/executive">
               <Executive />
               <>
                 <div className="quote-grp">
@@ -373,7 +374,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            {/* <Redirect from="/executive" to="/executive-secretarial-task" /> */}
+            <Redirect from="/executive" to="/executive-secretarial-task" />
 
             <Route exact path="/digital-services">
 
@@ -420,7 +421,7 @@ class App extends Component {
 
 {/* <Redirect from="/staff" to="/staffing-recruitment-service" /> */}
 
-<Route exact path="/customer-services">
+<Route exact path="/customerServices">
   <Customer />
   <>
     <div className="quote-grp">
@@ -433,7 +434,7 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/customerServices" to="/customer-services" /> */}
+<Redirect from="/customerServices" to="/customer-services" />
 
             <Route exact path="/travel-vacation-rentals-service">
   <Travel />

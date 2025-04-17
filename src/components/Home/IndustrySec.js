@@ -83,7 +83,7 @@ function IndustrySec() {
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-6 text-center" data-aos="fade-up" data-aos-delay="1600">
-                        <a href="/customer-services">
+                        <a href="/customerServices">
                             <div className="count-box ">
                                 <i className="icofont-search-user" styles="color: #63be63;"></i>
                                 <h5 className="title" >Customer <br/>Services</h5>

@@ -25,11 +25,11 @@ function Business() {
             <BusinessBanner />
 
             {/* ✅ SEO optimized H1 */}
-            <section className="section-title text-center py-4">
+            {/* <section className="section-title text-center py-4">
                 <div className="container">
-                    <h1>Improve Business Efficiency with Our Online Support</h1>
+                    <h3>Improve Business Efficiency with Our Online Support</h3>
                 </div>
-            </section>
+            </section> */}
 
             <section id="contact" className="contact new-contact">
                 <div className="container" style={{ paddingLeft: "0", paddingRight: "0" }}>

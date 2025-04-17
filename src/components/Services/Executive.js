@@ -29,56 +29,45 @@ function Executive() {
 						<div className="col-lg-12">
 							<div className="accordion" id="accordionExample">
 								<div className="section-title">
-									<h1>Executive Secretarial Task</h1>
+									<h2>Executive Secretarial Task</h2>
 								</div>
+								<br/>
+								<div className="row d-flex align-items-stretch">
+								<div className="col-lg-12 faq-item" data-aos="fade-up">
+								<h1> Why Market Research for Business Is Essential </h1>
+								<br/>
 								<p>
-								Executive assistants are unique than VA as they will be working for executives of corporate companies. 
-								They have the potential in assisting them with high-level administrative tasks prioritizing the events with 
-								effective time management. Executive assistants will also aid them in clerical works similar to PA or secretaries. 
-								ConnectMyVA executive assistants can make a profitable difference to a business or company by engaging in other 
-								duties such as market research, guiding employees and making travel arrangements for meetings, etc.,</p>
-
-								<div>
-								<h6><strong>Research</strong></h6>
-									
-										<p>Executive assistants conduct intense online and offline research working remotely for the diverse needs of top executives or chiefs of an organization.
-										</p>
+								Almost every established brand builds success upon complete market comprehension. <strong>Market Research 
+								for Business</strong> enables businesses to discover possible opportunities while detecting early signs of 
+								risk and maintaining positions ahead of market competition. Appropriate market research can reveal 
+								precise customer demands, conduct patterns, and decision-making triggers.<br/>
+								Market data analysis enables you to develop superior products through better marketing methods while 
+								directing particular sales initiatives. The strategies of businesses at all stages find solid foundations 
+								through <strong>Market Research for Business</strong> instead of depending on mere speculation.<br/>
+								Working with expert market research professionals lets you decrease uncertainty while building business confidence.
+								</p>
 								</div>
+                                </div>
+								<div className="row d-flex align-items-stretch">
+								<div className="col-lg-12 faq-item" data-aos="fade-up">
+								<h2> How Virtual Assistants Can Streamline Market Research for Business </h2>
+								<br/>
+								<p>
+								Virtual assistants handle business market research to produce high-quality results and free up personnel time and company 
+								funds. The professionals within our team possess training across multiple research techniques, including online survey management 
+								and database organization, consumer feedback assessment, and comprehensive trend reporting.<br/>
+								Your business goals determine which research methods we implement to serve your needs. We deliver specialized market insights that 
+								assist your business decisions concerning specific target groups, geographical market entry, and product assessment.<br/>
+								Our services offer scalability, which is the best advantage we provide to clients. Market Research for Business support from our side 
+								evolves along with your business growth, giving you the necessary tools to adapt and lead your market through changing conditions.
 
-								<div>
-								<h6><strong>Daily Management</strong></h6>
-									
-										<p>
-										<ul>
-											<li>Organize Executive’s schedule</li>
-											<li>Act as a representative for the executive in calls and meeting in their absence</li>
-											<li>Manage Office jobs</li>
-											<li>Document Preparation &amp; Reviews</li>
-											<li>Briefing Presentations &amp; Reports</li>
-											<li>Examine Data</li>
-											<li>Take care of Confidential info</li>
-											<li>Overseeing administrative assistants and workforce</li>
-
-										</ul>
-										</p>
+	
+								</p>
 								</div>
-
+                                </div>
 								<div>
-								<h6><strong>Word Processing</strong></h6>
-									
-										<p>Word Processors help you with creating and formatting reports, mailshots, newsletters, brochures, and maintaining audio &amp; video content in standard formats, etc., by using different tools.
-										</p>
-								</div>
-								
-								<div>
-								<h6><strong>Call Screening</strong></h6>
-									
-										<p>The call screener will be monitoring all incoming and outgoing calls on the client’s behalf and has to organize all data into key points for their day-to-day scheduling and business archives.
-										</p>
-								</div>
-								
-								
-								<div>
+								<div className="row d-flex align-items-stretch">
+								<div className="col-lg-12 faq-item" data-aos="fade-up">
 								<h6><strong>To do list organization</strong></h6>
 									
 										<p>
@@ -107,6 +96,8 @@ function Executive() {
 								</div>
 							</div>
 						</div>
+						</div>
+          </div>
 
 					<Hyperlinks2/>
 					</div>

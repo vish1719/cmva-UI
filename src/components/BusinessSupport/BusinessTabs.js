@@ -73,42 +73,39 @@ export default function BusinessTabs() {
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
-
-
-          <p>
-            
-            <br/>
-            Business process is the structural activities to achieve commercial results in the highly
-competitive business world. Every business are under pressure to improve their operating
-efficiencies in order to deliver the quality services and to attain the better margins. The best way
-to achieve this is by outsourcing to troubleshot your issues at affordable cost. Cost is not only the
-factor for outsourcing but also quality services, dedicated expert, flexibility to adapt the process
-
-and contribute best practices. <strong>ConnectMyVA</strong> assist clients on critical business processes with
-strategic planning to ensure that the maximum benefit is achieved through outsourcing. We just
-don’t manage our clients but work with them towards refining projects to significantly improve
-accuracy, productivity. <br/> <br/>
-There is an increase in small scale online businesses where individuals are taking their career
-initiative as entrepreneurs. The rise in competition calls for more management proficiency on the
-part of business owners to streamline their work process. Business people understand that
-outsourcing some mundane or break off particular tasks can help them gain a competitive
-advantage in the market place. <strong>ConnectMyVA</strong> assistance is a great long-term solution to lighten
-your workload and able to complete tasks tirelessly around the clock. Below is some of key
-aspects that helps you to choose best assistant from <strong>ConnectMyVA</strong>
-          </p>
-
-          <ul>
-            <li> Expertise in managing business processes across industries</li>
-            <li> Dedicated assistants with deep domain knowledge to handle any kind of tasks</li>
-            <li> Access to a range of skill sets and talent under a single roof</li>
-            <li> Flexibility in resource usage, adapt to seasonal demands</li>
-            <li> Adhere to company policies and follow the timelines</li>
-            <li> 100% Security on handling client data.</li>
-            <li> Affordable cost compare to the traditional employees and we provide backup in case of
-assistant absence.</li>
-            <li> We build healthy relationship with our clients by enhancing their business value</li>
-            
-          </ul>
+        <div className="row d-flex align-items-stretch">
+        <div className="col-lg-12 faq-item" data-aos="fade-up">
+        <h1> Improve Business Efficiency with Tailored Solutions </h1>
+        
+           <br/>
+           <p>
+           All entrepreneurs aim to <strong>Improve Business Efficiency</strong>, although various operators do not
+            possess enough time or staff to achieve this outcome. Our organization provides assistance 
+            services to clients looking for help. Customized service solutions from our company allow businesses
+             to eliminate administrative work while optimizing office functions, which generates time for crucial high-priority activities.<br/>
+             Implementing automated systems made possible by professional help lets organizations decrease manual tasks so workers can dedicate
+             themselves to vital assignments through enhanced communication systems. Our operational streamlining solutions help clients stay focused
+             on critical tasks and handle their scheduling tasks, document oversight, and service response requirements.<br/>
+             Your business operations will <strong>improve business efficiency</strong> by choosing the appropriate support solution despite the absence of permanent
+             personnel or expensive hardware.
+           </p>
+           </div>
+          </div> 
+          <br/>
+        <div className="row d-flex align-items-stretch">
+        <div className="col-lg-12 faq-item" data-aos="fade-up">
+        <h2> Online Business Support for Seamless Daily Operations </h2>
+        <br/>
+        <p>
+        The <strong>Online Business Support</strong> platform delivers complete commercial management procedures, ensuring continuous business operations. The remote office system performs
+        data entry tasks and addresses customer support concerns while managing research needs and calendar functions. Support is available whenever you make a request.<br/>
+        Reliable <strong>Online Business Support</strong> forever eliminates late work assignments, data loss, and data disorganization. The virtual team provides your business with enduring 
+        support to understand operational needs and promote organizational objectives.<br/>
+        The system behind our services applies framework principles to scale up capabilities based on your business expansion. Our virtual support structure adjusts its operations
+        to match your staffing requirements, whether you have single entrepreneurs or early-stage teams, without needing to expand costs or cut workforce levels.
+        </p>
+        </div>
+        </div>
 
 
         </TabPanel>

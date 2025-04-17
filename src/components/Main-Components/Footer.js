@@ -13,7 +13,7 @@ function Footer() {
                                 <h3>Services</h3>
                                 <ul>
                                     <li><i className="bx bx-chevron-right"></i> <Link to={"/personal-tasks"}>Personal Tasks</Link></li>
-                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/business-services"}>Business Support Services</Link></li>
+                                    <li><i className="bx bx-chevron-right"></i> <Link to={"/business"}>Business Support Services</Link></li>
                                     <li><i className="bx bx-chevron-right"></i> <Link to={"/digital-services"}>Digital Marketing</Link></li>
                                     <li><i className="bx bx-chevron-right"></i> <Link to={"/website-services"}>IT/Website Services</Link></li>
                                     

@@ -24,33 +24,41 @@ function LinkedIn() {
 
         
         <LinkedinBanner/>
-            <section id="faq" className="faq section-bg">
-                
-                <div className="container">
-                    <div className="row  d-flex align-items-stretch">
+        <section id="faq" className="faq section-bg">
+        <div className="container">
+        <div className="row d-flex align-items-stretch">
+          <div className="col-lg-12 faq-item" data-aos="fade-up">
+          <h1> Why You Need Expert Assistance LinkedIn Profile Optimization </h1>
+            <br/>
+           <p>
+           The current professional industries demand specialized <strong>Assistance linkedin</strong> profiles since generic profiles 
+           no longer work effectively. Through expert LinkedIn support, users can turn their LinkedIn profiles into strong 
+           recruiting and client-attracting business tools.<br/>
+           Our team designs personalized <strong>assistance linkedin</strong> optimization that aligns your LinkedIn page with your occupational 
+           objectives. Professional LinkedIn experts help us select the best keywords and enhance profile design for better visibility 
+           on this platform.<br/>
+           Because of our Assistance in improving credibility, your chances of receiving job opportunities and speaking engagements are 
+           enhanced, and your profile visibility is raised. Your professional expertise informs employers about your commitment to maintaining 
+           career quality.
+           </p>
+            </div>
+            </div>
+            <div className="row d-flex align-items-stretch">
+          <div className="col-lg-12 faq-item" data-aos="fade-up">
+          <h2> Benefits of Choosing Virtual Assistance LinkedIn Services </h2>
+          <br/>
+          <p>
+          Professional support through virtual Assistance enables you to utilize LinkedIn services that boost your professional image while decreasing 
+          the time needed for self-profile editing.<br/>
+          Our Linkedin support services offer profile audit services, personalized recommendations, and competitor benchmarking, which allow you to enhance 
+          your profile visibility. Virtual Assistance's network expansion capabilities develop your brand through proper attention attraction and brand development, 
+          which leads to new business opportunities.<br/>
+          Professionals assist LinkedIn users in handling their accounts. Thanks to our talented virtual assistants, professional Assistance will develop your confidence, 
+          generate new career prospects, and produce business value.
 
-                        <div className="col-lg-12 faq-item" data-aos="fade-up">
-                            <h1>ConnectMyVA launches LinkedIn Assistance to Clients with individual virtual assistants team expertise for LinkedIn Services.</h1>
-                            <h4>LinkedIn Lead Generation @ ConnectMyVA</h4>
-                            <p>
-                                We have launched a much essential service of lead generation through LinkedIn assistance.
-                                This package helps small &amp; medium scale businesses to build &amp; take their operational strategies
-                                into the mainstream by effective Lead generations via LinkedIn.
-                            </p>
-                            <div className=" services">
-                                <div className="section-title" styles="padding-bottom: 0px;" data-aos="fade-up" data-aos-delay="300">
-                                    <Link to="/callback" className="common-btn animated fadeInUp scrollto">Enquiry Now</Link>
-                                </div>
-                            </div>
-                            <h4>Own a LinkedIn Virtual Assistant now</h4>
-                            <p>
-                                Making a mark in Social Media is very much essential for the growth of any business.
-                                And, LinkedIn is the answer for it as it is the much trusted &amp; professional platform for
-                                entrepreneurs, startups, students &amp; job seekers to steer their competent life ahead. We ConnectMyVA
-                                work in building your profile &amp; establishing a firm base by facilitating to connect with potential people
-                                beyond one’s capabilities across the globe.
-                            </p>
-                        </div>
+          </p>
+          </div>
+          </div>
                         <div className="col-lg-12 faq-item" data-aos="fade-up">
                             <div className="section-title">
                                 <h3><strong>Steps to Glory on LinkedIn and What we offer</strong></h3>
@@ -69,10 +77,12 @@ function LinkedIn() {
 
                             <LinkedinProcess/>
                         </div>
+                        </div>
+                        </section>
 
                         
 
-                    </div>
+                  
 
 
                     
@@ -81,8 +91,7 @@ function LinkedIn() {
                     
                     <Hyperlinks2 />
 
-                </div>
-            </section>
+              
         </>
     )
 }
