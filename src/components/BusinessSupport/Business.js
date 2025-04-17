@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import BusinessTabs from './BusinessTabs'
+import Hyperlinks2 from '../Main-Components/Hyperlinks/Hyperlinks2';
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import Seo from "../Seo";
@@ -62,11 +63,12 @@ function Business() {
                                             <span className="head4"><Link to={`/${path}`}>{name}</Link></span>
                                         </div>
                                     ))}
-
+                                  
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <Hyperlinks2 />
                 </div>
             </section>
         </>
