@@ -14,7 +14,7 @@ function Personal() {
     return (
         <>
         <Seo
-  title="Pers onal Tasks Support | ConnectMyVA Virtual Assistants"
+  title="Personal Tasks Support | ConnectMyVA Virtual Assistants"
   description="Let ConnectMyVA handle your personal tasks! From booking hotels and dinner reservations to finding schools or planning events, our virtual assistants save you time and effort. Contact us today!"
   path="/personal-tasks"
   keywords="personal virtual assistant, personal VA services, travel booking VA, task management assistant, personal assistant remote, ConnectMyVA personal assistant, online assistant for daily tasks"
