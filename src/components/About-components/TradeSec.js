@@ -33,7 +33,7 @@ function TradeSec() {
                         </div>
 
                         <div className="col-xl-4 col-md-6 icon-box img-girl" >
-                        <img width="100%" height="auto" src="assets/images/Girl.png" className="img-fluid " alt="Skilled Female Virtual Assistant - ConnectMyVA" 
+                        <img width="100%" height="auto" src="/assets/images/Girl.png" className="img-fluid " alt="Skilled Female Virtual Assistant - ConnectMyVA" 
   title="Top-Class Female Virtual Assistant Services by ConnectMyVA"  />
                         </div>
 

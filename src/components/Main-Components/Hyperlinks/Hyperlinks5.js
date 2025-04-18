@@ -24,11 +24,11 @@ function Hyperlinks5() {
                                             <ul className="toRemLi">
                                             <li><Link to={"/retail-and-ecommerce"}>E-Commerce</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/executive"}>Executive assistant</Link></li>
+                                                <li><Link to={"/executive-secretarial-task"}>Executive assistant</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/customerServices"}>Customer Services</Link></li>
+                                                <li><Link to={"/customer-services"}>Customer Services</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/business"}>Services</Link></li>
+                                                <li><Link to={"/business-services"}>Services</Link></li>
                                             </ul>
                                         </p>
                                       
@@ -39,7 +39,7 @@ function Hyperlinks5() {
                                         <h3>About Us</h3>
                                         <p></p>
 
-                                        <Link to={"/about"}>About us</Link>
+                                        <Link to={"/about-us"}>About us</Link>
                                     </div>
                                 </div>
 
@@ -57,7 +57,7 @@ function Hyperlinks5() {
 
 Select our A monthly plan to get all the benefits from your personal assistant.</p>
 
-                                        <Link to={"/pricing1"}>Pricing &amp; plans</Link>
+                                        <Link to={"/pricing-plans"}>Pricing &amp; plans</Link>
                                     </div>
                                 </div>
                                 
@@ -68,7 +68,7 @@ Select our A monthly plan to get all the benefits from your personal assistant.<
                                         <p>Want to know more about our services and plans. Contact us and feel free to get clarifications? Give us a call or email before Signup.</p>
 
                                         
-                                        <Link to={"/contact2"}>Contact us</Link>
+                                        <Link to={"/contact-us"}>Contact us</Link>
                                     </div>
                                 </div>
                             </div>

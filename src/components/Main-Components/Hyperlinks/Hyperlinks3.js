@@ -22,11 +22,11 @@ function Hyperlinks3() {
                                     <ul className="toRemLi">
                                     <li><Link to={"/retail-and-ecommerce"}>E-Commerce</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/executive"}>Executive assistant</Link></li>
+                                                <li><Link to={"/executive-secretarial-task"}>Executive assistant</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/customerServices"}>Customer Services</Link></li>
+                                                <li><Link to={"/customer-services"}>Customer Services</Link></li>
                                                 <br></br>
-                                                <li><Link to={"/business"}>Services</Link></li>
+                                                <li><Link to={"/business-services"}>Services</Link></li>
                                     </ul>
                                 </p>
                         
@@ -40,7 +40,7 @@ function Hyperlinks3() {
                                         {/* <h3>Refer a friend</h3> */}
                                         <p>Refer your friends to ConnectMyVA in single click to grow together.</p>
 
-                                        <Link to={"/refer"}>Refer a friend</Link>
+                                        <Link to={"/refer-a-friend"}>Refer a friend</Link>
                                     </div>
                                 </div>
 
@@ -56,7 +56,7 @@ function Hyperlinks3() {
                                                 <li>Customer Services</li>
                                             </ul>
                                         </p> */}
-                                        <Link to={"/how"}>How it works?</Link>
+                                        <Link to={"/how-it-works"}>How it works?</Link>
                                     </div>
                                 </div>
                             </div>

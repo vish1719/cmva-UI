@@ -17,7 +17,7 @@ function DiffSec() {
 
                     <div className="row no-gutters ">
                         <div className="col-lg-6 video-box">
-                            <img src="assets/images/Efficiently.jpg" className="img-fluid " alt="Efficient Virtual Assistant Services" 
+                            <img src="/assets/images/Efficiently.jpg" className="img-fluid " alt="Efficient Virtual Assistant Services" 
   title="ConnectMyVA - Efficient Virtual Assistants for Business Productivity" /> 
                             {/* <a href="https://youtu.be/ql3FC0bEAbw" className="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>  */}
                              {/* <iframe width="560" height="315"  allowfullscreen><img src="assets/img/about.jpg" className="img-fluid" alt="" /></iframe>  */}
