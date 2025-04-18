@@ -42,7 +42,7 @@ function Executive() {
 								risk and maintaining positions ahead of market competition. Appropriate market research can reveal 
 								precise customer demands, conduct patterns, and decision-making triggers.<br/>
 								Market data analysis enables you to develop superior products through better marketing methods while 
-								directing particular sales initiatives. The strategies of businesses at all stages find solid foundations 
+								directing particular sales initiatives.<br/> The strategies of businesses at all stages find solid foundations 
 								through <strong>Market Research for Business</strong> instead of depending on mere speculation.<br/>
 								Working with expert market research professionals lets you decrease uncertainty while building business confidence.
 								</p>

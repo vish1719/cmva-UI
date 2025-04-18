@@ -31,8 +31,8 @@ function HowWeWorkSec() {
             <h3>Why Every Company Needs a Virtual Assistant for Business</h3>
              <br/>
              <p>
-             A Virtual Digital Assistant performs duties that extend past traditional administrative work. <strong>Virtual digital assistant</strong> 
-             frequently uses their services to produce content content, conduct research, and provide customer assistance services. 
+             A Virtual Digital Assistant performs duties that extend past traditional administrative work. 
+             <strong>Virtual digital assistant</strong> frequently uses their services to produce content content, conduct research, and provide customer assistance services. 
              Your organization will achieve operational streamlining through an appropriate Virtual Assistant for Business solutions.<br/>
              A Virtual Digital Assistant delivers the greatest value to small and medium-sized enterprises that add it to their workforce team. 
              These experts' capacity allows them to understand systems rapidly, meet immediate support needs and remove micromanagement requirements.<br/>

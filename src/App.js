@@ -106,6 +106,13 @@ import { Helmet } from "react-helmet";
 import NotFound from "./components/NotFound";
 
 
+const RemoveTrailingSlash = ({ location }) => {
+  if (location.pathname !== "/" && location.pathname.endsWith("/")) {
+    const newPath = location.pathname.slice(0, -1);
+    return <Redirect to={newPath + location.search} />;
+  }
+  return null;
+};
 
 
 
@@ -123,14 +130,18 @@ class App extends Component {
     return (
       <>
        
-
+       
         <Router >
-
+       
+        <Route component={RemoveTrailingSlash} />
         <Header2 />
 
 
-
+        
           <Switch>
+          
+
+
             <Route exact path="/" render={() => {
               return (
                 <>
@@ -165,7 +176,7 @@ class App extends Component {
             </Route>
 
 
-
+            <Redirect from="/about" to="/about-us" />
             <Route exact path="/about-us">
               {/* <Template/> */}
               <Banner />
@@ -187,13 +198,14 @@ class App extends Component {
               </>
 
             </Route>
-            {/* <Redirect from="/about" to="/about-us" /> */}
+           
 
 
 
             {/* <Route exact path="/contact"> */}
              
             {/* </Route> */}
+            <Redirect from="/contact2" to="/contact-us" />
             <Route exact path="/contact-us">
   <Contact5 />
   {/* <ShowContacts /> */}
@@ -208,7 +220,7 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/contact2" to="/contact-us" /> */}
+
 
             <Route exact path="/faq">
               <Faq />
@@ -231,6 +243,7 @@ class App extends Component {
           <PriceSec1/>  */}
 
             </Route>
+            <Redirect from="/pricing1" to="/pricing-plans" />
             <Route exact path="/pricing-plans">
   <PriceBanner />
   <NavbarComp />
@@ -246,8 +259,8 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/pricing1" to="/pricing-plans" /> */}
 
+<Redirect from="/pricing2" to="/monthly-subscription-plans" />
 <Route exact path="/monthly-subscription-plans">
   <SubsBanner />
   {/* <ContactBanner /> */}
@@ -264,8 +277,8 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/pricing2" to="/monthly-subscription-plans" /> */}
 
+<Redirect from="/how" to="/how-it-works" />
             <Route exact path="/how-it-works">
   <HowBanner />
   <NavbarHow />
@@ -281,7 +294,7 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/how" to="/how-it-works" /> */}
+
 
 
             <Route exact path="/process">
@@ -301,7 +314,8 @@ class App extends Component {
               </>
 
             </Route>
-            <Route exact path="/bookkeeping">
+            <Redirect from="/bookkeeping" to="/bookkeeping-services" />
+            <Route exact path="/bookkeeping-services">
               <BookKeeping />
               <>
                 <div className="quote-grp">
@@ -314,10 +328,10 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/bookkeeping" to="/bookkeeping-services" />
+            
 
-
-            <Route exact path="/linkedin">
+            <Redirect from="/linkedin" to="/linkedin-assistance" />
+            <Route exact path="/linkedin-assistance">
 
               <LinkedIn />
               <>
@@ -331,8 +345,8 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/linkedin" to="/linkedin-assistance" />
-
+            
+            <Redirect from="/realEstate" to="/real-estate-services" />
             <Route exact path="/real-estate-services">
   <RealEstate />
   <>
@@ -346,10 +360,11 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/realEstate" to="/real-estate-services" /> */}
 
 
-            <Route exact path="/business">
+<Redirect from="/business" to="/business-services" />
+
+            <Route exact path="/business-services">
 
               <Business />
               <>
@@ -359,9 +374,8 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/business" to="/business-services" />
-
-            <Route exact path="/executive">
+            <Redirect from="/executive" to="/executive-secretarial-task" />
+            <Route exact path="/executive-secretarial-task">
               <Executive />
               <>
                 <div className="quote-grp">
@@ -374,8 +388,8 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            <Redirect from="/executive" to="/executive-secretarial-task" />
-
+            
+            <Redirect from="/digital" to="/digital-services" />
             <Route exact path="/digital-services">
 
               <Digital />
@@ -390,8 +404,9 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            {/* <Redirect from="/digital" to="/digital-services" /> */}
-
+            
+           
+            <Redirect from="/website" to="/website-services" />
             <Route exact path="/website-services">
               <Website />
               <>
@@ -405,7 +420,7 @@ class App extends Component {
                 </div>
               </>
             </Route>
-            {/* <Redirect from="/website" to="/website-services" /> */}
+            <Redirect from="/staff" to="/staffing-recruitment-service" />
             <Route exact path="/staffing-recruitment-service">
   <Staff />
   <>
@@ -419,9 +434,9 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/staff" to="/staffing-recruitment-service" /> */}
 
-<Route exact path="/customerServices">
+<Redirect from="/customerServices" to="/customer-services" />
+<Route exact path="/customer-services">
   <Customer />
   <>
     <div className="quote-grp">
@@ -434,8 +449,8 @@ class App extends Component {
   </>
 </Route>
 
-<Redirect from="/customerServices" to="/customer-services" />
 
+<Redirect from="/travel" to="/travel-vacation-rentals-service" />
             <Route exact path="/travel-vacation-rentals-service">
   <Travel />
   <>
@@ -449,7 +464,7 @@ class App extends Component {
   </>
 </Route>
 
-{/* <Redirect from="/travel" to="/travel-vacation-rentals-service" /> */}
+
 
             <Route exact path="/entertainment-and-event-management">
               <Event />
@@ -530,18 +545,18 @@ class App extends Component {
               </>
             </Route>
 
-
+            <Redirect from="/refer" to="/refer-a-friend" />
             <Route exact path="/refer-a-friend">
   <Refer />
 </Route>
 
-{/* <Redirect from="/refer" to="/refer-a-friend" /> */}
 
+<Redirect from="/refund" to="/refund-policy" />
 <Route exact path="/refund-policy">
   <Refund />
 </Route>
 
-{/* <Redirect from="/refund" to="/refund-policy" /> */}
+
 
 
             <Route exact path="/ad_hoc">
@@ -587,10 +602,11 @@ class App extends Component {
             <Route exact path="/copyright">
               <Copyright />
             </Route>
+            <Redirect from="/privacy" to="/privacy-policy" />
+
             <Route exact path="/privacy-policy">
   <Privacy />
 </Route>
-{/* <Redirect from="/privacy" to="/privacy-policy" /> */}
 
 
 

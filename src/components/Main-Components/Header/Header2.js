@@ -42,22 +42,22 @@ function Header2() {
                                     <LinkContainer to="/personal-tasks">
                                     <NavDropdown.Item>Personal VA Service</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/executive">
+                                    <LinkContainer to="/executive-secretarial-task">
                                     <NavDropdown.Item>Executive Secretarial Task</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/bookkeeping">
+                                    <LinkContainer to="/bookkeeping-services">
                                     <NavDropdown.Item>Book Keeping</NavDropdown.Item>
                                     </LinkContainer>
                                     <LinkContainer to="/website-services">
                                     <NavDropdown.Item>Website Service</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/linkedin">
+                                    <LinkContainer to="/linkedin-assistance">
                                     <NavDropdown.Item>Linkedin Services</NavDropdown.Item>
                                     </LinkContainer>
                                     <LinkContainer to="/digital-services">
                                     <NavDropdown.Item>Digital Services</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/business">
+                                    <LinkContainer to="/business-services">
                                     <NavDropdown.Item>Business Process Support</NavDropdown.Item>
                                     </LinkContainer>
                                 </div>
@@ -90,7 +90,7 @@ function Header2() {
                                     <LinkContainer to="/travel-vacation-rentals-service">
                                     <NavDropdown.Item >Travel &amp; Vacation Rentals</NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/customerServices">
+                                    <LinkContainer to="/customer-services">
                                     <NavDropdown.Item >Customer service</NavDropdown.Item>
                                     </LinkContainer>
                                     

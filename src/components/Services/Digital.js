@@ -32,6 +32,7 @@ function Digital() {
 								<div className="section-title">
 									<h1>Digital Services</h1>
 								</div>
+								<br/>
 								<p>
 									Every business requires some marketing tactics to get more limelight to their brands.
 									ConnectMyVA assistants will take care of social media marketing strategies for your business

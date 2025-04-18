@@ -30,7 +30,7 @@ function Personal() {
                     <div className="row  d-flex align-items-stretch">
 
                         <div className="col-lg-12 faq-item" data-aos="fade-up">
-
+                            <br/>
                             <p>
                                 Our <strong style={{ color: "#58b958" }}>ConnectMyVA</strong> assistants make your work easier and help you with brainstorming activities.
                                 So that you can spend time with your family instead spending time on researching things. We

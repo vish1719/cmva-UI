@@ -42,7 +42,7 @@ function HeroSec() {
                                 <div className="carousel-content container">
                                     <h2 className="animated fadeInDown"><br></br>Virtual assistant for entrepreneurs and professionals</h2>
                                     <p className="animated fadeInUp">Our specialist for succoring your business needs.</p>
-                                    <Link to={"/executive"} className="btn-get-started animated fadeInUp scrollto">Read More</Link>
+                                    <Link to={"/executive-secretarial-task"} className="btn-get-started animated fadeInUp scrollto">Read More</Link>
                                 </div>                            
                             </Carousel.Caption>
                         </Carousel.Item>
