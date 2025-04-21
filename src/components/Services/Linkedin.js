@@ -18,7 +18,7 @@ function LinkedIn() {
         <Seo
   title="Assistance LinkedIn | ConnectMyVA Virtual LinkedIn Services"
   description="Grow your business with ConnectMyVA’s LinkedIn assistance! Our expert virtual assistants offer lead generation, profile enhancement, and content writing on LinkedIn. Boost your personal branding and reach target audience."
-  path="https://connectmyva.com/linkedin-assistance/"
+  path="/linkedin-assistance"
   keywords="assistance linkedin"
 />
 

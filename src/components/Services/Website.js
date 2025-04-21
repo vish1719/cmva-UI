@@ -18,7 +18,7 @@ function Website() {
 		<Seo
   title="Website Services | ConnectMyVA - WordPress, Joomla & More"
   description="Need a website? ConnectMyVA offers expert website services like WordPress design, Joomla development, eCommerce solutions, and more. From custom designs to SEO optimization, we build fast, affordable, and professional websites for your business."
-  path="https://connectmyva.com/website-services/"
+  path="/website-services"
   keywords="wordpress website design services, joomla website development, ecommerce website development services, custom website development services, responsive website design, seo optimized websites"
 />
 

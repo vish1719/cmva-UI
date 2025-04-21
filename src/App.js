@@ -236,13 +236,7 @@ class App extends Component {
               </>
             </Route>
 
-            <Route exact path="/pricing">
-              {/* <PriceBanner/>
-           <PricingComp/>
-          <Pricing />
-          <PriceSec1/>  */}
-
-            </Route>
+            
             <Redirect from="/pricing1" to="/pricing-plans" />
             <Route exact path="/pricing-plans">
   <PriceBanner />

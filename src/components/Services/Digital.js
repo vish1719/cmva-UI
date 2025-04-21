@@ -17,7 +17,7 @@ function Digital() {
 		<Seo
   title="Digital Services | ConnectMyVA - SEO, SEM & Social Media Marketing"
   description="Boost your business with ConnectMyVA’s digital services! We offer easy SEO, SEM, social media marketing, and more to grow your brand. From keyword research to social media campaigns, our assistants help you shine online."
-  path="https://connectmyva.com/digital-services/"
+  path="/digital-services"
   keywords="digital marketing services, SEO support, social media VA, email marketing virtual assistant, PPC management, ConnectMyVA marketing, content marketing support"
 />
 
