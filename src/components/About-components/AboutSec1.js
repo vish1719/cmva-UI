@@ -14,7 +14,7 @@ function AboutSec1() {
         <Seo
   title="About ConnectMyVA | Top Virtual Assistant Services"
   description="Know about ConnectMyVA! We help busy professionals and entrepreneurs with skilled virtual assistants for business and personal tasks. Save time, boost productivity, and trust our top-class, secure support."
-  path="/about"
+  path="/about-us"
 />
         
             <section id="faq" className="faq section-bg">
