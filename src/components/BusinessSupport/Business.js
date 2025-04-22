@@ -17,7 +17,7 @@ function Business() {
             <Seo
                 title="Improve Business Efficiency with ConnectMyVA | Online Business Support"
                 description="Boost your business with ConnectMyVA! We help improve business efficiency and provide expert online business support. Our dedicated assistants manage tasks, streamline processes, and save you time at an affordable cost."
-                path="https://connectmyva.com/business-services/"
+                path="/business-services"
                 keywords="Improve Business Efficiency, Online Business Support"
             />
 
