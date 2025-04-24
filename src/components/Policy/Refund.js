@@ -1,6 +1,7 @@
 import React from 'react'
 // import FAQBanner from './FAQBanner'
 import { useEffect } from 'react';
+import Seo from "../Seo";
 
 function Refund() {
 	useEffect(() => {
@@ -9,6 +10,9 @@ function Refund() {
       }, [])
 	return (
 		<>
+		<Seo
+						path="/refund-policy"
+				/>
 			{/* <FAQBanner/> */}
 			<section id="faq" className="faq section-bg">
 				<div className="container">

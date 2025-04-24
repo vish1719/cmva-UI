@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import config from '../../config';
+import Seo from "../Seo";
 
 toast.configure()
 
@@ -64,6 +65,9 @@ const Register = () => {
 
     return (
         <>
+        <Seo
+						path="/register"
+				/>
 
             {/* <RegisterBanner /> */}
             <section id="contact" className="contact new-contact">

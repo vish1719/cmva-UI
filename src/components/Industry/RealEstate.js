@@ -13,7 +13,7 @@ function RealEstate() {
         <Seo
   title="Virtual Assistant for Real Estate | ConnectMyVA"
   description="ConnectMyVA offers professional virtual assistant services for real estate businesses. We help with listings, lead management, scheduling, invoicing, and property coordination to boost productivity."
-  path="/industries/real-estate"
+  path="/real-estate-services"
   keywords="real estate virtual assistant, real estate support, VA for realtors, property management assistant, CRM virtual assistant"
   />
 

@@ -2,9 +2,12 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 
+
 function PricingHomeSec() {
     return (
         <>
+        
+        
 
             <section id="services" className="pricing1">
                 <div className="container">

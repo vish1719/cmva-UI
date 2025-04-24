@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 function PriceSec1() {
     return (
         <>
+       
             <section id="howSe" styles="background-color:#58b958" className="serv">
                 <div className="container">
 

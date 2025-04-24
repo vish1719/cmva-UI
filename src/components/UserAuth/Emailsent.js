@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
+import Seo from "../Seo";
 
 toast.configure()
 
@@ -12,7 +12,9 @@ const Emailsent = () => {
 
     return (
         <>
-
+         <Seo
+                path="/emailsent"
+        />
             {/* <RegisterBanner /> */}
             <section id="contact" className="contact new-contact">
                 <div className="container">

@@ -13,7 +13,7 @@ function Event() {
         <Seo
   title="Virtual Assistant for Event Management | ConnectMyVA"
   description="ConnectMyVA provides virtual assistants for entertainment and event management. We assist with event calendars, customer support, registrations, promotions, and invoice tracking to streamline your events."
-  path="/industries/event"
+  path="/entertainment-and-event-management"
   keywords="event management virtual assistant, entertainment assistant, event registration VA, virtual assistant for events, event planning support"
   
 />

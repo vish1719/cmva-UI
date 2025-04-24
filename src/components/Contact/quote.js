@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
 import { useEffect } from 'react';
 import {useForm} from 'react-hook-form'
+import Seo from "../Seo";
 const Quote = () => {
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
@@ -85,6 +86,9 @@ const Quote = () => {
 
     return (
         <>
+        <Seo
+                path="/quote"
+        />
             {/* <div>
             <h1>Show all contacts</h1>
         </div> */}

@@ -87,7 +87,7 @@ const Refer = () => {
         <Seo
   title="Refer a Friend | Get 10% Off | ConnectMyVA"
   description="Refer a friend to ConnectMyVA and get 10% off on their monthly billing. Fill the form and enjoy exclusive savings for both you and your friend."
-  path="/refer"
+  path="/refer-a-friend"
   keywords="refer a friend, ConnectMyVA referral, virtual assistant referral, 10% off, referral program"
  />
 

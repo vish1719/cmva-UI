@@ -1,10 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Box from '@material-ui/core/Box';
+import Seo from "../Seo";
 
 function NavbarHow() {
     return (
         <>
+        <Seo
+						path="/process"
+				/>
+
             <div id="services" className="pricing" >
                 {/* <div className="section-title">
         <h2>Pricing & Plans</h2>

@@ -14,7 +14,7 @@ function Healthcare() {
 		<Seo
   title="Virtual Assistant for Healthcare & Fitness | ConnectMyVA"
   description="ConnectMyVA provides expert virtual assistants for healthcare professionals and fitness trainers. From appointment scheduling to billing, EHR, and client management — we help streamline your practice."
-  path="/industries/healthcare"
+  path="/healthcare-and-fitness"
   keywords="virtual assistant for healthcare, fitness assistant, EHR support, fitness client billing, medical transcription VA"
   
 />

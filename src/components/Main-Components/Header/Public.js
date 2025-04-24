@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 // import {connect} from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
+
 import { useHistory } from 'react-router';
 // import Header from '../components/Header';
+
 
 function Loggedout(props) {
 
@@ -15,9 +17,12 @@ function Loggedout(props) {
         }
     }, [])
     return (
+        
+      
         <div>
             <Cmpo />
         </div>
+        
     )
 }
 

@@ -1,5 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import Seo from "../Seo";
 
 
 function Product({ product }) {
@@ -38,6 +39,7 @@ function Product({ product }) {
 
     if (paidFor) {
         return (
+           
             <div>
                 <div className="pro-plan">
                 <h2>Congrats, you just bought {product.name}!</h2>
@@ -111,10 +113,16 @@ function Product({ product }) {
             </section>
                 {/* <img alt={product.description} src={gif} /> */}
             </div>
+           
         );
+        
     }
 
     return (
+        <>
+        <Seo
+   path="/paypal"
+/>
         <div className="container">
             <div className="row">
 
@@ -136,6 +144,7 @@ function Product({ product }) {
             </div>
 
         </div>
+        </>
     );
 }
 

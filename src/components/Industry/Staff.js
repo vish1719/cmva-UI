@@ -13,7 +13,7 @@ function Staff() {
         <Seo
   title="Virtual Assistant for Staffing & Recruitment | ConnectMyVA"
   description="ConnectMyVA provides virtual assistants to support your staffing and recruitment process. From job postings and resume management to interview coordination, payroll, and HR support — we handle it all."
-  path="/industries/staffing"
+  path="/staffing-recruitment-service"
   keywords="staffing virtual assistant, recruitment assistant, HR VA, resume screening, payroll assistant, virtual HR support"
   />
 

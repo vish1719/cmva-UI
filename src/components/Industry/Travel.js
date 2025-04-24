@@ -13,7 +13,7 @@ function Travel() {
         <Seo
   title="Virtual Assistant for Travel & Hospitality | ConnectMyVA"
   description="ConnectMyVA provides virtual assistant services for travel planning, bookings, itinerary management, vendor coordination, and hospitality support. Focus on the trip — we handle the rest."
-  path="/industries/travel"
+  path="/travel-vacation-rentals-service"
   keywords="travel virtual assistant, itinerary assistant, hospitality VA, travel planning VA, travel bookings, virtual concierge"
   />
 

@@ -2,6 +2,7 @@ import React from 'react'
 // import FAQBanner from './FAQBanner'
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import Seo from "../Seo";
 
 function Privacy() {
 	useEffect(() => {
@@ -10,6 +11,10 @@ function Privacy() {
       }, [])
 	return (
 		<>
+
+							 <Seo
+						path="/privacy-policy"
+				/>
 			{/* <FAQBanner/> */}
 			<section id="faq" className="faq section-bg">
 				<div className="container">

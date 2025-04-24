@@ -13,7 +13,7 @@ function Ecommerce() {
         <Seo
   title="Virtual Assistant for Ecommerce & Retail | ConnectMyVA"
   description="ConnectMyVA offers expert virtual assistant services for ecommerce and retail businesses. From order processing to inventory management and storefront handling, we help scale your online business with ease."
-  path="/industries/ecommerce"
+  path="/retail-and-ecommerce"
   keywords="ecommerce virtual assistant, retail assistant, Amazon FBA support, order processing VA, ecommerce inventory management, online store management"
   
 />

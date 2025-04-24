@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import config from '../../config';
 import { useEffect } from 'react';
 import {useForm} from 'react-hook-form';
+import Seo from "../Seo";
 const Ad_hoc = () => {
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
@@ -73,6 +74,10 @@ const Ad_hoc = () => {
 
     return (
         <>
+        <Seo
+            path="/ad_hoc"
+        />
+        
             {/* <div>
             <h1>Show all contacts</h1>
         </div> */}

@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 // import ErrorAlert from '../Alerts/ErrorAlert';
 import { useEffect } from 'react';
 import config from '../../config';
+import Seo from "../Seo";
 import {useForm} from 'react-hook-form';
 const Chat= () => {
     useEffect(() => {        
@@ -81,6 +82,9 @@ const Chat= () => {
 
     return (
         <>
+        <Seo
+                path="/chat"
+        />
             {/* <div>
             <h1>Show all contacts</h1>
         </div> */}

@@ -36,6 +36,8 @@ function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
     return (
+        
+       
         <div
             role="tabpanel"
             hidden={value !== index}
@@ -89,7 +91,7 @@ export default function SimpleTabs() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
+    
     return (
         <ThemeProvider theme={theme}>
             <div id="services" className="pricing">
@@ -152,4 +154,5 @@ export const AUS = () => {
             <span>AUS &amp; NZ</span>
         </Box>
     )
+    
 }

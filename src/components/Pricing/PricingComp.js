@@ -5,10 +5,12 @@ import Pricing from './Pricing'
 import PriceBanner from './PricingBanner'
 import Contact from '../Contact/Contact'
 import ContactBanner from '../Contact/ContactBanner'
+import Seo from "../Seo";
 
 function PricingComp() {
   return (
     <>
+    
       <Router>
         <Switch>
           <Route exact path="/pricing-plans">

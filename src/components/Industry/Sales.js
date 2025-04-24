@@ -14,7 +14,7 @@ function Sales() {
 		<Seo
   title="Virtual Assistant for Sales & Marketing | ConnectMyVA"
   description="ConnectMyVA helps businesses grow with expert virtual assistants for sales and marketing. We assist in lead generation, campaign management, CRM, market research, and sales reporting."
-  path="/industries/sales"
+  path="/sales-and-marketing"
   keywords="sales virtual assistant, marketing VA, lead generation assistant, campaign management support, sales reporting virtual assistant"
   
 />

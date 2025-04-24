@@ -1,6 +1,7 @@
 import React from 'react'
 // import FAQBanner from './FAQBanner'
 import { useEffect } from 'react';
+import Seo from "../Seo";
 
 function Copyright() {
 	useEffect(() => {
@@ -9,6 +10,9 @@ function Copyright() {
       }, [])
 	return (
 		<>
+		<Seo
+                path="/copyright"
+        />
 			{/* <FAQBanner/> */}
 			<section id="faq" className="faq section-bg">
 				<div className="container">

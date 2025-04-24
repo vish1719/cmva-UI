@@ -15,7 +15,7 @@ function Customer() {
 		<Seo
   title="Virtual Assistant for Customer Services | ConnectMyVA"
   description="ConnectMyVA provides experienced virtual assistants for CRM management, customer support, lead generation, email handling, and phone supervision to boost client satisfaction and retention."
-  path="/industries/customer-service"
+  path="/customer-services"
   keywords="customer service virtual assistant, CRM management VA, lead generation VA, email support, call handling VA"
   />
 

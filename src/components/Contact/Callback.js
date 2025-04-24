@@ -9,6 +9,7 @@ import {useForm} from 'react-hook-form'
 // import SuccessAlert from '../Alerts/SuccessAlert';
 // import ErrorAlert from '../Alerts/ErrorAlert';
 import { useEffect } from 'react';
+import Seo from "../Seo";
 const Callback= () => {
     useEffect(() => {        
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
@@ -79,6 +80,9 @@ const Callback= () => {
 
     return (
         <>
+          <Seo
+                path="/callback"
+        />
             {/* <div>
             <h1>Show all contacts</h1>
         </div> */}

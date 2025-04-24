@@ -1,6 +1,7 @@
 import React from 'react'
 import ContactBanner from './ContactBanner'
 import { useEffect } from 'react';
+import Seo from "../Seo";
 function Contact5() {
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
@@ -24,6 +25,9 @@ function Contact5() {
 
     return (
         <>
+        <Seo
+                path="/contact-us"
+        />
             <ContactBanner />
             
             <section id="contact" className="contact new-contact">

@@ -14,7 +14,7 @@ function Education() {
 		<Seo
   title="Virtual Assistant for Education & Training | ConnectMyVA"
   description="ConnectMyVA offers dedicated virtual assistants for the education sector. We help with course updates, student enrollment, assessment evaluation, admin support, and more so educators can focus on teaching."
-  path="/industries/education"
+  path="/education-and-training"
   keywords="virtual assistant for education, education admin support, online training assistant, course management VA, student support VA"
   />
 			<EducationBanner/>
