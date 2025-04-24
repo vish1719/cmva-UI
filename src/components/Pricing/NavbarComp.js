@@ -1,44 +1,62 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import Seo from "../Seo";
 
 function NavbarComp() {
+    const location = useLocation();
+
+    let seoProps = {
+        title: "ConnectMyVA",
+        description: "Explore our pricing and subscription options.",
+        path: location.pathname
+    };
+
+    if (location.pathname === "/pricing-plans") {
+        seoProps = {
+            title: "Pricing Plans | ConnectMyVA",
+            description: "Check out our pricing plans for virtual assistant services.",
+            path: "/pricing-plans"
+        };
+    } else if (location.pathname === "/monthly-subscription-plans") {
+        seoProps = {
+            title: "Monthly Subscription Plans | ConnectMyVA",
+            description: "Discover our monthly virtual assistant subscription plans.",
+            path: "/monthly-subscription-plans"
+        };
+    }
+
     return (
         <>
-        <Seo
-                path="/pricing-plans"
-        />
-            <div id="services" className="pricing" >
-                {/* <div className="section-title">
-        <h2>Pricing & Plans</h2>
-      </div> */}
+            <Seo {...seoProps} />
+
+            <div id="services" className="pricing">
                 <div className="container">
-                    <div className="page"  >
-                        <nav className="page__menu menu" style={{backgroundColor:"#fff"}}>
+                    <div className="page">
+                        <nav className="page__menu menu" style={{ backgroundColor: "#fff" }}>
                             <ol className="menu__list r-list">
-                                <li className="menu__group"><Link to="/pricing-plans" className="menu__link r-link text-underlined"><CategoryTabNav/></Link></li>
-                                <li className="menu__group"><Link to="/monthly-subscription-plans" className="menu__link r-link text-underlined"><CategoryTabNav1/></Link></li>
-                                {/* <li className="menu__group"><a href="#0" className="menu__link r-link text-underlined">Option #3</a></li> */}
+                                <li className="menu__group">
+                                    <Link to="/pricing-plans" className="menu__link r-link text-underlined">
+                                        <CategoryTabNav />
+                                    </Link>
+                                </li>
+                                <li className="menu__group">
+                                    <Link to="/monthly-subscription-plans" className="menu__link r-link text-underlined">
+                                        <CategoryTabNav1 />
+                                    </Link>
+                                </li>
                             </ol>
                         </nav>
-                        {/* <nav className="page__menu page__custom-settings menu">
-                            <ul className="menu__list r-list">
-                                <li className="menu__group"><a href="#0" className="menu__link r-link text-underlined">Option #1</a></li>
-                                <li className="menu__group"><a href="#0" className="menu__link r-link text-underlined">Option #2</a></li>
-                                <li className="menu__group"><a href="#0" className="menu__link r-link text-underlined">Option #3</a></li>
-                            </ul>
-                        </nav>  */}
                     </div>
-
                 </div>
             </div>
-
         </>
-    )
+    );
 }
 
-export default NavbarComp
+export default NavbarComp;
+
+
 
 export const CategoryTabNav = () => {
 	return(
