@@ -1,0 +1,183 @@
+/* Blog Styles */
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .blog-post-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Blog Post Page */
+  .blog-post-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .featured-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 1rem 0;
+  }
+  
+  .post-content {
+    line-height: 1.6;
+    margin-top: 2rem;
+  }
+  
+  /* Admin Styles */
+  .blog-admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .create-post-button, .logout-button {
+    padding: 0.5rem 1rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .logout-button {
+    background: #cc0000;
+  }
+  
+  .admin-post-list {
+    margin-top: 2rem;
+  }
+  
+  .admin-post-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  .post-actions {
+    margin-top: 1rem;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 0.3rem 0.8rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .edit-button {
+    background: #0066cc;
+    color: white;
+  }
+  
+  .delete-button {
+    background: #cc0000;
+    color: white;
+  }
+  
+  /* Editor Styles */
+  .blog-editor-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    min-height: 300px;
+  }
+  
+  .save-button {
+    padding: 0.5rem 1.5rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: #cc0000;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #ffeeee;
+    border-radius: 4px;
+  }
+  .login-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-button:hover {
+  background-color: #0056b3;
+}

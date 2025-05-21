@@ -144,6 +144,9 @@ function Header2() {
                             <LinkContainer to="/faq">
                             <Nav.Link className="navbar-link text-white linkHere" href="">FAQ</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to="/blog">
+                            <Nav.Link className="navbar-link text-white linkHere">Blog</Nav.Link>
+                            </LinkContainer>
                             <LinkContainer to="/refer-a-friend">
                             <Nav.Link className="navbar-link text-white linkHere" href="">Refer</Nav.Link>
                             </LinkContainer>

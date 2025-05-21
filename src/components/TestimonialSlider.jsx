@@ -17,7 +17,7 @@ const videoTestimonials = [
   },
 ];
 
-function testimonialSlider() {
+function TestimonialSlider() {
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -111,4 +111,4 @@ function testimonialSlider() {
   );
 }
 
-export default testimonialSlider;
+export default TestimonialSlider;

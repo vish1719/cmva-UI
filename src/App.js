@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from 'react'; 
 // import AboutSec from "./components/Home/AboutSec";
 // import ContactSec from "./components/Home/ContactSec";
 import IndustrySec from "./components/Home/IndustrySec";
@@ -13,8 +15,9 @@ import TestimonialSlider from "./components/TestimonialSlider";
 // import ServicesSec from "./components/Home/ServicesSec";
 // import TeamSec from "./components/Home/TeamSec";
 import Topbar1 from "./components/Main-Components/Header/Topbar1";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact5 from "./components/Contact/Contact";
+
 // import { Redirect } from "react-router";
 
 import {
@@ -22,6 +25,7 @@ import {
   Switch,
   Route,
   Redirect,
+  Navigate,
   Link
 } from "react-router-dom";
 import HomeSec1 from "./components/Home/HomeSec1";
@@ -104,6 +108,17 @@ import Dashboard from "./components/Profile/Dashboard";
 // import * as actions from "./components/UserAuth/store/actions/auth"
 import { Helmet } from "react-helmet";
 import NotFound from "./components/NotFound";
+import BlogList from './components/Blog/BlogList';
+import BlogPost from './components/Blog/BlogPost';
+import BlogLogin from './components/Blog/BlogLogin';
+import BlogAdmin from './components/Blog/BlogAdmin';
+import BlogEditor from './components/Blog/BlogEditor';
+import AuthRoute from './components/AuthRoute';
+import GuestPostForm from './components/Blog/GuestPostForm';
+
+
+
+
 
 
 const RemoveTrailingSlash = ({ location }) => {
@@ -139,6 +154,16 @@ class App extends Component {
 
         
           <Switch>
+          <Route exact path="/blog" component={BlogList} />
+<Route exact path="/blog/login" component={BlogLogin} />
+<AuthRoute exact path="/blog/admin" component={BlogAdmin} />
+<AuthRoute exact path="/blog/create" component={BlogEditor} />
+<AuthRoute exact path="/blog/:slug/edit" component={BlogEditor} />
+<Route exact path="/blog/guest-post" component={GuestPostForm} />
+<Route exact path="/blog/:slug" component={BlogPost} />
+
+
+        
           
 
 
@@ -172,8 +197,10 @@ class App extends Component {
                   </main>
                 </>)
             }}>
-
             </Route>
+            
+            
+
 
 
             <Redirect from="/about" to="/about-us" />

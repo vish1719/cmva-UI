@@ -1,0 +1,57 @@
+/* BlogList.css */
+
+.blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blog-card img {
+    transition: transform 0.4s ease;
+  }
+  
+  .blog-card:hover img {
+    transform: scale(1.08);
+  }
+  
+  .blog-card .card-body {
+    transition: background-color 0.3s ease;
+  }
+  
+  .blog-card:hover .card-body {
+    background-color: #f8f9fa;
+  }
+  
+  /* ✨ Title hover effect - No underline, just glow and color change */
+  .blog-title {
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    color: #212529;
+  }
+  
+  .blog-title:hover {
+    color: #198754; /* Bootstrap green */
+    text-shadow: 0 2px 8px rgba(25, 135, 84, 0.3);
+  }
+  
+  /* Removed the underline effect */
+  .blog-title::after {
+    content: none;
+  }
+  
+  .blog-card .btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover .btn {
+    transform: translateY(-3px);
+  }
+  
+ 

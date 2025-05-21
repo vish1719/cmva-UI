@@ -1,0 +1,26 @@
+import axios from 'axios';
+
+// Base URL for API requests (without trailing slash)
+const API_BASE_URL = 'http://localhost:8000';
+
+// Create an Axios instance
+const api = axios.create({
+  baseURL: API_BASE_URL,
+});
+
+// Add authentication token to every request if logged in
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('blogAuthToken');
+  if (token) {
+    config.headers.Authorization = `Token ${token}`;
+  }
+
+  // Ensure the URL doesn't result in double slashes
+  if (config.url.startsWith('//')) {
+    config.url = config.url.replace(/^\/+/, '/');
+  }
+
+  return config;
+});
+
+export default api;
