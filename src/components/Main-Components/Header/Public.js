@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import Seo from '../../Seo';

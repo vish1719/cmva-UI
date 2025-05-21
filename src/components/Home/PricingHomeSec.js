@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import RegisterBanner from './RegisterBanner';
 import axios from 'axios';

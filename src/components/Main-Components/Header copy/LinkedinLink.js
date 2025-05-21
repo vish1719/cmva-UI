@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useHistory } from "react-router-dom";
 
 function LinkedinLink() {

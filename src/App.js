@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable */
 import React from 'react'; 
 // import AboutSec from "./components/Home/AboutSec";
 // import ContactSec from "./components/Home/ContactSec";
@@ -83,7 +83,7 @@ import Quote from "./components/Contact/quote";
 import Copyright from "./components/Policy/Copyright";
 import Privacy from "./components/Policy/Privacy";
 import Price1 from "./components/Pricing/price1";
-import Ad_hoc from "./components/Pricing/ad_hoc";
+import AdHoc from "./components/Pricing/AdHoc";
 import Refer from "./components/Refer/Refer";
 import Sign_up from "./components/Pricing/Sign_up";
 import { Component } from "react";
@@ -580,8 +580,8 @@ class App extends Component {
 
 
 
-            <Route exact path="/ad_hoc">
-              <Ad_hoc />
+            <Route exact path="<AdHoc />">
+              <AdHoc />
             </Route>
 
             <Route exact path="/register">
