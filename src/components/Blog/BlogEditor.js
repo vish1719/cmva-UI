@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import api from '../../api';
 
+
 const BlogEditor = () => {
   const { slug } = useParams();
   const history = useHistory();
@@ -27,9 +28,7 @@ const BlogEditor = () => {
       const fetchPost = async () => {
         try {
           const response = await api.get(`/blog/${slug}/`, {
-            headers: {
-              Authorization: `Token ${token}`,
-            }
+            headers: { Authorization: `Token ${token}` },
           });
 
           setTitle(response.data.title);
@@ -49,7 +48,7 @@ const BlogEditor = () => {
     e.preventDefault();
     setError('');
 
-    const token = localStorage.getItem('blogAuthToken');
+    const token = localStorage.getItem('access');
     if (!token) {
       history.push('/blog/login');
       return;
@@ -69,7 +68,7 @@ const BlogEditor = () => {
         headers: {
           Authorization: `Token ${token}`,
           'Content-Type': 'multipart/form-data',
-        }
+        },
       };
 
       if (isEditing) {
@@ -136,7 +135,11 @@ const BlogEditor = () => {
               <div className="mb-3">
                 <p className="form-label">Current Featured Image:</p>
                 <img
-                  src={`http://localhost:8000${existingImage}`}
+                  src={
+                    existingImage.startsWith('http')
+                      ? existingImage
+                      : `${API_BASE_URL}${existingImage}`
+                  }
                   alt="Featured"
                   className="img-fluid mb-2"
                 />

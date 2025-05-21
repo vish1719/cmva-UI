@@ -81,7 +81,7 @@ const BlogPost = () => {
             src={
               post.featured_image.startsWith('http')
                 ? post.featured_image
-                : `http://localhost:8000${post.featured_image}`
+                : `${API_BASE_URL}${post.featured_image}`
             }
             alt={post.title}
             className="img-fluid rounded mb-4 shadow-sm"

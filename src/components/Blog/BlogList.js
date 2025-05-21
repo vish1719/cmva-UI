@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../../api';
 import './BlogList.css';
 
+
 const BlogList = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -43,7 +44,6 @@ const BlogList = () => {
     );
   }
 
-  // Common button styles and handlers for hover effect
   const btnStyle = {
     transition: 'all 0.3s ease',
     borderRadius: '50px',
@@ -99,7 +99,7 @@ const BlogList = () => {
         </div>
       </div>
 
-      {/* Search Bar with Bootstrap Input Group */}
+      {/* Search Bar */}
       <div className="mb-4">
         <div className="input-group shadow-sm rounded-pill border border-success">
           <input
@@ -135,7 +135,7 @@ const BlogList = () => {
                     src={
                       post.featured_image.startsWith('http')
                         ? post.featured_image
-                        : `http://localhost:8000${post.featured_image}`
+                        : `${API_BASE_URL}${post.featured_image}`
                     }
                     alt={post.title}
                     className="card-img-top"
