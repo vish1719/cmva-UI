@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../../api';
 import './BlogList.css';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
 
 const BlogList = () => {
   const [posts, setPosts] = useState([]);
@@ -26,23 +27,13 @@ const BlogList = () => {
   }, []);
 
   const handleLoadMore = () => {
-    setVisibleCount(prev => prev + 3);
+    setVisibleCount((prev) => prev + 3);
   };
 
-  const filteredPosts = posts.filter(post =>
+  const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.content.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
-  if (loading) {
-    return (
-      <div className="text-center mt-5">
-        <div className="spinner-border text-success" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
-  }
 
   const btnStyle = {
     transition: 'all 0.3s ease',
@@ -70,6 +61,16 @@ const BlogList = () => {
     e.currentTarget.style.boxShadow = '0 4px 8px rgba(40, 167, 69, 0.2)';
     e.currentTarget.style.transform = 'scale(1)';
   };
+
+  if (loading) {
+    return (
+      <div className="text-center mt-5">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container my-5">
@@ -106,15 +107,13 @@ const BlogList = () => {
             type="text"
             className="form-control border-0 rounded-pill ps-4"
             placeholder="Search blog posts..."
-            aria-label="Search blog posts"
             value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
+            onChange={(e) => setSearchQuery(e.target.value)}
             style={{ outline: 'none' }}
           />
           <button
             className="btn btn-success rounded-pill"
             type="button"
-            aria-label="Search button"
             style={{ padding: '0 1.5rem' }}
           >
             🔍
@@ -127,7 +126,7 @@ const BlogList = () => {
         <p className="text-muted">No blog posts found.</p>
       ) : (
         <div className="row">
-          {filteredPosts.slice(0, visibleCount).map(post => (
+          {filteredPosts.slice(0, visibleCount).map((post) => (
             <div className="col-md-6 col-lg-4 mb-4" key={post.id}>
               <div className="card h-100 shadow-sm blog-card">
                 {post.featured_image && (
@@ -174,7 +173,6 @@ const BlogList = () => {
             onClick={handleLoadMore}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            aria-label="Load More blog posts"
           >
             Load More
           </button>

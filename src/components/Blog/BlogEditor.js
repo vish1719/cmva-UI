@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import api from '../../api';
-
+import api, { API_BASE_URL } from '../../api';
 
 const BlogEditor = () => {
   const { slug } = useParams();
