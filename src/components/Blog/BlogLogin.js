@@ -35,7 +35,8 @@ const BlogLogin = () => {
       if (!access_token) throw new Error('No access token received');
 
       // Store token in localStorage
-      localStorage.setItem('access', access_token);
+      localStorage.setItem('blogAuthToken', access_token);
+
 
       // Redirect to blog admin
       history.push('/blog/admin');
