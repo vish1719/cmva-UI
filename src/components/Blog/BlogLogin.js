@@ -27,24 +27,26 @@ const BlogLogin = () => {
       });
 
       // Log the response data for debugging
-      console.log(response.data);
+      console.log('Login response:', response.data);
 
-      // Extract the token from the response
-      const { access_token } = response.data;
+      // ✅ Correct key names from backend
+      const { access, refresh } = response.data;
 
-      if (!access_token) throw new Error('No access token received');
+      if (!access) throw new Error('No access token received');
 
-      // Store token in localStorage
-      localStorage.setItem('access', access_token);
+      // ✅ Store JWT tokens
+      localStorage.setItem('access', access);
+      localStorage.setItem('refresh', refresh); // optional
 
-      // Redirect to blog admin
+      // ✅ Redirect to blog admin
       history.push('/blog/admin');
     } catch (err) {
       console.error('Login error:', err.response?.data || err.message);
 
-      // Check for custom error messages from backend
       const errorMessage =
-        err.response?.data?.error || err.response?.data?.detail || 'Login failed. Please try again.';
+        err.response?.data?.error ||
+        err.response?.data?.detail ||
+        'Login failed. Please try again.';
       setError(errorMessage);
     } finally {
       setLoading(false);
