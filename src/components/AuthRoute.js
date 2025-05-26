@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { AuthContext } from '../../context/authcontext';
+import { AuthContext } from './context/authcontext';
  // ✅ Import context
 
 const AuthRoute = ({ component: Component, ...rest }) => {

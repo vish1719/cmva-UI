@@ -108,7 +108,7 @@ import Plans from "./components/Profile/Plans";
 import Dashboard from "./components/Profile/Dashboard";
 // import * as actions from "./components/UserAuth/store/actions/auth"
 import { Helmet } from "react-helmet";
-import { AuthProvider } from './context/authcontext';
+import { AuthProvider } from './components/context/authcontext';
 import NotFound from "./components/NotFound";
 import BlogList from './components/Blog/BlogList';
 import BlogPost from './components/Blog/BlogPost';
