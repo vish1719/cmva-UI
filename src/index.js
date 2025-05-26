@@ -6,7 +6,8 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './components/UserAuth/store/reducers/auth';
-import {AuthProvider} from './components/context/authcontext'; // ✅ Add this line
+import { AuthProvider } from './components/context/authcontext';
+import { BrowserRouter } from 'react-router-dom';  // <-- Import BrowserRouter
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,10 +18,12 @@ const store = createStore(reducer, composeEnhances(applyMiddleware(thunk)));
 const app = (
   <Provider store={store}>
     <HelmetProvider>
-      <AuthProvider> {/* ✅ Wrap App with AuthProvider */}
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+      <AuthProvider>
+        <BrowserRouter> {/* <-- Wrap here */}
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </BrowserRouter>
       </AuthProvider>
     </HelmetProvider>
   </Provider>
