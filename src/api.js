@@ -8,11 +8,11 @@ const api = axios.create({
   baseURL: API_BASE_URL,
 });
 
-// Add authentication token to every request if logged in
+// Add JWT token to every request if logged in
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('blogAuthToken');
+  const token = localStorage.getItem('access'); // ✅ Use 'access' for JWT
   if (token) {
-    config.headers.Authorization = `Token ${token}`;
+    config.headers.Authorization = `Bearer ${token}`; // ✅ Use Bearer for JWT
   }
 
   // Ensure the URL doesn't result in double slashes
@@ -23,5 +23,5 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export { API_BASE_URL }; // 👈 Add this line
+export { API_BASE_URL };
 export default api;
