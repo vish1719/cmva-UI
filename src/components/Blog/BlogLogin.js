@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom';
 import api from '../../api';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import { AuthContext } from '../contexts/AuthContext'; // ✅ Import context
+import { AuthContext } from '../../context/authcontext';
+ // ✅ Import context
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
