@@ -2,34 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { HelmetProvider } from 'react-helmet-async';
-import {createStore, compose, applyMiddleware} from 'redux';
-import {Provider} from 'react-redux';
-import thunk from 'redux-thunk'
-// import reducer from  './components/UserAuth/reducers/auth';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import reducer from './components/UserAuth/store/reducers/auth';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap FIRST
-// import './tailwind.css';  
+import AuthProvider from './contexts/AuthContext'; // ✅ Add this line
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
-const store = createStore(reducer, composeEnhances(
-  applyMiddleware(thunk)
-));
+// Redux devtools setup
+const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, composeEnhances(applyMiddleware(thunk)));
 
 const app = (
   <Provider store={store}>
-    <HelmetProvider> 
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+    <HelmetProvider>
+      <AuthProvider> {/* ✅ Wrap App with AuthProvider */}
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </AuthProvider>
     </HelmetProvider>
   </Provider>
 );
 
-
-ReactDOM.render(
-  app,
-  document.getElementById('root')
-);
+ReactDOM.render(app, document.getElementById('root'));

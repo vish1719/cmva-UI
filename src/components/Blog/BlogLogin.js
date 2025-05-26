@@ -1,9 +1,10 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../api';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import { AuthContext } from '../../contexts/AuthContext'; // ✅ Import context
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -13,6 +14,8 @@ const BlogLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const history = useHistory();
+
+  const { login } = useContext(AuthContext); // ✅ Get login method from context
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,17 +29,14 @@ const BlogLogin = () => {
         password,
       });
 
-      // Log the response data for debugging
       console.log('Login response:', response.data);
 
-      // ✅ Correct key names from backend
       const { access, refresh } = response.data;
 
       if (!access) throw new Error('No access token received');
 
-      // ✅ Store JWT tokens
-      localStorage.setItem('access', access);
-      localStorage.setItem('refresh', refresh); // optional
+      // ✅ Use context method instead of setting localStorage manually
+      login(access, refresh);
 
       // ✅ Redirect to blog admin
       history.push('/blog/admin');

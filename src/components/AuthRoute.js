@@ -1,17 +1,23 @@
-import React from 'react';
+/* eslint-disable */
+import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext'; // ✅ Import context
 
-const AuthRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      localStorage.getItem('access') ? (  // <== change here
-        <Component {...props} />
-      ) : (
-        <Redirect to="/blog/login" />
-      )
-    }
-  />
-);
+const AuthRoute = ({ component: Component, ...rest }) => {
+  const { isAuthenticated } = useContext(AuthContext); // ✅ Get auth status from context
+
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/blog/login" />
+        )
+      }
+    />
+  );
+};
 
 export default AuthRoute;

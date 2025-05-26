@@ -26,6 +26,7 @@ import {
   Route,
   Redirect,
   Navigate,
+  withRouter,
   Link
 } from "react-router-dom";
 import HomeSec1 from "./components/Home/HomeSec1";
@@ -107,6 +108,7 @@ import Plans from "./components/Profile/Plans";
 import Dashboard from "./components/Profile/Dashboard";
 // import * as actions from "./components/UserAuth/store/actions/auth"
 import { Helmet } from "react-helmet";
+import { AuthProvider } from './contexts/AuthContext';
 import NotFound from "./components/NotFound";
 import BlogList from './components/Blog/BlogList';
 import BlogPost from './components/Blog/BlogPost';
@@ -121,13 +123,13 @@ import GuestPostForm from './components/Blog/GuestPostForm';
 
 
 
-const RemoveTrailingSlash = ({ location }) => {
+const RemoveTrailingSlash = withRouter(({ location }) => {
   if (location.pathname !== "/" && location.pathname.endsWith("/")) {
     const newPath = location.pathname.slice(0, -1);
     return <Redirect to={newPath + location.search} />;
   }
   return null;
-};
+});
 
 
 
@@ -145,7 +147,7 @@ class App extends Component {
     return (
       <>
        
-       
+       <AuthProvider>
         <Router >
        
         <Route component={RemoveTrailingSlash} />
@@ -677,6 +679,7 @@ class App extends Component {
           <a href="#" className="back-to-top"><i className="icofont-simple-up"></i></a>
 
         </Router>
+        </AuthProvider>
       </>
     );
   }
