@@ -2,79 +2,106 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../api';
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
+
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const BlogLogin = () => {
-  const history = useHistory();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const history = useHistory();
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
     try {
-      const response = await api.post('/users/token/', {
-        username,
+      // Send POST request to the backend login endpoint
+      const response = await api.post('/api/blog/login/', {
+        email,
         password,
       });
 
-      const { access, refresh } = response.data;
+      // Log the response data for debugging
+      console.log(response.data);
 
-      // ✅ Store tokens with expected keys
-      localStorage.setItem('access', access);
-      localStorage.setItem('refresh', refresh);
+      // Extract the token from the response
+      const { access_token } = response.data;
 
-      // ✅ Redirect to blog admin
+      if (!access_token) throw new Error('No access token received');
+
+      // Store token in localStorage
+      localStorage.setItem('access', access_token);
+
+      // Redirect to blog admin
       history.push('/blog/admin');
-    } catch (error) {
-      console.error('Login error:', error);
-      setError('Invalid credentials. Please try again.');
+    } catch (err) {
+      console.error('Login error:', err.response?.data || err.message);
+
+      // Check for custom error messages from backend
+      const errorMessage =
+        err.response?.data?.error || err.response?.data?.detail || 'Login failed. Please try again.';
+      setError(errorMessage);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="container py-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6 col-lg-5">
-          <div className="card shadow-sm">
-            <div className="card-body">
-              <h4 className="text-center mb-4">Admin Login</h4>
+    <section id="blog-login" className="contact new-contact">
+      <div className="container">
+        <div className="section-title">
+          <h2>Login to <span style={{ color: "#58b958" }}>Blog Admin</span></h2>
+        </div>
+        <div className="row">
+          <div className="col-lg-3 contact-sec" />
+          <div className="col-lg-6">
+            {loading ? (
+              <Spin indicator={antIcon} />
+            ) : (
+              <form onSubmit={handleSubmit} role="form" className="php-email-form">
+                {error && <div className="error-message text-danger">{error}</div>}
 
-              {error && <div className="alert alert-danger">{error}</div>}
-
-              <form onSubmit={handleLogin}>
-                <div className="mb-3">
-                  <label className="form-label">Username</label>
+                <div className="form-group">
+                  <h6 className="head3">Email:</h6>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter Email Address"
                     required
                   />
                 </div>
 
-                <div className="mb-3">
-                  <label className="form-label">Password</label>
+                <div className="form-group">
+                  <h6 className="head3">Password:</h6>
                   <input
                     type="password"
                     className="form-control"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter Password"
                     required
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100">
-                  Login
-                </button>
+                <div className="text-center">
+                  <button className="btn btn-primary" type="submit" disabled={loading}>
+                    Login
+                  </button>
+                </div>
               </form>
-            </div>
+            )}
           </div>
+          <div className="col-lg-3 contact-sec" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
