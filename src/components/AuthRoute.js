@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthContext'; // ✅ Import context
+import { AuthContext } from '../contexts/AuthContext'; // ✅ Import context
 
 const AuthRoute = ({ component: Component, ...rest }) => {
   const { isAuthenticated } = useContext(AuthContext); // ✅ Get auth status from context
