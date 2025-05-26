@@ -6,7 +6,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './components/UserAuth/store/reducers/auth';
-import AuthProvider from './components/context/authcontext'; // ✅ Add this line
+import {AuthProvider} from './components/context/authcontext'; // ✅ Add this line
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
