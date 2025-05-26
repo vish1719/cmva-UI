@@ -5,7 +5,7 @@ const AuthRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      localStorage.getItem('blogAuthToken') ? (
+      localStorage.getItem('access') ? (  // <== change here
         <Component {...props} />
       ) : (
         <Redirect to="/blog/login" />
