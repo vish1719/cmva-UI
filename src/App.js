@@ -108,7 +108,6 @@ import Plans from "./components/Profile/Plans";
 import Dashboard from "./components/Profile/Dashboard";
 // import * as actions from "./components/UserAuth/store/actions/auth"
 import { Helmet } from "react-helmet";
-import { AuthProvider } from './components/context/authcontext';
 import NotFound from "./components/NotFound";
 import BlogList from './components/Blog/BlogList';
 import BlogPost from './components/Blog/BlogPost';
@@ -147,7 +146,7 @@ class App extends Component {
     return (
       <>
        
-       <AuthProvider>
+     
         <Router >
        
         <Route component={RemoveTrailingSlash} />
@@ -679,7 +678,7 @@ class App extends Component {
           <a href="#" className="back-to-top"><i className="icofont-simple-up"></i></a>
 
         </Router>
-        </AuthProvider>
+       
       </>
     );
   }

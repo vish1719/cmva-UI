@@ -1,11 +1,9 @@
 /* eslint-disable */
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../api';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import { AuthContext } from '../context/authcontext';
- // ✅ Import context
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -15,8 +13,6 @@ const BlogLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const history = useHistory();
-
-  const { login } = useContext(AuthContext); // ✅ Get login method from context
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,8 +32,9 @@ const BlogLogin = () => {
 
       if (!access) throw new Error('No access token received');
 
-      // ✅ Use context method instead of setting localStorage manually
-      login(access, refresh);
+      // ✅ Store tokens in localStorage manually
+      localStorage.setItem('blogAuthToken', access);
+      localStorage.setItem('blogRefreshToken', refresh);
 
       // ✅ Redirect to blog admin
       history.push('/blog/admin');
