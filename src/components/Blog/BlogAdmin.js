@@ -13,11 +13,9 @@ const BlogAdmin = () => {
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState('published');
 
-  // Pagination state for published posts
   const [publishedPage, setPublishedPage] = useState(1);
   const publishedPageSize = 5;
 
-  // Pagination state for pending posts
   const [pendingPage, setPendingPage] = useState(1);
   const pendingPageSize = 5;
 
@@ -28,17 +26,10 @@ const BlogAdmin = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const access = localStorage.getItem('access');
-      if (!access) {
-        history.push('/blog/login');
-        return;
-      }
-
       try {
-        const headers = { Authorization: `Bearer ${access}` };
         const [postsResponse, pendingResponse] = await Promise.all([
-          api.get('/blog/admin-posts/', { headers }),
-          api.get('/blog/pending-posts/', { headers }),
+          api.get('/blog/admin-posts/'),
+          api.get('/blog/pending-posts/'),
         ]);
 
         setPosts(postsResponse.data);
@@ -46,8 +37,6 @@ const BlogAdmin = () => {
       } catch (error) {
         console.error('Fetch error:', error);
         if (error.response?.status === 401) {
-          localStorage.removeItem('access');
-          localStorage.removeItem('refresh');
           history.push('/blog/login');
         } else {
           setError('Failed to load posts');
@@ -61,7 +50,7 @@ const BlogAdmin = () => {
   }, [history]);
 
   const handleLogout = () => {
-    localStorage.removeItem('access');
+    localStorage.removeItem('blogAuthToken');
     localStorage.removeItem('refresh');
     history.push('/blog/login');
   };
@@ -72,17 +61,8 @@ const BlogAdmin = () => {
       return;
     }
 
-    const access = localStorage.getItem('access');
-    if (!access) {
-      history.push('/blog/login');
-      return;
-    }
-
     try {
-      const response = await api.delete(`/blog/${slug}/delete/`, {
-        headers: { Authorization: `Bearer ${access}` },
-      });
-
+      const response = await api.delete(`/blog/${slug}/delete/`);
       if (response.status === 204) {
         setPosts(posts.filter(post => post.slug !== slug));
         alert('Post deleted');
@@ -96,21 +76,10 @@ const BlogAdmin = () => {
   };
 
   const approvePost = async (id) => {
-    const access = localStorage.getItem('access');
-    if (!access) {
-      history.push('/blog/login');
-      return;
-    }
-
     try {
-      await api.post(`/blog/approve-post/${id}/`, {}, {
-        headers: { Authorization: `Bearer ${access}` },
-      });
+      await api.post(`/blog/approve-post/${id}/`);
       setPendingPosts(prev => prev.filter(post => post.id !== id));
-
-      const response = await api.get('/blog/admin-posts/', {
-        headers: { Authorization: `Bearer ${access}` },
-      });
+      const response = await api.get('/blog/admin-posts/');
       setPosts(response.data);
     } catch (error) {
       console.error('Approve error:', error);
@@ -119,16 +88,8 @@ const BlogAdmin = () => {
   };
 
   const rejectPost = async (id) => {
-    const access = localStorage.getItem('access');
-    if (!access) {
-      history.push('/blog/login');
-      return;
-    }
-
     try {
-      await api.delete(`/blog/reject-post/${id}/`, {
-        headers: { Authorization: `Bearer ${access}` },
-      });
+      await api.delete(`/blog/reject-post/${id}/`);
       setPendingPosts(prev => prev.filter(post => post.id !== id));
     } catch (error) {
       console.error('Reject error:', error);
@@ -137,16 +98,8 @@ const BlogAdmin = () => {
   };
 
   const handleReview = async (id) => {
-    const access = localStorage.getItem('access');
-    if (!access) {
-      history.push('/blog/login');
-      return;
-    }
-
     try {
-      const response = await api.get(`/blog/post-detail/${id}/`, {
-        headers: { Authorization: `Bearer ${access}` },
-      });
+      const response = await api.get(`/blog/post-detail/${id}/`);
       setSelectedPost(response.data);
       setShowModal(true);
     } catch (error) {
@@ -168,16 +121,13 @@ const BlogAdmin = () => {
     history.push(`/blog/${slug}/edit`);
   };
 
-  // Pagination slices
   const paginatedPosts = posts.slice((publishedPage - 1) * publishedPageSize, publishedPage * publishedPageSize);
   const paginatedPendingPosts = pendingPosts.slice((pendingPage - 1) * pendingPageSize, pendingPage * pendingPageSize);
 
-  // Bootstrap Pagination Component
   const BootstrapPagination = ({ currentPage, pageSize, totalItems, onPageChange }) => {
     const totalPages = Math.ceil(totalItems / pageSize);
     if (totalPages <= 1) return null;
 
-    // Generate page numbers to show (simple version: show all pages, could be enhanced)
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
       pages.push(i);
@@ -191,15 +141,11 @@ const BlogAdmin = () => {
               &laquo;
             </button>
           </li>
-
           {pages.map(page => (
             <li key={page} className={`page-item ${page === currentPage ? 'active' : ''}`}>
-              <button className="page-link" onClick={() => onPageChange(page)}>
-                {page}
-              </button>
+              <button className="page-link" onClick={() => onPageChange(page)}>{page}</button>
             </li>
           ))}
-
           <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
             <button className="page-link" onClick={() => onPageChange(currentPage + 1)} aria-label="Next">
               &raquo;
@@ -292,22 +238,13 @@ const BlogAdmin = () => {
                           <p>{post.content.substring(0, 200)}...</p>
                           <p><em>Submitted by: {post.submitted_by}</em></p>
                           <div className="d-flex gap-2 flex-wrap">
-                            <button
-                              onClick={() => handleReview(post.id)}
-                              className="btn btn-info btn-sm"
-                            >
+                            <button onClick={() => handleReview(post.id)} className="btn btn-info btn-sm">
                               Review
                             </button>
-                            <button
-                              onClick={() => approvePost(post.id)}
-                              className="btn btn-success btn-sm"
-                            >
+                            <button onClick={() => approvePost(post.id)} className="btn btn-success btn-sm">
                               Approve
                             </button>
-                            <button
-                              onClick={() => rejectPost(post.id)}
-                              className="btn btn-danger btn-sm"
-                            >
+                            <button onClick={() => rejectPost(post.id)} className="btn btn-danger btn-sm">
                               Reject
                             </button>
                           </div>
@@ -329,18 +266,9 @@ const BlogAdmin = () => {
       </div>
 
       {showModal && selectedPost && (
-        <div
-          className="modal fade show d-block"
-          tabIndex="-1"
-          role="dialog"
-          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}
-          onClick={closeModal}
-        >
-          <div
-            className="modal-dialog modal-lg"
-            role="document"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="modal fade show d-block" tabIndex="-1" role="dialog"
+          style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} onClick={closeModal}>
+          <div className="modal-dialog modal-lg" role="document" onClick={(e) => e.stopPropagation()}>
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">{selectedPost.title}</h5>
@@ -353,9 +281,7 @@ const BlogAdmin = () => {
                 <p>{selectedPost.content}</p>
               </div>
               <div className="modal-footer">
-                <button className="btn btn-secondary" onClick={closeModal}>
-                  Close
-                </button>
+                <button className="btn btn-secondary" onClick={closeModal}>Close</button>
               </div>
             </div>
           </div>

@@ -25,7 +25,6 @@ import {
   Switch,
   Route,
   Redirect,
-  Navigate,
   withRouter,
   Link
 } from "react-router-dom";

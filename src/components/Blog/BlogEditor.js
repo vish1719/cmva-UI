@@ -47,7 +47,7 @@ const BlogEditor = () => {
     e.preventDefault();
     setError('');
 
-    const token = localStorage.getItem('access');
+    const token = localStorage.getItem('blogAuthToken');
     if (!token) {
       history.push('/blog/login');
       return;

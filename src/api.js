@@ -1,21 +1,21 @@
 import axios from 'axios';
 
-// Use environment variable for API base URL
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
-// Create an Axios instance
 const api = axios.create({
   baseURL: API_BASE_URL,
 });
 
-// Add JWT token to every request if logged in
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('access'); // ✅ Use 'access' for JWT
+  // Get the token from localStorage
+  const token = localStorage.getItem('blogAuthToken');
+  
+  // Use "Token" prefix for DRF TokenAuthentication
   if (token) {
-    config.headers.Authorization = `Bearer ${token}`; // ✅ Use Bearer for JWT
+    config.headers.Authorization = `Token ${token}`;
   }
 
-  // Ensure the URL doesn't result in double slashes
+  // Clean up leading slashes in URL if needed
   if (config.url.startsWith('//')) {
     config.url = config.url.replace(/^\/+/, '/');
   }

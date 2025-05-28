@@ -15,47 +15,57 @@ const BlogLogin = () => {
   const history = useHistory();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
+  e.preventDefault();
+  setError('');
+  setLoading(true);
 
-    try {
-      // Send POST request to the backend login endpoint
-      const response = await api.post('/api/blog/login/', {
-        email,
-        password,
-      });
+  try {
+    const response = await api.post('/api/blog/login/', {
+      email,
+      password,
+    });
 
-      console.log('Login response:', response.data);
+    console.log('Login response:', response.data);
 
-      const { access, refresh } = response.data;
+    // ✅ Extract directly
+    const access_token = response?.data?.access_token;
+    const refresh_token = response?.data?.refresh_token;
 
-      if (!access) throw new Error('No access token received');
-
-      // ✅ Store tokens in localStorage manually
-      localStorage.setItem('blogAuthToken', access);
-      localStorage.setItem('blogRefreshToken', refresh);
-
-      // ✅ Redirect to blog admin
-      history.push('/blog/admin');
-    } catch (err) {
-      console.error('Login error:', err.response?.data || err.message);
-
-      const errorMessage =
-        err.response?.data?.error ||
-        err.response?.data?.detail ||
-        'Login failed. Please try again.';
-      setError(errorMessage);
-    } finally {
-      setLoading(false);
+    if (!access_token) {
+      console.error("DEBUG: Token extraction failed from response", response.data);
+      throw new Error('No access token received');
     }
-  };
+
+    // ✅ Save to localStorage
+    localStorage.setItem('blogAuthToken', access_token);
+    if (refresh_token) {
+      localStorage.setItem('blogRefreshToken', refresh_token);
+    }
+
+    // ✅ Redirect
+    history.push('/blog/admin');
+  } catch (err) {
+    console.error('Login error:', err.response?.data || err.message);
+
+    const errorMessage =
+      err.response?.data?.error ||
+      err.response?.data?.detail ||
+      err.message ||
+      'Login failed. Please try again.';
+    setError(errorMessage);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <section id="blog-login" className="contact new-contact">
       <div className="container">
         <div className="section-title">
-          <h2>Login to <span style={{ color: "#58b958" }}>Blog Admin</span></h2>
+          <h2>
+            Login to <span style={{ color: '#58b958' }}>Blog Admin</span>
+          </h2>
         </div>
         <div className="row">
           <div className="col-lg-3 contact-sec" />
