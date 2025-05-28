@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api, { API_BASE_URL } from '../../api';
 import './BlogList.css';
+import Seo from "../Seo";
 
 const BlogList = () => {
   const [posts, setPosts] = useState([]);
@@ -72,6 +73,13 @@ const BlogList = () => {
 
   return (
     <div className="container my-5">
+      <Seo
+        title="Top Virtual Assistant Insights & Business Growth Tips | ConnectMyVA Blog"
+        description="Explore expert tips, success stories, and smart strategies for growing your business with virtual assistants. Stay ahead with the latest from ConnectMyVA."
+        path="/blog"
+        keywords="virtual assistant services, virtual assistant for entrepreneurs, ConnectMyVA blog, VA productivity tips, benefits of virtual assistants, small business automation"
+      />
+
       {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap">
         <h1 className="mb-3 mb-md-0 fw-bold">Our Blogs</h1>
