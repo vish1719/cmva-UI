@@ -8,12 +8,12 @@ const videoTestimonials = [
   {
     url: "https://www.youtube.com/embed/y1BCpXwipok",
     name: "Raymond Dailey",
-    title: "CEO-Papyrus Document Design UK"
+    title: "CEO-Papyrus Document Design USA"
   },
   {
     url: "https://www.youtube.com/embed/sDWKZKkh-xE",
     name: "Alec Grant",
-    title: "Well Being Advisor And Mentor UK"
+    title: "Well Being Advisor And Mentor USA"
   },
 ];
 

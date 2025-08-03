@@ -3969,3 +3969,12 @@ position: relative;
   margin: 2px 0 0;
   font-weight: 600
 }
+
+/* Move chat widget to bottom-right corner */
+#live2support {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 99999 !important;
+}
+
