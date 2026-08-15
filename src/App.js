@@ -167,6 +167,7 @@ class App extends Component {
           
 
 
+            <Redirect exact from="/home" to="/" />
             <Route exact path="/" render={() => {
               return (
                 <>
