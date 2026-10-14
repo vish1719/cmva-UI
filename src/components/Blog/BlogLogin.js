@@ -77,7 +77,7 @@ const BlogLogin = () => {
             {loading ? (
               <Spin indicator={antIcon} />
             ) : (
-              <form onSubmit={handleSubmit} role="form" className="php-email-form">
+              <form onSubmit={handleSubmit} className="php-email-form">
                 {error && <div className="error-message text-danger">{error}</div>}
 
                 <div className="form-group">
