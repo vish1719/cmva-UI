@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 import { authSignup } from '../UserAuth/store/actions/auth';
+import Captcha from '../Common/Captcha';
 
 const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
 
@@ -18,6 +19,8 @@ class Sign_up_resuse extends Component {
     //         history.push('/register')
     //     }
     // }, [])
+    captchaRef = React.createRef();
+
     state = {
         // username: "",
         first_name: "",
@@ -44,6 +47,9 @@ class Sign_up_resuse extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        if (this.captchaRef.current && !this.captchaRef.current.validate()) {
+            return;
+        }
 
         const {first_name, middle_name, last_name, email, phone, address, city, country, password1, password2 } = this.state;
         this.props.signup(first_name, middle_name, last_name, email, phone, address, city, country, password1, password2);
@@ -193,6 +199,7 @@ class Sign_up_resuse extends Component {
                                         <label className="custom-control-label" for="magicBtn5">I agree that my submitted data is being collected and stored.</label>
                                     </div>
                                 </div> */}
+                                            <Captcha ref={this.captchaRef} />
                                             <div className="text-center"><button loading={loading} disabled={loading} type="submit">Signup</button></div>
                                             <div className="text-center my-3">
                                                 {/* <input id="magicBtn5" type="checkbox" className="custom-control-input" /> */}

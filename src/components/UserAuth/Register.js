@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import RegisterBanner from './RegisterBanner';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -7,6 +7,7 @@ import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import config from '../../config';
 import Seo from "../Seo";
+import Captcha from '../Common/Captcha';
 
 toast.configure()
 
@@ -21,8 +22,13 @@ const Register = () => {
     const [city, setCity] = useState("")
 
     const history = useHistory()
+    const captchaRef = useRef(null);
 
-    const addRegisterInfo = async () => {
+    const addRegisterInfo = async (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        if (captchaRef.current && !captchaRef.current.validate()) {
+            return;
+        }
         let formField = new FormData()
         formField.append('name', name)
         formField.append('email', email)
@@ -208,6 +214,7 @@ const Register = () => {
                                         <label className="custom-control-label" for="magicBtn5">I agree that my submitted data is being collected and stored.</label>
                                     </div>
                                 </div>
+                                <Captcha ref={captchaRef} />
                                 <div className="text-start"><button onClick={addRegisterInfo} type="submit">Save &amp; Proceed</button></div>
                             </form>
                         </div>

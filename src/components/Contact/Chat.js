@@ -1,10 +1,11 @@
 /* eslint-disable */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Seo from "../Seo";
 import api from '../../api'; // Axios instance
+import Captcha from '../Common/Captcha';
 
 const Chat = () => {
   useEffect(() => {
@@ -25,7 +26,12 @@ const Chat = () => {
     },
   });
 
+  const captchaRef = useRef(null);
+
   const addChatInfo = async (data) => {
+    if (captchaRef.current && !captchaRef.current.validate()) {
+      return;
+    }
     const widgetCode = '6ee9d37906c7b20e8fb4da063dffef463ec27de171190bbe7dd94fd96bd6dd60';
     const thriveRefId = localStorage.getItem(`${widgetCode}_thrive_ref_id`) || '';
 
@@ -148,6 +154,8 @@ const Chat = () => {
                   />
                   <div className="error-message-form">{errors.message?.message}</div>
                 </div>
+
+                <Captcha ref={captchaRef} />
 
                 <div className="text-center">
                   <button type="submit" className="btn btn-primary">

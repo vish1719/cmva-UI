@@ -1,9 +1,9 @@
-/* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../api';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import Captcha from '../Common/Captcha';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -13,9 +13,13 @@ const BlogLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const history = useHistory();
+  const captchaRef = useRef(null);
 
   const handleSubmit = async (e) => {
   e.preventDefault();
+  if (captchaRef.current && !captchaRef.current.validate()) {
+    return;
+  }
   setError('');
   setLoading(true);
 
@@ -99,6 +103,8 @@ const BlogLogin = () => {
                     required
                   />
                 </div>
+
+                <Captcha ref={captchaRef} />
 
                 <div className="text-center">
                   <button className="btn btn-primary" type="submit" disabled={loading}>

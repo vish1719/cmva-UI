@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Modal, Button } from 'react-bootstrap'; // ✅ Import Modal components
 import api from '../../api';
 import { Link } from 'react-router-dom';
+import Captcha from '../Common/Captcha';
 
 const GuestPostForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const GuestPostForm = () => {
   const [featuredImage, setFeaturedImage] = useState(null);
   const [modalMessage, setModalMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const captchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,6 +25,9 @@ const GuestPostForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (captchaRef.current && !captchaRef.current.validate()) {
+      return;
+    }
 
     const data = new FormData();
     data.append('title', formData.title);
@@ -43,6 +48,7 @@ const GuestPostForm = () => {
       setShowModal(true);
       setFormData({ title: '', content: '', submitted_by: '' });
       setFeaturedImage(null);
+      if (captchaRef.current) captchaRef.current.refresh();
     } catch (error) {
       console.error('Submission Error:', error);
       setModalMessage('Submission failed!');
@@ -127,6 +133,8 @@ const GuestPostForm = () => {
                     className="form-control"
                   />
                 </div>
+
+                <Captcha ref={captchaRef} />
 
                 <button type="submit" className="btn btn-primary w-100">
                   Submit

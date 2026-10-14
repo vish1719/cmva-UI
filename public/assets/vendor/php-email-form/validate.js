@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
   "use strict";
 
-  //Contact
-  $('form.php-email-form').submit(function() {
+  //Contact - only intercept legacy static php contact forms
+  $('form.php-email-form[action$=".php"]').submit(function() {
    
     var f = $(this).find('.form-group'),
       ferror = false,

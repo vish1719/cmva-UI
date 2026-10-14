@@ -1,11 +1,12 @@
 /* eslint-disable */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
+import Captcha from '../Common/Captcha';
 
 const Sign_up = () => {
     const location = useLocation(); // Get state passed via router
@@ -41,7 +42,12 @@ const Sign_up = () => {
         },
     });
 
+    const captchaRef = useRef(null);
+
     const submitData = async (data) => {
+        if (captchaRef.current && !captchaRef.current.validate()) {
+            return;
+        }
         formData = {
             ...data,
             thriveRefId: localStorage.getItem('6ee9d37906c7b20e8fb4da063dffef463ec27de171190bbe7dd94fd96bd6dd60_thrive_ref_id') || ''
@@ -229,6 +235,7 @@ const Sign_up = () => {
                                 </div>
                             </div>
 
+                            <Captcha ref={captchaRef} />
                             <div className="text-center">
                                 <button onClick={handleSubmit(submitData)} type="submit">Signup</button>
                             </div>

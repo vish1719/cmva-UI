@@ -1,11 +1,12 @@
-/* eslint-disable */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ContactBanner from './ContactBanner';
 import Seo from "../Seo";
-import api from '../../api'; // Axios instance
+import axios from 'axios';
+import config from '../../config';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
+import Captcha from '../Common/Captcha';
 
 function Contact5() {
     useEffect(() => {
@@ -27,12 +28,36 @@ function Contact5() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const captchaRef = useRef(null);
+
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        if (e && e.preventDefault) e.preventDefault();
+        if (captchaRef.current && !captchaRef.current.validate()) {
+            return;
+        }
         const loadingToast = toast.loading("Sending...");
 
         try {
-            await api.post('/api/contacts/', formData);
+            const widgetCode = '6ee9d37906c7b20e8fb4da063dffef463ec27de171190bbe7dd94fd96bd6dd60';
+            const thriveRefId = localStorage.getItem(widgetCode + '_thrive_ref_id') || '';
+
+            const formField = new FormData();
+            formField.append('name', formData.name);
+            formField.append('email', formData.email);
+            formField.append('phone', formData.phone);
+            formField.append('subject', formData.subject || `Inquiry from ${formData.name}`);
+            formField.append('hear_about_us', formData.hear_about_us);
+            formField.append('message', formData.message);
+            formField.append('thriveRefId', thriveRefId);
+            if (formData.category) {
+                formField.append('category', formData.category);
+            }
+
+            await axios({
+                method: 'post',
+                url: `${config.apiUrl}/api/contacts/`,
+                data: formField,
+            });
 
             toast.update(loadingToast, {
                 render: " Message submitted successfully!",
@@ -52,13 +77,15 @@ function Contact5() {
                 subject: '',
                 thriveRefId: ''
             });
+            if (captchaRef.current) captchaRef.current.refresh();
         } catch (error) {
-            console.error(error);
+            console.error('Contact submission error:', error);
+            const errText = error.response?.data?.error || error.message || "Failed to submit the message.";
             toast.update(loadingToast, {
-                render: "❌ Failed to submit the message.",
+                render: `❌ ${errText}`,
                 type: "error",
                 isLoading: false,
-                autoClose: 3000,
+                autoClose: 4000,
                 closeOnClick: true
             });
         }
@@ -135,8 +162,9 @@ function Contact5() {
                                     <h6 className="head">Message:</h6>
                                     <textarea className="form-control" name="message" rows="5" value={formData.message} onChange={handleChange} placeholder="Message" required></textarea>
                                 </div>
+                                <Captcha ref={captchaRef} />
                                 <div className="text-center">
-                                    <button type="submit">Send Message</button>
+                                    <button type="submit" onClick={handleSubmit}>Send Message</button>
                                 </div>
                             </form>
                         </div>

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import ContactBanner from './ContactBanner'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -9,8 +9,8 @@ import config from '../../config';
 import {useForm} from 'react-hook-form'
 // import SuccessAlert from '../Alerts/SuccessAlert';
 // import ErrorAlert from '../Alerts/ErrorAlert';
-import { useEffect } from 'react';
 import Seo from "../Seo";
+import Captcha from '../Common/Captcha';
 const Callback= () => {
     useEffect(() => {        
         window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
@@ -26,8 +26,12 @@ const Callback= () => {
     });    
 
     const history = useHistory()
+    const captchaRef = useRef(null);
 
     const addCallbackInfo = async (data) => {
+        if (captchaRef.current && !captchaRef.current.validate()) {
+            return;
+        }
         let formField = new FormData()
         formField.append('name', data.name)
         formField.append('email', data.email)
@@ -131,6 +135,7 @@ const Callback= () => {
                                     {/* <div className="error-message"></div> */}
                                     {/* <div className="sent-message">Your message has been sent. Thank you!</div> */}
                                 </div>
+                                <Captcha ref={captchaRef} />
                                 <div className="text-center"><button onClick={handleSubmit(addCallbackInfo)} type="submit">Send Message</button></div>
 
                                 <hr />

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import ContactBanner from './ContactBanner'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -7,8 +7,8 @@ import ReferBanner from './ReferBanner';
 import config from '../../config';
 import {toast} from 'react-toastify';
 import {useForm} from 'react-hook-form';
-import { useEffect } from 'react';
 import Seo from "../Seo";
+import Captcha from '../Common/Captcha';
 //import ReactGA from 'react-ga4';
 
 const Refer = () => {
@@ -32,8 +32,12 @@ const Refer = () => {
     const [femail, setFEmail] = useState("")*/
 
     const history = useHistory()
+    const captchaRef = useRef(null);
 
     const addContactInfo =async(data) => {
+        if (captchaRef.current && !captchaRef.current.validate()) {
+            return;
+        }
        /* ReactGA.event({
             category: 'User',
             action: 'Clicked Refer Button',
@@ -187,6 +191,7 @@ const Refer = () => {
                                     <div className="sent-message">Your message has been sent. Thank you!</div>
                                 </div>
                             
+                                <Captcha ref={captchaRef} />
                                 <div className="text-center"><button onClick={handleSubmit(addContactInfo)} type="submit" >Submit</button></div>
                             </form>
                         </div>
